@@ -246,6 +246,8 @@ In chapter~\ref{ch:analysis} of~\cite{strunk}, the {\it similar-to-my-project-th
 
 \chapter{Analysis and Theoretical Foundation}
 \label{ch:analysis}
+TODO: Producer consumer architecture
+
 
 Together with the next chapter takes about 60\% of the whole paper
 
@@ -357,8 +359,42 @@ with the result being a generator which can be further consumed by the applicati
 Cassandra queries are used throughout the application, both in synchronous and asynchronous application steps. Its speedy retrieval and updating of records is not a bottleneck, as API rate limits are.
 
 \section{Harvesting tools}
-\subsection{Celery and Redis brokers for asynchronous jobs}
+The harvesting module as presented conceptually in \ref{fig:harvestpipe} was implemented in ATHENA using asynchronous job queueing. The user is presented with a form for submitting the harvesting job, consisting of a content field, start and end dates. An asynchronous job is launched via Python's Celery task library, which uses the tweepy library to connect to the Twitter Search API and Cassandra driver to save tweets and harvests.
+
+\subsection{Celery for asynchronous jobs}
+The Python library Celery\footnote{http://www.celeryproject.org} is designed for the fairly frequent development case where asynchronous jobs need to be managed. The Producer-Consumer architecture is implemented with Celery, as used in its real-time mode, while another option would be using Celery to run scheduled jobs. The job granularity in this case is indeed Harvest-level, with each job inside the Producer-Consumer queue is defined as the job of downloading one single, separate Harvest.
+
+As previously stated, a huge advantage of Python is that third party libraries are highly compatible and easily configurable. Such is the case with Celery as well, setting up an asynchronous jobs taking very little effort:
+
+\begin{enumerate}
+\item install the \texttt{celery} library using \texttt{pip}
+\item add configuration information to a celery.py file inside the application directory, including the task body and its decorator \texttt{@app.task(bind=True)}
+\item import the function and use it. In the ATHENA Harvesting module context, the function was added as part of the Form validation customisation in Django's FormView class
+\item install and configure a service broker such as Redis
+\end{enumerate}
+
+\subsection{Using Redis as a Celery broker}
+Celery offers a variety of possible brokers for message transport through the job queue. Stable brokers are RabbitMQ and Redis, while others are in Experimental stages or offered by third parties\footnote{http://docs.celeryproject.org/en/latest/getting-started/brokers/}. Redis is an open source data structure store which can perform as a database or cache system, but in our case we are interested in its functionality as a message broker.
+
+Installing Redis is straightforward using a downloaded package and even some available package managers such as Mac's \texttt{brew}. After the installation is complete, the Redis server can be fired up using the command \texttt{redis-server}. A splash screen with Redis' logo as ASCII art should appear, but connection to the running Redis server can also be tested by pinging:
+
+\lstset{basicstyle=\small}
+\begin{lstlisting}
+$ redis-cli ping
+PONG
+\end{lstlisting}
+
+After the Redis server is properly installed and running, there are some extra steps for hooking it up: adding the Redis configuration settings in our project's \texttt{settings.py} file and installing the \texttt{redis} library using pip. After all these steps are completed, running:
+
+\lstset{basicstyle=\small}
+\begin{lstlisting}
+celery -A athena_app worker -l info
+\end{lstlisting}
+
+should confirm Celery's connection to Redis. Any tasks that were previously set up will now go through this job queue.
+
 \subsection{Twitter API and the Tweepy library}
+Once the general configuration of the asynchronous job is done, we can use the Twitter Search API to Harvest tweets per the specifications.
 
 \section{Enhancement tools}
 \subsection{Simple numerical data}
