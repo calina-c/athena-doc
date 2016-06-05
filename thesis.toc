@@ -1,0 +1,36 @@
+\contentsline {chapter}{Chapter{} \numberline {1}Introduction - Project Context}{12}
+\contentsline {section}{\numberline {1.1}Project context}{12}
+\contentsline {subsection}{\numberline {1.1.1}Social Media and why people care about what it says}{13}
+\contentsline {subsection}{\numberline {1.1.2}Data Analysis tools today}{13}
+\contentsline {subsection}{\numberline {1.1.3}Crossroads: Social Media in Business Intelligence}{13}
+\contentsline {chapter}{Chapter{} \numberline {2}Project Objectives and Specifications}{15}
+\contentsline {section}{\numberline {2.1}Web architecture}{15}
+\contentsline {subsection}{\numberline {2.1.1}Data storage}{16}
+\contentsline {section}{\numberline {2.2}ATHENA breakdown}{16}
+\contentsline {subsection}{\numberline {2.2.1}Twitter as data source}{16}
+\contentsline {subsubsection}{Fetching data through asynchronous jobs}{17}
+\contentsline {subsection}{\numberline {2.2.2}Harvesting}{17}
+\contentsline {subsection}{\numberline {2.2.3}Enhancement}{18}
+\contentsline {subsubsection}{User contribution modeling}{18}
+\contentsline {subsection}{\numberline {2.2.4}Normalisation and analysis}{18}
+\contentsline {section}{\numberline {2.3}Non-functional requirements}{18}
+\contentsline {chapter}{Chapter{} \numberline {3}Bibliographic research}{20}
+\contentsline {section}{\numberline {3.1}Title}{20}
+\contentsline {section}{\numberline {3.2}Other title}{20}
+\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{21}
+\contentsline {section}{\numberline {4.1}Title}{21}
+\contentsline {section}{\numberline {4.2}Other title}{21}
+\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{22}
+\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{23}
+\contentsline {section}{\numberline {6.1}Title}{23}
+\contentsline {section}{\numberline {6.2}Other title}{23}
+\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{24}
+\contentsline {section}{\numberline {7.1}Title}{24}
+\contentsline {section}{\numberline {7.2}Other title}{24}
+\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{25}
+\contentsline {section}{\numberline {8.1}Title}{25}
+\contentsline {section}{\numberline {8.2}Other title}{25}
+\contentsline {chapter}{Bibliography}{26}
+\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{27}
+\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{28}
+\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{29}
