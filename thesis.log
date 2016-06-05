@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  5 JUN 2016 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  5 JUN 2016 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -519,38 +519,50 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 ) [22
 
 ]
+Overfull \hbox (2.5912pt too wide) in paragraph at lines 328--329
+[]\T1/aer/m/n/12 The Cas-san-dra NoSQL database was cho-sen for this project's 
+non-relational database
+ []
+
+[23] <img/cqlsh.png, id=85, 713.66624pt x 366.36874pt>
+File: img/cqlsh.png Graphic file (type png)
+ <use img/cqlsh.png>
+Package pdftex.def Info: img/cqlsh.png used on input line 334.
+(pdftex.def)             Requested size: 367.2014pt x 188.5059pt.
+LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 350.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
-[24]
+ [24 <./img/cqlsh.png>] [25]
 Chapter 6.
-[25
-
-]
-Chapter 7.
 [26
 
 ]
-Chapter 8.
-(./thesis.bbl [27
+Chapter 7.
+[27
 
-]) [28
+]
+Chapter 8.
+(./thesis.bbl [28
+
+]) [29
 
 ]
 \openout2 = `apendix.aux'.
 
  (./apendix.tex
 Appendix A.
-[29
+[30
 
 
 ]
 Appendix B.
-[30
+[31
 
 ]
 Appendix C.
-) [31
+) [32
 
 ] (./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux)
 (./apendix.aux))
@@ -559,13 +571,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5658 strings out of 493089
- 74036 string characters out of 6134843
- 168925 words of memory out of 5000000
- 8938 multiletter control sequences out of 15000+600000
+ 5666 strings out of 493089
+ 74163 string characters out of 6134843
+ 168936 words of memory out of 5000000
+ 8945 multiletter control sequences out of 15000+600000
  42450 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,32p,884b,877s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,32p,884b,920s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
@@ -577,10 +589,10 @@ texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (28 pages, 309437 bytes).
+Output written on thesis.pdf (29 pages, 402270 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
+ 151 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

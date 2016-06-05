@@ -325,6 +325,36 @@ tweepy==3.5.0
 The advantage of using the \texttt{pip} package manager is that upon installing either library, its dependencies are installed as well. Throughout this thesis I will refer to the list of installed libraries when explaining the choice and particular implementation where each library is used. For now, please note the Django 1.8 installation, which is the current long-term release, chosen for its stability and support.
 
 \section{Storage with Cassandra}
+The Cassandra NoSQL database was chosen for this project's non-relational database requirement, due to its large flexibility and scalability to more clusters when the need arises.
+
+A Cassandra server was installed locally and needs to be up for all queries run from the aplication. The Python library \texttt{cassandra-driver} allows for easy connection to Cassandra clusters and execution of queries, similarly to SQL ones. Empyrical debugging is easy via the \texttt{cqlsh} command line utility, which acts like a Cassandra interactive console. Figure \ref{fig:cqlsh} presents a demo of these functionalities, including starting up the console, connecting to a cluster and submitting a query.
+
+\begin{figure}[ht]
+    \centering
+\includegraphics[width=0.8\columnwidth]{img/cqlsh.png}
+    \caption{Demo of the cqlsh utility}
+    \label{fig:cqlsh}
+\end{figure}
+
+The same functionality can be mirrored in Python using the following set of instructions:
+
+\lstset{basicstyle=\scriptsize}
+\begin{lstlisting}
+from cassandra.cluster import Cluster
+
+cluster = Cluster()
+session = cluster.connect('demo')
+
+ harvests = session.execute(
+    """
+    select * from tweets limit 2
+    """
+)
+\end{lstlisting}
+
+with the result being a generator which can be further consumed by the application. This means that it is easy to perform queries programatically, without much overhead, by employing the usage of this driver.
+
+Cassandra queries are used throughout the application, both in synchronous and asynchronous application steps. Its speedy retrieval and updating of records is not a bottleneck, as API rate limits are.
 
 \section{Harvesting tools}
 \subsection{Celery and Redis brokers for asynchronous jobs}
