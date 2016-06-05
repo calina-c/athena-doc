@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  5 JUN 2016 10:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  5 JUN 2016 15:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -277,35 +277,64 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 142.
 )
-(./thesis.aux (./guideline.aux) (./apendix.aux))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count118
+\lst@gtempboxa=\box33
+\lst@token=\toks29
+\lst@length=\count119
+\lst@currlwidth=\dimen142
+\lst@column=\count120
+\lst@pos=\count121
+\lst@lostspace=\dimen143
+\lst@width=\dimen144
+\lst@newlines=\count122
+\lst@lineno=\count123
+\lst@maxwidth=\dimen145
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count124
+\lst@skipnumbers=\count125
+\lst@framebox=\box34
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+(./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux) (./apendix.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count118
-\scratchdimen=\dimen142
-\scratchbox=\box33
-\nofMPsegments=\count119
-\nofMParguments=\count120
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count121
-\MPscratchDim=\dimen143
-\MPnumerator=\count122
-\makeMPintoPDFobject=\count123
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count126
+\scratchdimen=\dimen146
+\scratchbox=\box35
+\nofMPsegments=\count127
+\nofMParguments=\count128
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen147
+\MPnumerator=\count130
+\makeMPintoPDFobject=\count131
+\everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -350,27 +379,28 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+lasy on input line 53.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 55.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+LaTeX Font Info:    Try loading font information for U+msa on input line 55.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+LaTeX Font Info:    Try loading font information for U+msb on input line 55.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.47998pt on input line 53.
+Package xypdf Info: Line width: 0.47998pt on input line 55.
+\c@lstlisting=\count132
 
 <img/tucn.jpg, id=1, 519.44063pt x 108.405pt>
 File: img/tucn.jpg Graphic file (type jpg)
  <use img/tucn.jpg>
-Package pdftex.def Info: img/tucn.jpg used on input line 71.
+Package pdftex.def Info: img/tucn.jpg used on input line 73.
 (pdftex.def)             Requested size: 426.79134pt x 89.06966pt.
  [4
 
@@ -379,17 +409,17 @@ ucn.jpg>]
 File: img/tucn.jpg Graphic file (type jpg)
 
 <use img/tucn.jpg>
-Package pdftex.def Info: img/tucn.jpg used on input line 97.
+Package pdftex.def Info: img/tucn.jpg used on input line 99.
 (pdftex.def)             Requested size: 426.79134pt x 89.06966pt.
 
-Overfull \hbox (25.93462pt too wide) in paragraph at lines 105--110
+Overfull \hbox (25.93462pt too wide) in paragraph at lines 107--112
 [][] 
  []
 
 [5] [6]
 File: img/tucn.jpg Graphic file (type jpg)
  <use img/tucn.jpg>
-Package pdftex.def Info: img/tucn.jpg used on input line 154.
+Package pdftex.def Info: img/tucn.jpg used on input line 156.
 (pdftex.def)             Requested size: 426.79134pt x 89.06966pt.
  [7] [8]
 \openout2 = `guideline.aux'.
@@ -405,48 +435,76 @@ Package pdftex.def Info: img/tucn.jpg used on input line 154.
 
 
 [11]
-Chapter 1.
-LaTeX Font Info:    Try loading font information for OMS+aer on input line 226.
+\openout2 = `intro.aux'.
 
+ (./intro.tex
+Chapter 1.
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 9.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/ae/omsaer.fd
 File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 226.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--237
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
 [][]\T1/aer/m/n/10 http://www.techrepublic.com/article/election-tech-why-social
 -media-is-more-powerful-than-
  []
 
 [12
 
+
 ] <img/Tableau-Desktop_3.png, id=36, 770.88pt x 571.38469pt>
 File: img/Tableau-Desktop_3.png Graphic file (type png)
 
 <use img/Tableau-Desktop_3.png>
-Package pdftex.def Info: img/Tableau-Desktop_3.png used on input line 254.
+Package pdftex.def Info: img/Tableau-Desktop_3.png used on input line 37.
 (pdftex.def)             Requested size: 367.2014pt x 272.16907pt.
- [13] [14 <./img/Tableau-Desktop_3.png>]
+ [13]) [14 <./img/Tableau-Desktop_3.png>]
+\openout2 = `specs.aux'.
+
+
+(./specs.tex
 Chapter 2.
 [15
+
+
 
 ] [16] <img/harvestpipe1.png, id=56, 989.6975pt x 208.78pt>
 File: img/harvestpipe1.png Graphic file (type png)
 
 <use img/harvestpipe1.png>
-Package pdftex.def Info: img/harvestpipe1.png used on input line 317.
+Package pdftex.def Info: img/harvestpipe1.png used on input line 49.
 (pdftex.def)             Requested size: 459.0pt x 96.82683pt.
 
 <img/harvestpipe.png, id=57, 923.45pt x 358.33875pt>
 File: img/harvestpipe.png Graphic file (type png)
  <use img/harvestpipe.png>
-Package pdftex.def Info: img/harvestpipe.png used on input line 324.
+Package pdftex.def Info: img/harvestpipe.png used on input line 56.
 (pdftex.def)             Requested size: 459.0pt x 178.11365pt.
 
-[17 <./img/harvestpipe1.png>] [18 <./img/harvestpipe.png>] [19]
+[17 <./img/harvestpipe1.png>] [18 <./img/harvestpipe.png>]) [19]
 Chapter 3.
+
+LaTeX Warning: Citation `BellucciLZ04' on page 20 undefined on input line 234.
+
+
+LaTeX Warning: Citation `AntoniouSBDB07' on page 20 undefined on input line 234
+.
+
+
+LaTeX Warning: Citation `russell1995artificial' on page 20 undefined on input l
+ine 235.
+
+
+LaTeX Warning: Citation `AntoniouSBDB07' on page 20 undefined on input line 237
+.
+
+
+LaTeX Warning: Citation `strunk' on page 20 undefined on input line 240.
+
 [20
+
 
 ]
 Chapter 4.
@@ -454,65 +512,75 @@ Chapter 4.
 
 ]
 Chapter 5.
-[22
+LaTeX Font Info:    Try loading font information for T1+aett on input line 283.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+) [22
 
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+[24]
 Chapter 6.
-[23
+[25
 
 ]
 Chapter 7.
-[24
+[26
 
 ]
 Chapter 8.
-(./thesis.bbl [25
+(./thesis.bbl [27
 
-]) [26
+]) [28
 
 ]
 \openout2 = `apendix.aux'.
 
  (./apendix.tex
 Appendix A.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 4.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/ae/t1aett.fd
-File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-) [27
+[29
 
 
 ]
 Appendix B.
-[28
+[30
 
 ]
 Appendix C.
-) [29
+) [31
 
-] (./thesis.aux (./guideline.aux) (./apendix.aux)) ) 
+] (./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux)
+(./apendix.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4393 strings out of 493089
- 55556 string characters out of 6134843
- 136038 words of memory out of 5000000
- 7702 multiletter control sequences out of 15000+600000
+ 5658 strings out of 493089
+ 74036 string characters out of 6134843
+ 168925 words of memory out of 5000000
+ 8938 multiletter control sequences out of 15000+600000
  42450 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,26p,868b,243s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (26 pages, 289207 bytes).
+ 38i,8n,32p,884b,877s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on thesis.pdf (28 pages, 309437 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 146 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

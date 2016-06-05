@@ -27,6 +27,8 @@
 %\usepackage{algorithmic}
 \usepackage{color}
 \usepackage{color}
+\usepackage{url}
+\usepackage{listings}
 
 \mastersthesis
 %\diplomathesis
@@ -215,140 +217,9 @@ Data \hspace{8cm} Nume, Prenume
 
 
 
-\chapter{Introduction - Project Context}
-\pagestyle{headings}
+\include{intro}
+\include{specs}
 
-Not long time ago, big data and the need for content analysis were idealistic, intangible concepts. However, recent developments in computer performance and the growing popularity of social media has enhanced the need for novel academic approaches in this field.
-
-The biggest challenge with processing these huge amounts of data lies in its sheer volume. This is highly problematic in many different ways:
-
-\begin{itemize}
- \item storing and managing data is costly and sometimes needs special structuring attention
-\item irregularities across data streams often indicate the need for extra transformations
-\item filtering out noise and the extraction of meaningful data from thousands of entries requires specialised algorithms, architectures and platforms which are either inaccessible or difficult to use by regular users
-\end{itemize}
-
-\section{Project context}
-
-Social media platforms these days have a strong presence in "the Cloud", which allows more and more developers to solve the problem of storage space and scalability in a relatively easy way. The high adoption of platforms like Facebook, Twitter, Instagram and many others have resulted in the generation of hundreds of thousands of online documents, text and media alike. Such a deluge of information is highly applicable for business purposes, but in is often stuck as a "diamond in the rough". An array of new and exciting job titles has also appeared, such as "Social Media Marketer", "Social Media Manager", "Social Media Expert" and so on. Not only do they represent career alternatives for a new generation, but they are also still outliers for decision support software.
-
-\subsection{Social Media and why people care about what it says}
-
-While the concept of Social Media is not a new one to be precise, it is clearly just starting to engulf us. The spread of Social Media alongside the spread of worldwide Internet access, the emergence of specialised applications and the recent shift to mobile online presence are objective realities. Subjectively as well, people have become more engaged to consuming, creating and sharing content online, which is evident in newspaper sales drops, app sales increase, events "going viral" within groups and even the online presence of a political critical mass. Companies offer barter possibilities for a variety of bloggers and vloggers to push products to their followers (which is not only more effective\footnote{http://www.techrepublic.com/article/election-tech-why-social-media-is-more-powerful-than-advertising/}, but also cheaper).
-
-No wonder social media has a stake in public decisions! But for the first time in decades, people's choices are also quite open and public. Which means that some parties can get clues about society's preferences by using public data available on platforms such as Facebook, Youtube and Twitter. Consider two basic use cases, which I will emphasise throughout the course of this thesis:
-
-\begin{itemize}
-\item What does social media say about X?
-\item What does social media say about X vs. Y?
-\end{itemize}
-
-where X and Y can be public people, events, brands, companies etc. 
-
-\subsection{Data Analysis tools today}
-
-There are a number of current platforms for data analysis, in the large sense including chart generators, format converters and importers and data visualisation plug-ins of sorts. Crossing into the realm of powerful analysis applications, most of them are complex and confusing to non-engineers, examples including Tableau\footnote{https://public.tableau.com/s/}, RapidMiner\footnote{http://rapidminer.com} and WolframAlpha\footnote{http://www.wolframalpha.com}. Figure \ref{fig:tableau} shows Tableau's interface, which may seem quite intimidating.
-
-\begin{figure}[ht]
-    \centering
-\includegraphics[width=0.8\columnwidth]{img/Tableau-Desktop_3.png}
-    \caption{Tableau's interface}
-    \label{fig:tableau}
-\end{figure}
-
-\subsection{Crossroads: Social Media in Business Intelligence}
-
-The Computer Science field is very much branched nowadays in clearly-delimited subjects. But it is such a case where the large-scale processing capacities of data analytics should merge with approaches for computer-assisted business decisions. Consider that data analytics software often requires extensive training and a specialised knowledge, while most users desire only simple, straightforward functionalities for basic data analysis. One of Object Oriented Programming's fundamental principles is that of abstraction, in which end users need not (and should not) be aware of what is under the hood. Yet in data analytics, this is still the case on a 
-
-The following Master's Thesis is the result of such an endeavour, to combine solid concepts from big data analysis, web application architecture and design, as well as enterprise software and economics for a better understanding of social media trends and opinions.
-
-\subsection*{Thesis structure}
-{\color{red} TODO
-}
-
-\chapter{Project Objectives and Specifications}
-The project's purpose is to help non-expert users interested in social media analysis to get relevant and reliable information regarding specific concepts. 
-
-\section{Web architecture}
-A web architecture is preferable as a modern-day alternative to installable applications. The fast evolution of mobile devices has pushed web developers to segregate User Interfaces from Backend implementations, permitting devices to seamlessly connect to the same under the hood implementation without much development cost and overhead. Communication via REST services is crucial in this concern. Beyond user preference towards such applications, a web architecture presents even more advantages:
-
-\begin{itemize}
-\item virtually infinite space extensible with storage backends such as AWS3 or Google Cloud
-\item scalability and outsourcing of time-costly services such as getting stream histories
-\item database distribution over nodes
-\item easily available documentation and integration throughout the development process
-\end{itemize} 
-
-Using a web framework eases development even more so and presents security advantages such as stable features, packages and quick patches in the odd case of a security breach. Plugging in services is also considered in the project's context, with handling of specific use cases done in separate managers, loosely coupled with the Model-View-Controller architecture.
-
-\subsection{Data storage}
-Since scalability and distribution are a must for a large-scale stream analysis project, data storage should be handled using a method which supports such breakdown while still remaining query-efficient. NoSQL databases are a popular choice for such implementation. The correspondence between the database storage backend and the model part of the application should also be loosely coupled, allowing for the possibility of switching between database backends if the need arises.
-
-Big players in the field of non-relational databases are obvious possible choices: HBase, Cassandra, MongoDB, CouchDB, etc.
-
-\section{ATHENA breakdown}
-This thesis is based on the ATHENA original project, which comprises different pipeline steps in acquiring and analysing Twitter feeds:
-
-\begin{itemize}
-\item Harvesting: acquisition of collections of related Twitter statuses, by hashtag and dates (start and end).
-\item Enhancement: basic analysis of a single harvest with classical unsupervised algorithms
-\item Normalisation and Analysis: comparative analysis of harvests
-\end{itemize}
-
-\subsection{Twitter as data source}
-For the development of this project, I chose to only implement one social media backend as data source. Twitter was the choice, since the character limit they impose is a great asset in regards of data processing: First of all, the classical data analysis pipeline deals with special cases such as documents of different lengths providing unusual skewing to the data set. Another advantage of Twitter is the prevalence of the hashtag model, which has failed to catch on with Facebook to the same degree. This means that statuses basically come out of the box already tagged for content.
-
-Twitter is arguably the second most popular social media platform at the time, gaining on a large number of users even before the mobile device explosion, by integrating with telephone service providers to facilitate posting through SMS. Its 140 character limit makes for a good spin, which has pushed Twitter into a more textual realm than its more successful counterpart, Facebook. The platform is largely popular in the United States and especially in the entertainment domain\footnote{https://en.wikipedia.org/wiki/Twitter}, with the most popular Twitter accounts belonging to celebrities.
-
-It notably also has a history of being the "go to" source for data analysis, after the United States' current president Barrack Obama purportedly used it in his 2008 campaign as one of the principal media outlets, choosing to have a strong Twitter presence, akin to advertisement presence of past candidates.
-
-In short, although this approach is social platform-independent, Twitter was chosen even from the specifications step of this project for a clear start towards the data mining part.
-
-\subsubsection{Fetching data through asynchronous jobs}
-Since most social media platforms communicate with external applications via REST APIs with rate limits, the project's structure should include asynchronous modules. In this way, the user will be able to send an API-intensive job for queueing and asynchronous processing, without hindering their overall experience of using the application. This becomes apparent in the Harvesting part.
-
-\subsection{Harvesting}
-If we interpret ATHENA as a classical pipeline, then it becomes clear that the Harvesting part is the acquisition part. In order to perform analysis on data, it must first be fetched according to predefined rules and user options. Being time-intensive, these jobs must be designed asynchronously, following a FIFO model.
-
-Figure \ref{fig:harvestpipe1} represents the conceptual model of data acquisition, starting from a collection of grouped documents (in our case they will be collections of statuses with a common hashtag). The Harvest manager handles sending asynchronous jobs via a FIFO queue towards a Consumer-type Harvesting job, represented as black box and further detailed in Figure \ref{fig:harvestpipe}. It is important to note that this pipeline is not in any way adjusted to the domain or the particular API platform; the only constraint we impose is that of periodically checking for compliance to rate limits. Social APIs usually limit requests either by number of requests or requested data size per unit of time. It is therefore a good idea to consider if any limitations alter our pipelines before starting on implementations.
-
-\begin{figure}[ht]
-    \centering
-\includegraphics[width=\columnwidth]{img/harvestpipe1.png}
-    \caption{Harvesting pipeline}
-    \label{fig:harvestpipe1}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-\includegraphics[width=\columnwidth]{img/harvestpipe.png}
-    \caption{Harvesting job sub-pipeline}
-    \label{fig:harvestpipe}
-\end{figure}
-
-\subsection{Enhancement}
-As previously stated, it is not of great importance to have the data, but the goal is to obtain meaningful information from it. In this thesis I will refer to "harvests" as per the following definition:
-
-\begin{definition}{}
-A Harvest is a collection of documents related by contant, containing a token T and spanning from a start date and to an end date, which have gone through the harvesting pipeline and are stored for further anaylsis.
-\end{definition}
-
-After completing the Harvesting pipeline, resulting harvests are processed using various data extraction algorithms and presented to the user in the Enhancement step. These algorithms each have their own sub-pipelines of transformation, which will be detailed in the Analysis step.
-
-\subsubsection{User contribution modeling}
-{\color{red} TODO
-}
-
-\subsection{Normalisation and analysis}
-{\color{red} TODO
-}
-
-\section{Non-functional requirements}
-I am much concerned with the user's perspective in developing this application. As explained previously, one of the main objectives of this application is undoubtedly to be as simple to use as possible, to benefit non-expert users.
-
-Firstly, I believe that a familiar and streamlined user experience should be implemented. The UI should have componenents found in most web application nowadays, in order to seem aproachable. The customisation options should also be loaded without input from the user, so that things like algorithm choices and parameters should stay hidden. Non-expert users do not know what \emph{Tfidf Vectorizer} or \emph{KMeans clustering} means, all they care about is to have some paplable results to their queries. In short, it is in the benefit of the non-expert users, which I target through this application, to have as little inputs, panels and buttons to figure out.
-
-Besided the look and feel, users will also be interested in having a fast and reliable application. Exceptions and possible bugs should be properly filtered out and time-consuming jobs moved as per Figure \ref{fig:harvestpipe} to asynchronous jobs.
 
 \chapter{Bibliographic research}
 
@@ -398,17 +269,79 @@ YOU DO NOT copy/paste info on technologies from various sources and others alike
 
 
 \chapter{Detailed Design and Implementation}
+The following chapter presents the architecture, components and implementation particularities of the ATHENA application.
 
-Together with the previous chapter takes about 60\% of the paper.
+\section{Python and Django}
+The choice of Python as main programming language for this application, alongside the choice of Django as a framework, were based on the industry's long-time endorsement of these technologies. According to the TIOBE programming language index, Python ranks as the 6th most popular programming language, the index being calculated according to the number of engineers world-wide, courses and third-party vendors concerned with this programming language \cite{tiobeindex}. Its higher ranked competitors are Java and the C family (C, C++ and C\#), which are not as well diversified in the field of research and string processing as Python.
 
-The purpose of this chapter is to document the developed application such a way that it can be maintained and developed later. A reader should be able (from what you have written here) to identify the main functions of the application.
+\subsubsection{Python for scientists}
+Besides its prevalence in the web application realm, Python is also one of the preferred languages for research, as argued in \cite{millman2011python}, with a plethora of scientific-oriented third-part libraries including NumPy, SciPy and Matplotlib. String processing is also generally considered faster and more cohesive than in other programming languages.
 
-The chapter should contain (but not limited to):
-\begin{itemize}
- \item a general application sketch/scheme,
-\item a description of every component implemented, at module level,
-\item class diagrams, important classes and methods from key classes.
-\end{itemize}
+\subsubsection{Python libraries}
+One of the main libraries used here is Django, arguably the best known Python web framework. Django was chosen in the detriment of others such as Flask and CherryPy, due to its active and dynamic open source community, its good documentation resources, high number of compatible third party libraries and generally available support with installation, development and running.
+
+For the purpose of this application, a number of libraries were installed via \texttt{pip}, the package manager preferred by Python applications. The entire application was build using \texttt{virtualenv}, a virtual environment creator that helps Python developers manage different Python versions in different environments, to avoid unnecessary creation of virtual machines. Running the command \texttt{pip freeze} inside the activated virtual environment we get the list of installed third party libraries:
+
+\lstset{basicstyle=\scriptsize}
+\begin{lstlisting}
+amqp==1.4.9
+anyjson==0.3.3
+beautifulsoup4==4.4.1
+billiard==3.3.0.23
+cassandra-driver==3.4.1
+celery==3.1.18
+cssselect==0.9.1
+cycler==0.10.0
+DistributedLock==1.2
+Django==1.8.13
+django-annoying==0.9.0
+django-m2m-history==0.3.5
+django-oauth-tokens==0.6.3
+django-picklefield==0.3.2
+django-taggit==0.19.1
+futures==3.0.5
+kombu==3.0.35
+lxml==3.6.0
+nltk==3.2.1
+numpy==1.11.0
+oauthlib==1.1.1
+pandas==0.18.1
+pyparsing==2.1.4
+pyquery==1.2.13
+python-dateutil==2.5.3
+python-memcached==1.58
+pytz==2016.4
+redis==2.10.3
+requests==2.10.0
+requests-oauthlib==0.6.1
+scikit-learn==0.17.1
+scipy==0.17.1
+simplejson==3.8.2
+six==1.10.0
+sklearn==0.0
+tweepy==3.5.0
+\end{lstlisting}
+
+The advantage of using the \texttt{pip} package manager is that upon installing either library, its dependencies are installed as well. Throughout this thesis I will refer to the list of installed libraries when explaining the choice and particular implementation where each library is used. For now, please note the Django 1.8 installation, which is the current long-term release, chosen for its stability and support.
+
+\section{Storage with Cassandra}
+
+\section{Harvesting tools}
+\subsection{Celery and Redis brokers for asynchronous jobs}
+\subsection{Twitter API and the Tweepy library}
+
+\section{Enhancement tools}
+\subsection{Simple numerical data}
+\subsection{Sci-kit learn}
+\subsection{Related hashtag calculation}
+\subsection{Related hashtag clustering using K-Means}
+\subsection{Page and bot vs. users modeling}
+{\color{red} TODO
+}
+
+\section{Normalisation and Analysis tools}
+{\color{red} TODO
+}
 
 \chapter{Testing and Validation}
 

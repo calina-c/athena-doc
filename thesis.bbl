@@ -21,24 +21,12 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{BellucciLZ04}
-E.~Bellucci, A.~Lodder, and J.~Zeleznikow, ``Integrating artificial
-  intelligence, argumentation and game theory to develop an online dispute
-  resolution environment.'' in \emph{16th International Conference on Tools
-  with Artificial Intelligence}, 2004, pp. 749--754.
+\bibitem{tiobeindex}
+``{TIOBE index May 2016},'' \url{http://www.tiobe.com/tiobe_index?page=index},
+  2016, [Online; accessed 5-June-2008].
 
-\bibitem{AntoniouSBDB07}
-G.~Antoniou, T.~Skylogiannis, A.~Bikakis, M.~Doerr, and N.~Bassiliades,
-  ``Dr-brokering: A semantic brokering system.'' \emph{Knowledge-Based
-  Systems}, vol.~20, no.~1, pp. 61--72, 2007.
-
-\bibitem{russell1995artificial}
-S.~J. Russell, P.~Norvig, J.~F. Canny, J.~M. Malik, and D.~D. Edwards,
-  \emph{Artificial intelligence: a modern approach}.\hskip 1em plus 0.5em minus
-  0.4em\relax Prentice hall Englewood Cliffs, 1995, vol.~2.
-
-\bibitem{strunk}
-W.~Strunk, Jr. and E.~B. White, \emph{The Elements of Style}, 3rd~ed.\hskip 1em
-  plus 0.5em minus 0.4em\relax Macmillan, 1979.
+\bibitem{millman2011python}
+K.~J. Millman and M.~Aivazis, ``Python for scientists and engineers,''
+  \emph{Computing in Science \& Engineering}, vol.~13, no.~2, pp. 9--12, 2011.
 
 \end{thebibliography}
