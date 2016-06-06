@@ -358,6 +358,28 @@ with the result being a generator which can be further consumed by the applicati
 
 Cassandra queries are used throughout the application, both in synchronous and asynchronous application steps. Its speedy retrieval and updating of records is not a bottleneck, as API rate limits are.
 
+\subsection{Database structure}
+Two tables are used in our application. The \texttt{harvest} table containing columns:
+
+\begin{itemize}
+\item uuid (primary key, generated for each user-submitted harvest form)
+\item start date (from which we harvest Tweets)
+\item end date (up to which we harvest Tweets)
+\item hashtag (used to query Twitter's API for statuses containing this particular hashtag)
+\item done (boolean fag indicated whether the harvest has finished downloading Tweets)
+\end{itemize}
+
+The \texttt{tweet} table is used for storage of tweets belonging to histories and contains:
+
+\begin{itemize}
+\item twitterId (the id of that status on Twitter)
+\item user (username of the author on Twitter)
+\item content (textual content including hashtags)
+\item date (of postage)
+\item retweets (number of retweets, indicating popularity)
+\item history (uuid of harvest that Tweet belongs to inside ATHENA)
+\end{itemize}
+
 \section{Harvesting tools}
 The harvesting module as presented conceptually in \ref{fig:harvestpipe} was implemented in ATHENA using asynchronous job queueing. The user is presented with a form for submitting the harvesting job, consisting of a content field, start and end dates. An asynchronous job is launched via Python's Celery task library, which uses the tweepy library to connect to the Twitter Search API and Cassandra driver to save tweets and harvests.
 
@@ -393,8 +415,64 @@ celery -A athena_app worker -l info
 
 should confirm Celery's connection to Redis. Any tasks that were previously set up will now go through this job queue.
 
-\subsection{Twitter API and the Tweepy library}
+\subsection{Fetching data from Twitter using the Search API and Tweepy}
 Once the general configuration of the asynchronous job is done, we can use the Twitter Search API to Harvest tweets per the specifications.
+
+Twitter belongs to a series of web applications which fully understands the developers' need to hook into some of their features. Creating a Twitter application is easy from their developer support pages, with the creator receiving a set of OAuth access keys:
+
+\begin{itemize}
+\item a Consumer Key (API Key)
+\item a Consumer Secret (API Secret)
+\item an Access Token
+\item an Access Token secret
+\end{itemize}
+
+For harvesting tweets, my approach uses a wrapper to Twitter's Search API called Tweepy. It is a library that handles connection and customised requests to the API, in a Pythonic fashion. Tweepy needs to be installed using pip, and then configured with the proper access keys (here in the code sample replaced with placeholders for security purposes):
+
+\lstset{basicstyle=\small}
+\begin{lstlisting}
+from tweepy import OAuthHandler
+
+consumer_key="XXXX"
+consumer_secret="XXXXXXXX"
+
+access_token="XXXX"
+access_token_secret= "XXXXXXXX"
+
+auth = OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+\end{lstlisting}
+
+The way I am using this is by first setting up an \texttt{api} object which I will further query for statuses. I will initialise it using the \texttt{auth} object and a few flags:
+
+\begin{itemize}
+\item \texttt{wait\_on\_rate\_limit=True}. Flagging this indicates to the api object that whenever it reaches the API rate limits, it should not stop, but rather sleep for the required amount of time until new data can be acquired. This approach is preferable, since our harvesting takes place asynchronously and we do not mind the process sleeping for a while
+\item \texttt{wait\_on\_rate\_limit\_notify=True}. Setting this flag tells the api object to print out a warning string to the console, indicating when it has reached the rate limit and at the beginning and end of the sleep cycle. E.g.:\lstset{basicstyle=\small}
+\begin{lstlisting}
+[2016-06-02 10:17:46,804: WARNING/Worker-2]
+Rate limit reached. Sleeping for:
+627
+\end{lstlisting}
+\end{itemize}
+
+After setting up the API, a Tweepy Cursor class is used for querying it. This is initialised with the api object and parameters indicating the query we send to the server. This uses parameters defined by the user upon submitting the harvest form, refined by our application's specifications. The hashtag field is prefixed with a "\#" sign, start and end dates are formatted to "yyyy-mm-dd" and the language set to English, since extension to other languages is beyond the scope of this thesis.
+
+The cursor will return a Pyhton generator, which means that the contents of the tweet list is rather consumed one by one, rather than having the whole list present at either point in time. Here, using Cassandra, we save the contents to the database.
+
+\lstset{basicstyle=\small, breaklines=True}
+\begin{lstlisting}
+tweets = tweepy.Cursor(api.search, q='#' + hashtag, since=start_date, until=end_date, lang='en').items()
+
+for tweet in tweets:
+    session.execute(
+     """
+     insert into tweet (twitterId, user, content, date, retweets, history) values (%s, %s, %s, %s, %s, %s)
+     """,
+     (str(tweet.id), tweet.author.screen_name.encode('utf8'), tweet.text, tweet.created_at, tweet.retweet_count, key)
+     )
+\end{lstlisting}
+
+The stored and completed harvests are now ready for the Enhancement step.
 
 \section{Enhancement tools}
 \subsection{Simple numerical data}

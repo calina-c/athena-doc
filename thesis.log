@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  5 JUN 2016 22:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  6 JUN 2016 09:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -532,40 +532,41 @@ Package pdftex.def Info: img/cqlsh.png used on input line 336.
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 352.
 
-Overfull \hbox (7.23715pt too wide) in paragraph at lines 362--363
+[24 <./img/cqlsh.png>]
+Overfull \hbox (7.23715pt too wide) in paragraph at lines 384--385
 []\T1/aer/m/n/12 The har-vest-ing mod-ule as pre-sented con-cep-tu-ally in 2.2[
 ] was im-ple-mented in ATHENA
  []
 
-[24 <./img/cqlsh.png>] [25] [26]
+[25] [26] [27] [28]
 Chapter 6.
-[27
+[29
 
 ]
 Chapter 7.
-[28
+[30
 
 ]
 Chapter 8.
-(./thesis.bbl [29
+(./thesis.bbl [31
 
-]) [30
+]) [32
 
 ]
 \openout2 = `apendix.aux'.
 
  (./apendix.tex
 Appendix A.
-[31
+[33
 
 
 ]
 Appendix B.
-[32
+[34
 
 ]
 Appendix C.
-) [33
+) [35
 
 ] (./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux)
 (./apendix.aux))
@@ -576,11 +577,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  5676 strings out of 493089
  74307 string characters out of 6134843
- 168935 words of memory out of 5000000
+ 189936 words of memory out of 5000000
  8953 multiletter control sequences out of 15000+600000
  46253 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,32p,884b,928s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,32p,884b,953s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
@@ -592,10 +593,10 @@ texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (30 pages, 408449 bytes).
+Output written on thesis.pdf (32 pages, 420048 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 162 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
