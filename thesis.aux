@@ -1,5 +1,6 @@
 \relax 
 \@input{guideline.aux}
+\@writefile{toc}{\contentsline {chapter}{List of Figures}{9}}
 \@input{intro.aux}
 \@input{specs.aux}
 \citation{BellucciLZ04}
@@ -12,10 +13,13 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Title}{20}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Other title}{20}}
+\citation{clauset2009power}
 \@writefile{toc}{\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{21}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{ch:analysis}{{4}{21}}
+\newlabel{plfittheory}{{4}{21}}
+\newlabel{kmeansplusplus}{{4}{21}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Title}{21}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Other title}{21}}
 \citation{tiobeindex}
@@ -26,39 +30,58 @@
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}Python and Django}{22}}
 \@writefile{toc}{\contentsline {subsubsection}{Python for scientists}{22}}
 \@writefile{toc}{\contentsline {subsubsection}{Python libraries}{22}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Storage with Cassandra}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Demo of the cqlsh utility}}{24}}
-\newlabel{fig:cqlsh}{{5.1}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Database structure}{24}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Harvesting tools}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Celery for asynchronous jobs}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Storage with Cassandra}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Demo of the cqlsh utility}}{25}}
+\newlabel{fig:cqlsh}{{5.1}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Database structure}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Harvesting tools}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Celery for asynchronous jobs}{26}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Using Redis as a Celery broker}{26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Fetching data from Twitter using the Search API and Tweepy}{26}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Enhancement tools}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Simple numerical data}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Sci-kit learn}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Related hashtag calculation}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Related hashtag clustering using K-Means}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.5}Page and bot vs. users modeling}{28}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Normalisation and Analysis tools}{28}}
-\@writefile{toc}{\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Redis splash screen}}{27}}
+\newlabel{fig:redis}{{5.2}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Fetching data from Twitter using the Search API and Tweepy}{27}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Enhancement tools}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Simple numerical data}{29}}
+\@writefile{toc}{\contentsline {subsubsection}{User-related data}{29}}
+\citation{clauset2009power}
+\citation{pedregosa2011scikit}
+\@writefile{toc}{\contentsline {subsubsection}{Modeling the post numbers}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Sci-kit learn}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Related hashtag calculation}{31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Sample status message with hashtags}}{31}}
+\newlabel{fig:tweet}{{5.3}{31}}
+\@writefile{toc}{\contentsline {subsubsection}{Getting the hashtag vocabulary}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Related hashtag clustering using KMeans}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Example of related hashtags in a \#Python harvest over one day}}{33}}
+\newlabel{fig:relhashtags}{{5.4}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{Ordering and displaying the hashtag clusters}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Example of clustered hashtags in a \#Python harvest over one day}}{35}}
+\newlabel{fig:clusters}{{5.5}{35}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Normalisation}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Reasons and options}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}One post per user, one-day limit normalisation process}{37}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Analysis}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Code organisation}{38}}
+\@writefile{toc}{\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{39}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Title}{29}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Other title}{29}}
-\@writefile{toc}{\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{30}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Title}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Other title}{39}}
+\@writefile{toc}{\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{40}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Title}{30}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Other title}{30}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Title}{40}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Other title}{40}}
 \bibstyle{IEEEtran}
 \bibdata{thesis}
-\@writefile{toc}{\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{31}}
+\@writefile{toc}{\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{41}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}Title}{31}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.2}Other title}{31}}
-\bibcite{tiobeindex}{1}
-\bibcite{millman2011python}{2}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{32}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Title}{41}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Other title}{41}}
+\bibcite{clauset2009power}{1}
+\bibcite{tiobeindex}{2}
+\bibcite{millman2011python}{3}
+\bibcite{pedregosa2011scikit}{4}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{42}}
 \@input{apendix.aux}

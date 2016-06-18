@@ -1,3 +1,4 @@
+\contentsline {chapter}{List of Figures}{9}
 \contentsline {chapter}{Chapter{} \numberline {1}Introduction - Project Context}{12}
 \contentsline {section}{\numberline {1.1}Project context}{12}
 \contentsline {subsection}{\numberline {1.1.1}Social Media and why people care about what it says}{13}
@@ -24,29 +25,36 @@
 \contentsline {section}{\numberline {5.1}Python and Django}{22}
 \contentsline {subsubsection}{Python for scientists}{22}
 \contentsline {subsubsection}{Python libraries}{22}
-\contentsline {section}{\numberline {5.2}Storage with Cassandra}{23}
-\contentsline {subsection}{\numberline {5.2.1}Database structure}{24}
-\contentsline {section}{\numberline {5.3}Harvesting tools}{25}
-\contentsline {subsection}{\numberline {5.3.1}Celery for asynchronous jobs}{25}
+\contentsline {section}{\numberline {5.2}Storage with Cassandra}{24}
+\contentsline {subsection}{\numberline {5.2.1}Database structure}{25}
+\contentsline {section}{\numberline {5.3}Harvesting tools}{26}
+\contentsline {subsection}{\numberline {5.3.1}Celery for asynchronous jobs}{26}
 \contentsline {subsection}{\numberline {5.3.2}Using Redis as a Celery broker}{26}
-\contentsline {subsection}{\numberline {5.3.3}Fetching data from Twitter using the Search API and Tweepy}{26}
-\contentsline {section}{\numberline {5.4}Enhancement tools}{28}
-\contentsline {subsection}{\numberline {5.4.1}Simple numerical data}{28}
-\contentsline {subsection}{\numberline {5.4.2}Sci-kit learn}{28}
-\contentsline {subsection}{\numberline {5.4.3}Related hashtag calculation}{28}
-\contentsline {subsection}{\numberline {5.4.4}Related hashtag clustering using K-Means}{28}
-\contentsline {subsection}{\numberline {5.4.5}Page and bot vs. users modeling}{28}
-\contentsline {section}{\numberline {5.5}Normalisation and Analysis tools}{28}
-\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{29}
-\contentsline {section}{\numberline {6.1}Title}{29}
-\contentsline {section}{\numberline {6.2}Other title}{29}
-\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{30}
-\contentsline {section}{\numberline {7.1}Title}{30}
-\contentsline {section}{\numberline {7.2}Other title}{30}
-\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{31}
-\contentsline {section}{\numberline {8.1}Title}{31}
-\contentsline {section}{\numberline {8.2}Other title}{31}
-\contentsline {chapter}{Bibliography}{32}
-\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{33}
-\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{34}
-\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{35}
+\contentsline {subsection}{\numberline {5.3.3}Fetching data from Twitter using the Search API and Tweepy}{27}
+\contentsline {section}{\numberline {5.4}Enhancement tools}{29}
+\contentsline {subsection}{\numberline {5.4.1}Simple numerical data}{29}
+\contentsline {subsubsection}{User-related data}{29}
+\contentsline {subsubsection}{Modeling the post numbers}{30}
+\contentsline {subsection}{\numberline {5.4.2}Sci-kit learn}{30}
+\contentsline {subsection}{\numberline {5.4.3}Related hashtag calculation}{31}
+\contentsline {subsubsection}{Getting the hashtag vocabulary}{31}
+\contentsline {subsection}{\numberline {5.4.4}Related hashtag clustering using KMeans}{32}
+\contentsline {subsubsection}{Ordering and displaying the hashtag clusters}{34}
+\contentsline {section}{\numberline {5.5}Normalisation}{36}
+\contentsline {subsection}{\numberline {5.5.1}Reasons and options}{36}
+\contentsline {subsection}{\numberline {5.5.2}One post per user, one-day limit normalisation process}{37}
+\contentsline {section}{\numberline {5.6}Analysis}{38}
+\contentsline {section}{\numberline {5.7}Code organisation}{38}
+\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{39}
+\contentsline {section}{\numberline {6.1}Title}{39}
+\contentsline {section}{\numberline {6.2}Other title}{39}
+\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{40}
+\contentsline {section}{\numberline {7.1}Title}{40}
+\contentsline {section}{\numberline {7.2}Other title}{40}
+\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{41}
+\contentsline {section}{\numberline {8.1}Title}{41}
+\contentsline {section}{\numberline {8.2}Other title}{41}
+\contentsline {chapter}{Bibliography}{42}
+\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{43}
+\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{44}
+\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{45}

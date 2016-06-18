@@ -39,14 +39,14 @@
 % \oneandhalfspace
 % \doublespace
 
-\renewcommand{\thesisauthor}{Firstname LASTNAME}    %% Your name.
-\renewcommand{\thesismonth}{June}     %% Your month of graduation.
-\renewcommand{\thesisyear}{2015}      %% Your year of graduation.
-\renewcommand{\thesistitle}{LICENSE THESIS TITLE} 
-\renewcommand{\thesissupervisor}{scientific title Firstname LASTNAME}
+\renewcommand{\thesisauthor}{Ioana-C\u{a}lina TUTUNARU}    %% Your name.
+\renewcommand{\thesismonth}{July}     %% Your month of graduation.
+\renewcommand{\thesisyear}{2016}      %% Your year of graduation.
+\renewcommand{\thesistitle}{ATHENA - Aproach for Twitter Harvesting, Enhancement, Normalisation \& Analysis} 
+\renewcommand{\thesissupervisor}{prof. dr. ing. Ioan Salomie}
 \newcommand{\department}{\bf FACULTY OF AUTOMATION AND COMPUTER SCIENCE\\
 COMPUTER SCIENCE DEPARTMENT}
-\newcommand{\thesis}{LUCRARE DE LICEN'T'A}
+\newcommand{\thesis}{MASTER THESIS}
 \newcommand{\utcnlogo}{\includegraphics[width=15cm]{img/tucn.jpg}}
 
 \newcommand{\uline}[1]{\rule[0pt]{#1}{0.4pt}}
@@ -80,11 +80,11 @@ COMPUTER SCIENCE DEPARTMENT}
 
 \vspace{1.5cm}
 
-LICENSE THESIS
+MASTER THESIS
 
-\vspace{6cm}
+\vspace{5cm}
 
-Graduate: {\bf Firstname LASTNAME} 
+Graduate: {\bf Ioana-C\u{a}lina TUTUNARU} 
 
 Supervisor: {\bf \thesissupervisor}
 
@@ -110,7 +110,7 @@ Supervisor: {\bf \thesissupervisor}
 \hspace{-1cm}{\bf Prof. dr. eng. Liviu MICLEA} & {\bf Prof. dr. eng. Rodica POTOLEA}\\  
 \end{tabular}
  
-\vspace{2cm}
+\vspace{1cm}
 
 \begin{center}
 Graduate: {\bf \thesisauthor}
@@ -158,14 +158,12 @@ $ $
 \department
 \end{center}
 
-\vspace{0.5cm}
-
 \begin{center}
 {\bf
 Declara\c{t}ie pe proprie r\u{a}spundere privind\\ 
 autenticitatea lucr\u{a}rii de licen\c{t}\u{a}}
 \end{center}
-\vspace{1cm}
+\vspace{0.5cm}
 
 
 
@@ -212,6 +210,7 @@ Data \hspace{8cm} Nume, Prenume
 
 \newpage
 
+\listoffigures
 \tableofcontents
 \newpage
 
@@ -247,6 +246,14 @@ In chapter~\ref{ch:analysis} of~\cite{strunk}, the {\it similar-to-my-project-th
 \chapter{Analysis and Theoretical Foundation}
 \label{ch:analysis}
 TODO: Producer consumer architecture
+
+\label{plfittheory}
+TODO: Plfit theory and \cite{clauset2009power}
+
+TODO: supervised vs unsupervised
+TODO: kmeans
+\label{kmeansplusplus}
+TODO: Talk about Kmeans++ algorithm
 
 
 Together with the next chapter takes about 60\% of the whole paper
@@ -288,12 +295,20 @@ For the purpose of this application, a number of libraries were installed via \t
 \begin{lstlisting}
 amqp==1.4.9
 anyjson==0.3.3
+appnope==0.1.0
+backports-abc==0.4
+backports.shutil-get-terminal-size==1.0.0
+backports.ssl-match-hostname==3.5.0.1
 beautifulsoup4==4.4.1
 billiard==3.3.0.23
 cassandra-driver==3.4.1
 celery==3.1.18
+certifi==2016.2.28
 cssselect==0.9.1
 cycler==0.10.0
+Cython==0.24
+dask==0.9.0
+decorator==4.0.9
 DistributedLock==1.2
 Django==1.8.13
 django-annoying==0.9.0
@@ -301,26 +316,52 @@ django-m2m-history==0.3.5
 django-oauth-tokens==0.6.3
 django-picklefield==0.3.2
 django-taggit==0.19.1
+functools32==3.2.3.post2
 futures==3.0.5
+gnureadline==6.3.3
+ipython==4.2.0
+ipython-genutils==0.1.0
+Jinja2==2.8
+jsonschema==2.5.1
 kombu==3.0.35
 lxml==3.6.0
+MarkupSafe==0.23
+matplotlib==1.5.1
+mpmath==0.19
+networkx==1.11
 nltk==3.2.1
 numpy==1.11.0
 oauthlib==1.1.1
 pandas==0.18.1
+pathlib2==2.1.0
+pexpect==4.1.0
+pickleshare==0.7.2
+Pillow==3.2.0
+plfit==1.0.2
+ptyprocess==0.5.1
+pylab==0.1.3
 pyparsing==2.1.4
 pyquery==1.2.13
 python-dateutil==2.5.3
 python-memcached==1.58
 pytz==2016.4
+pyzmq==15.2.0
 redis==2.10.3
 requests==2.10.0
 requests-oauthlib==0.6.1
+scikit-image==0.12.3
 scikit-learn==0.17.1
 scipy==0.17.1
+seaborn==0.7.1
+simplegeneric==0.8.1
 simplejson==3.8.2
+singledispatch==3.4.0.3
 six==1.10.0
 sklearn==0.0
+sympy==1.0
+toolz==0.8.0
+tornado==4.3
+traitlets==4.2.1
 tweepy==3.5.0
 \end{lstlisting}
 
@@ -398,13 +439,20 @@ As previously stated, a huge advantage of Python is that third party libraries a
 \subsection{Using Redis as a Celery broker}
 Celery offers a variety of possible brokers for message transport through the job queue. Stable brokers are RabbitMQ and Redis, while others are in Experimental stages or offered by third parties\footnote{http://docs.celeryproject.org/en/latest/getting-started/brokers/}. Redis is an open source data structure store which can perform as a database or cache system, but in our case we are interested in its functionality as a message broker.
 
-Installing Redis is straightforward using a downloaded package and even some available package managers such as Mac's \texttt{brew}. After the installation is complete, the Redis server can be fired up using the command \texttt{redis-server}. A splash screen with Redis' logo as ASCII art should appear, but connection to the running Redis server can also be tested by pinging:
+Installing Redis is straightforward using a downloaded package and even some available package managers such as Mac's \texttt{brew}. After the installation is complete, the Redis server can be fired up using the command \texttt{redis-server}. A splash screen with Redis' logo as ASCII art, such as the example in \ref{fig:redis} should appear, but connection to the running Redis server can also be tested by pinging:
 
 \lstset{basicstyle=\small}
 \begin{lstlisting}
 $ redis-cli ping
 PONG
 \end{lstlisting}
+
+\begin{figure}[ht]
+    \centering
+\includegraphics[width=0.8\columnwidth]{img/redis-splash.png}
+    \caption{Redis splash screen}
+    \label{fig:redis}
+\end{figure}
 
 After the Redis server is properly installed and running, there are some extra steps for hooking it up: adding the Redis configuration settings in our project's \texttt{settings.py} file and installing the \texttt{redis} library using pip. After all these steps are completed, running:
 
@@ -427,7 +475,7 @@ Twitter belongs to a series of web applications which fully understands the deve
 \item an Access Token secret
 \end{itemize}
 
-For harvesting tweets, my approach uses a wrapper to Twitter's Search API called Tweepy. It is a library that handles connection and customised requests to the API, in a Pythonic fashion. Tweepy needs to be installed using pip, and then configured with the proper access keys (here in the code sample replaced with placeholders for security purposes):
+For harvesting tweets, my approach uses a wrapper to Twitter's Search API called Tweepy\footnote{http://tweepy.readthedocs.io/en/v3.5.0/}. It is a library that handles connection and customised requests to the API, in a Pythonic fashion. Tweepy needs to be installed using pip, and then configured with the proper access keys (here in the code sample replaced with placeholders for security purposes):
 
 \lstset{basicstyle=\small}
 \begin{lstlisting}
@@ -475,16 +523,195 @@ for tweet in tweets:
 The stored and completed harvests are now ready for the Enhancement step.
 
 \section{Enhancement tools}
-\subsection{Simple numerical data}
-\subsection{Sci-kit learn}
-\subsection{Related hashtag calculation}
-\subsection{Related hashtag clustering using K-Means}
-\subsection{Page and bot vs. users modeling}
-{\color{red} TODO
-}
+Enhancement tools are concentrated in the enhancement\_manager.py file/module where basic numerical calculations on the data is performed, alongside more complex transformations such as related hashtag collection and hashtag clustering. The process of enhancing data starts on the Enhancement tab, with the user being presented the list of available Harvests. The user decides on the harvest they want to enhance and display by clicking an icon next to the harvest's title.
 
-\section{Normalisation and Analysis tools}
+\subsection{Simple numerical data}
+A number of easily calculated, relevant data is calculated for the user and displayed on the enhancement results page. The number of tweets is calculated using a database query and displayed in a separate \texttt{<div>} on the results page.
+
+\subsubsection{User-related data}
+Upon consuming the tweet generator which resulted from the query, the data related to users is restructured as a Pyhton dictionary having the usernames of keys and the number of documents authored by those users, in the contex of the present harvest. The following numerical data is displayed related to users:
+
+\begin{itemize}
+\item the number of unique users contributing tweets to the enhanced harvest
+\item the maximum number of tweets per user. The author's username is also presented in parantheses, and will usually represent a bot or a domain-related page, e.g. for the \texttt{\#pyhton} hashtag, the highest number of posts in a given day is posted by the user \texttt{@pyhtonbot\_}
+\item the average number of posts per user, which is a metric indicating the general activity level of the harvest's generator hashtag
+\end{itemize}
+
+\subsubsection{Modeling the post numbers}
+Since many a times the number of posts per user tends to skew towards pages and bots, it may be the case that the number of posts indicate a certain pattern. To analyse the eventuality of post numbers as an estimation of a power function, the \texttt{plfit} library was used. First the data was prepared as a list, from the users/posts dictionary described above. 
+
+The \texttt{plfit} library was originally written in Matlab by Clauset et al \cite{clauset2009power} and later converted to R, Python and C++ modules by various developers. It handles calculations regarding data pattern fitting to a power law as described in \ref{plfittheory}. The library is suitable for non-domain-related data, being based on a combined maximum-likelihood fitting and goodness-of-fit tests. It was tested on twenty-four real-world data sets from unrelated fields of study and has found good results with power law fitting.
+
+After importing the \texttt{plfit} library into the enhancement module, a plfit object is created. The tweet numbers are then fitted using the plfit method on the list described above. The minimum value and alpha are printed on the enhancement results page.
+
+\subsection{Sci-kit learn}
+Sci-kit Learn\footnote{http://scikit-learn.org/stable/} is proof of the fact that Python has recently gained much momentum in science and research. Its architecture is build on other stable and related Python science libraries, namely NumPy, SciPy and matplotlib. In fact, upon installation with the \texttt{pip} command line utility, sci-kit also installs these libraries as dependencies. According to a large number of scientists \cite{pedregosa2011scikit} and as displayed on their website, sci-kit learn is used for supervised and unsupervised data mining and data analysis endeavours, including:
+
+\begin{itemize}
+\item Classification
+\item Regression
+\item Clustering
+\item Dimensionality reduction
+\item Model selection
+\item Preprocessing
+\end{itemize}
+
+Other important advantage of this library is its open souce BSD licensing. This means that, even tough it is a highly specialised tool, it is free to use for developers worldwide. The following presents \emph{sci-kit learn}'s employment in ATHENA.
+
+\subsection{Related hashtag calculation}
+Twitter uses a hashtag system to encourage users to tag data for proper search and visibility. Hashtags are words prefixed by a "\#" character, which represent categories of statuses. The hashtag system has been used on Twitter ever since its start, as opposed to other social networks such as Facebook, who only employed tagging much after being launched. Such other social networks have a hashtag disadvantage, since the system did not "catch on" with their users as naturally as it has on early-adopters such as Twitter.
+
+On going into the realm of more complexly calculated data, as opposed to the numerical values extracted directly from the list of tweets, calculating a harvest's related hashtags is a more difficult task and is achieved using sci-kit learn. Figure \ref{fig:tweet} presents a sample tweet (the screenshot was taken on 7th June 2016), and it is clear empirically from such status messages that hashtags can be interpreted as category labels.
+
+\begin{figure}[ht]
+    \centering
+\includegraphics[width=0.8\columnwidth]{img/tweet.png}
+    \caption{Sample status message with hashtags}
+    \label{fig:tweet}
+\end{figure}
+
+The tweet in Figure \ref{fig:tweet} also empirically demonstrates that the same post belongs to a number of related categories, in this case \emph{yoga}, \emph{fitness}, \emph{lolesport}, \emph{gym}, \emph{cardiotime}, \emph{sports}, \emph{workout} and \emph{zumba}. Indded these hashtags seem much related to one another, in this case, all belonging to a domain of sport and fitness.
+
+Analysing each status' component hashtags will reveal related hashtags. As part of the enhancement process, we consider all the related collected tweets which compose a harvest and go trough the \texttt{get\_vocabulary} function, much like in the grammatical process of collecting a word's semantic field.
+
+\subsubsection{Getting the hashtag vocabulary}
+For the purpose of getting the list of related hashtags to our own harvest's base hashtag, we use a few customised components from the \emph{sci-kit learn} toolbelt. I start by vectorizing the list of tweets using the \texttt{TfidfVectorizer} with the following options:
+
+\begin{itemize}
+\item \texttt{min\_df=10}, to prevent hashtags who appear in less than 10 tweets appearing in our final list of results. This prevents noise generated by use-once hashtags through unusual, parody or disparate hashtags.
+\item \texttt{max\_df=0.8}, to prevent flooding with most-common hashtags appearing in more than 80\% of the corpus
+\item \texttt{sublinear\_tf=True} to use a sublinear function. A linear idf function may boost the document scores sometimes, but since the frequency of a term to relevance is usually a sublinear function, we use this option to ensure higher-precision results.
+\item \texttt{use\_idf=True} to enable inverse-document-frequency re-weighting
+\item \texttt{max\_features=25} to limit our search of most relevant related hashtags to a number of 25. We do this so that only the best most relevant hashtags are displayed for the user and prevent them being distracted by too much information.
+\item \texttt{token\_pattern='\#[a-zA-Z0-9][a-zA-Z0-9]*'}. This option takes a regular expression (RegEx) argument which it uses to identify relevant tokens inside the corpus. Since we are only interested in hashtags and not other content words, the RegExp introduced forces the vectorizer to only consider "words" that start with a "\#' symbol and has one or more alphanumerical characters afterwards.
+\end{itemize}
+
+The sparse matrix indicating term frequency is obtained using the initialized vectorizer to \texttt{fit\_transform} the list of tweets' texts. Although a sparse matrix would overwhelm a non-expert user, and I have chosen not to display it as part of the enhancement results, the structure's content can be printed on the console and used for debugging and bird's eye correctness checking.
+
+\begin{figure}[ht]
+    \centering
+\includegraphics[width=0.5\columnwidth]{img/relhashtags.png}
+    \caption{Example of related hashtags in a \#Python harvest over one day}
+    \label{fig:relhashtags}
+\end{figure}
+
+We do however return the \texttt{vocabulary} variable. We calculate this by having the vectorizer perform the \texttt{get\_feature\_names()} method. This enables us to print a list of related hashtags on the enhancement results page in a separate \texttt{div}, as exemplified in Figure \ref{fig:relhashtags}. Indeed the empyrical data obtained in the example for the \#python hashtags showcases some of Python's most popular features (\#bigdata, \#machinelearning), tools (\#django, \#flask) and related technologies (\#javascript, \#ruby, \#r).
+
+\subsection{Related hashtag clustering using KMeans}
+Another interesting aspect the hashtags indicate is that there are some general directions (or common features) of our text. In a supervised approach, this could be tackled with an adnotated training dataset which would help classify the data. However, since ATHENA is based on user input and analysis of non-domain-related documents, such an approach is not appropriate.
+
+One of the most classic approaches in classifying non-adnotated data is the K-Means clustering algorithm. Luckily \emph{Sci-kit learn} also contains tools for clustering approaches, including various implementations of K-Means variants.
+
+Calculations start similarly to the approach described above, for related hashtags, but features an extra step for clustering. The concern for choosing a number of cluster centroids was similar to the one choosing the number of related hashtags to be displayed: A number of 5 centroids was chosen with the goal of having enough diversification, but not too many clusters to display, so as not to confuse the user. In a more domain-tweaked approach, the number of clusters would have been chosen according to the data's structure, but here it is a trade-off between the various factors explained.
+
+A new \texttt{TfifVectorizer} object is instantiated with similar options, except for the \texttt{max\_df}, in order to also consider highly-used hashtags. After reproducing the \texttt{fit\_transform} step and obtraining the fitted set X, we apply the KMeans algorithm as such:
+
+\lstset{basicstyle=\small, breaklines=True}
+\begin{lstlisting}
+from sklearn.cluster import KMeans
+[...]
+
+model = KMeans(n_clusters=true_k, init='k-means++', max_iter=100, n_init=1)
+model.fit(X)
+\end{lstlisting}
+
+For the centroid initialisation, I chose the "K-Means++" algorithm described in \ref{kmeansplusplus}, a maximum number of iterations towards the solution of 100. The \texttt{n\_init} option instructs the K-Means algorithm to run  just once with different centroid seeds. In case a larger number would have been chosen, the output of the algorithm would have been the best output during these runs.
+
+\subsubsection{Ordering and displaying the hashtag clusters}
+The main issue with clustering generation, as directly resulted from the \emph{Sci-kit} K-Means algorithm, is that the clusters are not ordered. Items are assigned with some probability to each cluster, but there is no clear representation and collection of those clusters. In order to properly display these clusters on the results page, though, they need to be sorted and formatted.
+
+\lstset{basicstyle=\small, breaklines=True}
+\begin{lstlisting}
+order_centroids = model.cluster_centers_.argsort()[:, ::-1]
+terms = vectorizer.get_feature_names()
+clusters = {}
+
+for i in range(true_k):
+    cluster_name = 'Cluster ' + str(i+1) + ':'
+    cluster = {}
+    for ind in order_centroids[i, :10]:
+        cluster[ind] = str(terms[ind])
+    clusters[cluster_name] = cluster
+
+    return clusters
+\end{lstlisting}
+
+Note the similarity to the previously described feature. The terms are fetched just the same, and then their assignment to the clusters is checked. The resulting structure is a dictionary consisting of cluster names as keys and hashtags (from the same cluster) as values.
+
+They are returned to the controller, then to the front-end part and displayed via Django's templating engine. For a better understanding of their separation, each cluster is placed into its own div with Bootstrap's \texttt{well} CSS class, which adds a separate wrapper and colouring to its contents. Figure \ref{fig:clusters} presents an example of such a clustering.
+
+\begin{figure}[ht]
+    \centering
+\includegraphics[width=0.7\columnwidth]{img/clusters.png}
+    \caption{Example of clustered hashtags in a \#Python harvest over one day}
+    \label{fig:clusters}
+\end{figure}
+
+It can be seen in the example that the clusters follow a structure similar to Python's main fields of development.
+
+\begin{enumerate}
+\item the first cluster is correspondent to some genric Python fields: \#flask, \#coding, \#artificialintelligence
+\item the second cluster is correspondent to Python conventions, promotions and opportunities for development: \#free, \#gamedev, \#hiring, \#pycon
+\item the third cluster relates to front-end technologies and their prevalence in Python conventions: \#html, \#ux
+\item the fourth cluster relates to Python's endeavours in machine learning: \#machinelearning, \#bigdata, \#numpy, \#datascience, \#r, \#rstats
+\item the fifth cluster is a collection of technologies related to Python or generally used alognside it: \#postgresql, \#django, \#flask, \#javascript
+\end{enumerate}
+
+New clustering is calculated with every refresh, and the user can observe a high degree of convergence for rich hashtags such as our \#python example. For one-fold or loosely related hashtags, the number of centroids chosen might indeed be too large.
+
+\section{Normalisation}
+\subsection{Reasons and options}
+As previously discussed, many a times the dataset is skewed due to spikes and outliers such as pages and bots. The normalisation step helps with the process of eliminating outliers and possible fakers, by flattening the dataset to a single representative post per each user. This is done mostly because professional pages intentionally use repetitive hashtags to promote certain events. On the other hand, bots scan for and retweet statuses which feature specific content, which results in the flooding of the dataset with promotional messages. Both these series of events lead to skewed dataset wich is easily recognisable by its fitting to a power function.
+
+Remember that the Enhancement step only takes regular harvests as inputs, as it calculates power set fitting, likely pages and outliers etc. In a similar fashion, the Analysis step will only consider normalised harvests as permitted input. This means that output of the Normalisation step should be properly stored, in a separate table.
+
+It must also be noted that the Normalisation step is still in its early proof of concept ages, since the main focus of this application was to develop and validate the Harvesting, Enhancement and Analysis steps, and only then add more functionality to the Normalisation module. Proper Normalisation should indeed take into consideration various factors:
+
+\begin{itemize}
+\item flattening process: 
+\begin{itemize}
+\item one post per user, to remove outliers such as pages and bots
+\item multiple posts-only, to analyse only regular users, which use the hashtag more times, which would filter out accidental ones with opinions that might be unrepresentative for the community
+\item popular posts-only, considering only posts with retweet count larger than a threshold $r$
+\item liked posts-only, considering only posts with like count larger than a threshold $l$.
+\item combinations of the above options
+\end{itemize}
+\item time period considered
+\begin{itemize}
+\item short term options: $n$-days with $n\leq7$, $m$-hour normalisation
+\item long term options: $n$-days with $n>7$, which would also imply the possibility of streaming harvests on a longer period, per Twitter API's rate limits.
+\end{itemize} 
+\end{itemize}
+
+Each normalisation method has its very own advantages and drawbacks, so in order to choose a viable normalisation method to implement, the following was considered: Unfortunately with promotional messages such as those posted by pages and bots, the retweet and like counts is often tied to some form of prize or gratification a user gets for sharing the content. This means that the popularity of the tweet is many a times artificially boasted using a variety of marketing methods. Also, it might be the case that few users actually post multiple tweets in a short-term amount of time, which rules out the second option of flattening as well.
+
+Current implementation restricts normalisation options to one post per user and one-day date limits. However, the code is designed in such a fashion that new options should be added easily, when the need arises.
+
+\subsection{One post per user, one-day limit normalisation process}
+The process I describe below is currently the only allowed Normalisation process, with more to come after testing and user validation of the ATHENA proof of concept app. This method of normalisation intends to remove outlier influence of pages, bots and fake accounts.
+
+The first interface presented to the user in the Normalisation step is a form containing the list of harvests in a dropdown. After submitting the form, the selected harvest is sent to the \texttt{normalisation\_manager.py} file through the controller. This manager file contains the process necessary to fetch the harvest's tweets from the database and flattening the result into a list.
+
+The method used was the classical approach of duplicate removal using HashMaps (as implemented in the Python dictionary data type). Using the username as the dictionary's key, the last occurrence in the list of tweets for each user is considered. The value of this result dictionary is a tuple of tweet id and tweet content, which are later used in the Analysis module. Of course, the tweet's post date is also considered, in order to filter out tweets outside the date limit.
+
+Results are stored in the \texttt{normal} database table, which has a structure consisting of the following columns:
+\begin{itemize}
+\item original harvest uuid, which facilitates comparison between corresponding normalised and regular harvests
+\item name of the normalised harvest (formed using the original harvest's name and the normalisation type details)
+\item JSON-serialised normalised dictionary resulting from the normalisation step
+\end{itemize}
+
+Or, as CQL script:
+\begin{lstlisting}
+CREATE TABLE normal (uuid uuid, name text, content text, PRIMARY KEY(uuid));
+\end{lstlisting}
+
+Multiple formats would have been suitable for serialisation if persistence only was considered. But in the idea of adding a RESTful module to the application, enabling its use from mobile and web applications seamlessly, the normalisation result is stored in a JSON format. JSON is a widely-spread and widely-used format for REST service communication and is easily integrated with Python and Django via the \texttt{json} library. The contents of the Python data structure is encoded using \texttt{json.dumps()}, while the loading from a string and into a Python data structure can be achieved using \texttt{json.loads()}.
+
+\section{Analysis}
 {\color{red} TODO
+}\section{Code organisation}
+{\color{red} TODO until page 44
 }
 
 \chapter{Testing and Validation}
@@ -497,7 +724,7 @@ About 5\% of the paper
 
 In the installation description section your should detail the hardware and software resources needed for installing and running the application, and a step by step description of how your application can be deployed/installed. An administrator should be able to perform the installation/deployment based on your instructions.
 
-In the user manual section you describe how to use the application from the point of view of a user with no inside technical information; this should be done with screen shots and a stepwize explanation of the interaction. Based on user's manual, a person should be able to use your product.
+In the user manual section you describe how to use the application from the point of view of a user with no inside technical information; this should be done with screen shots and a stepwise explanation of the interaction. Based on user's manual, a person should be able to use your product.
 
 \section{Title}
 \section{Other title}

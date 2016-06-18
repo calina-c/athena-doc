@@ -21,6 +21,10 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{clauset2009power}
+A.~Clauset, C.~R. Shalizi, and M.~E. Newman, ``Power-law distributions in
+  empirical data,'' \emph{SIAM review}, vol.~51, no.~4, pp. 661--703, 2009.
+
 \bibitem{tiobeindex}
 ``{TIOBE index May 2016},'' \url{http://www.tiobe.com/tiobe_index?page=index},
   2016, [Online; accessed 5-June-2008].
@@ -28,5 +32,11 @@
 \bibitem{millman2011python}
 K.~J. Millman and M.~Aivazis, ``Python for scientists and engineers,''
   \emph{Computing in Science \& Engineering}, vol.~13, no.~2, pp. 9--12, 2011.
+
+\bibitem{pedregosa2011scikit}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg \emph{et~al.},
+  ``Scikit-learn: Machine learning in python,'' \emph{The Journal of Machine
+  Learning Research}, vol.~12, pp. 2825--2830, 2011.
 
 \end{thebibliography}
