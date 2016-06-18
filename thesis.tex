@@ -744,11 +744,23 @@ In order to calculate the domain breakdown between the two normalised harvests, 
 
 Of course displaying the raw numbers on the results page doesn't help the user that much. It is therefore necessary to perform some extra steps to indicate the polarisation of the domain between the two hashtags: displaying the numbers as a graphical pie chart. Such a chart indicates the proportions of users who post exclusively for each hashtag and common users, who represent the middle ground.
 
-\subsubsection{Displaying the chart using Google Charts API}
-{\color{red} TODO
-}
-
 Figure \ref{fig:piechart} presents the results for the user proportions between two hashtags: \#python and \#php. The results indeed seem to match with empyrical real-life data, since the two are both back-end programming languages and it is rarely seen that both are used by the same people or in the same projects. Results also display a highly-polarised domain, with a slight better cult of Python, which can be confirmed from other sources such as the TIOBE index, which maintains Python is more popular than PHP.
+
+\subsubsection{Displaying the chart using Google Charts API}
+A number of approaches for HTML charting are available for free use. Some work primarily on the back-end with image generation, while some are exclusively front-end. Among the simplest and easiest to use approaches is using Google Chart API, a javascript library for front-end chart generation. The image in \ref{fig:piechart} is captured from the application and is indeed generated using Google Chart API. The code is fairly straightforward, using javascript on the front-end side, from the list of values.
+
+\begin{lstlisting}
+var data = google.visualization.arrayToDataTable([
+      ['Norm. Harvest', 'Number of posts'],
+      ["{{ h1 }}",     {{ proportions.0 }}],
+      ["{{ h2 }}",     {{ proportions.1 }}],
+      ["common",     {{ proportions.2 }}],
+    ]);
+\end{lstlisting}
+
+Note that the curly brackets used are from Django's templating engine, and are variables which are passed from the controller onto the view. When executing the javascript code, the values are already replaced with the corresponding values and will execute like normal strings or numbers within the code.
+
+Hovering the mouse over one pie chart slice generates a dialog containing both the raw number and the proportion from the total, as shown in the figure as well, onto \emph{php one day normalisation}.
 
 \begin{figure}
     \centering
@@ -758,8 +770,103 @@ Figure \ref{fig:piechart} presents the results for the user proportions between 
 \end{figure}
 
 \section{Code organisation}
-{\color{red} TODO until page 44
-}
+Generally speaking, the code is organised in a classical MVC (Model-View-Controller) fashion, with specifics related to Django's recommentations. As per their recommended usage, the functionality is separated into an app called \texttt{athena\_app} found in the \texttt{athena} workspace, under a virtual environment wrapper with Django 1.8 installed. 
+
+\subsection{File and folder structure}
+As Django tends to encourage reusability, some of the scaffolding and file structure is generated via commands using the \texttt{manage.py} command line utility. E.g., upon creating a new app, a directory structure is also created containing:
+
+\begin{itemize}
+\item \texttt{urls.py}, the file which contains URL path definitions and directs received data to the corresponding views, as defined by the user. Our application currently defines a total of 8 URLs, for the index page, harvest, enhancement, normalisation and analysis page as well as some result pages. The local \texttt{urls.py} file is imported into the main \texttt{urls.py} which resides in the root of the project.
+\item \texttt{views.py}, the file which contains what other frameworks call "controller actions". These functions determine the behaviour of the application when encountering the data matched by respective entries in \texttt{urls.py}. As a general best practice, our functions in \texttt{views.py} either inherit and override significant parts of Django generic views\footnote{Code templates for widely-used functionalites such as CRUD, forms or simple HTML rendering views}, or use minimal code and delegate to manager files for the core functionality.
+\item \texttt{models.py}, which should contain model definition. This file was not used, since database queries were written manually in CQL, which is not that well supported by Django's migration creating structure for models and migrations.
+\item \texttt{forms.py} which contains form definitions, holding part of the functionality, field definitions and validation instructions
+\item other various folders such as the \texttt{static} folder where static files such as images, CSS and JS are stored, and the \texttt{templates} folder where html views are stored. Our application's static folder contains various Twitter Bootstrap CSS and JS elements for beautifying the front-end, while our templates directory holds a number of 6 individual views (mostly corresponding to the URLs enumerated above) and one \texttt{base.html} view which the others use as a general template. This enables us to only overwrite those sections which change and leave the menu and headers generally intact.
+\item some other files and folders which we have not used and are beyond the scope of our application, such as \texttt{admin.py} (which should define administrative actions with Django Admin) and others.
+\end{itemize}
+
+Python's import structure is defined using file names and classes/functions defined inside those files. This makes it easy to use functions from files such as managers, by simply importing those functions. The separation of concerns principle is very important for proper maintenance and good functionality of the code, so the controllers stay light and handle Request processing and Response sending, while the core work is done separately in managers. The application defines a number of four managers:
+
+\begin{itemize}
+\item \texttt{harvest\_manager.py}, dealing with harvesting jobs and used primarily from the harvest parts of the \texttt{view.py} file
+\item \texttt{enhancement\_manager.py}, dealing with the enhancement-concerned parts of the application
+\item \texttt{normalisation\_manager.py}, dealing with flattening the datasets as instructed by the corresponding actions in \texttt{views.py}
+\item \texttt{analysis\_manager.py}, containing analysis functions and used by the Analysis module
+\end{itemize}
+
+As previously stated, Python's simple structure make it easy to import functions from the managers inside the views using specific commands and then straightforwardly using the function, e.g.:
+
+\begin{lstlisting}
+from athena_app.harvest_manager import get_harvests
+[...]
+result = get_harvests()
+\end{lstlisting}
+
+\subsection{Using Django generic views}
+Django offers the possibility of reusing specific classes from their very own codebase, classes which were designed for repetitive tasks. As opposed to having programmers code their very own implementations of rendering simple HTML views, creating and validation forms or performing CRUD (Create, Update, Delete) funcionalities, these classes, called generic views, can be directly used, or efficiently customised by overwriting a few attributes or methods.
+
+ATHENA uses Django's \texttt{FormView} and the basic \texttt{View}, imported from
+
+\texttt{django.views.generic.edit} and 
+
+\texttt{django.views.generic.base}
+
+respectively. The former is used for creating the Enhancement and Normalisation harvest selection page, and the Analysis pairwise normalised harvest selection page. FormView is also used when creating the harvest and is perhaps the most representative example, combining fields of various types and a special success method performed on return.
+
+The HarvestForm is defined in \texttt{forms.py} and used inside the FormView in \texttt{views.py}. Inside the class definition an extra method was added, called \texttt{create\_harvest}, which is not an override of any parent method, but instead contains instructions on performing the asynchronous job of creating the harvest. Otherwise, the rest of the Form definition consists of field declarations with their corresponding types:
+
+\begin{itemize}
+\item \texttt{hashtag} as type \texttt{CharField}, the hashtag used for searching tweets on Twitter API
+\item \texttt{start\_date} as type \texttt{DateField}, the beginning date for filtering tweets
+\item \texttt{end\_date} similarly, represents the end date for tweet filtering
+\end{itemize}
+
+HarvestView inherits from Django's FormView and overwrites some fields and methods, which are somewhat instructive for understanding the other customised Forms and FormViews defined inside the application's codebase:
+
+\begin{itemize}
+\item template name: path of the HTML template to render
+\item form class: the HarvestForm we defined in \texttt{forms.py} and imported here
+\item success url: where the view should redirect upon form submission and success
+\item get context data(): defines extra variables to be passed to the templating engine. In our case, it is the list of available harvests.
+\item form valid(): extra validation and/or steps to be performed in case of success
+\end{itemize}
+
+In regards of the classic \texttt{View} generic, its only overwritten method was \texttt{get()} which instructs the view on the course it should consider when receiving a GET-type HTML request.
+
+\subsection{List comprehensions and other Python specifics}
+Python is a language of simplicity, but it is also a language difficult to understand from the outside. Its focus on simplicity starts from the building blocks: no visibility modifiers, easy import management, indentation-based execution blocks. However, some simplifications may seem obscure.
+
+One of such shorthand becoming cipher is the declaration of arrays and lists, as in:
+\begin{lstlisting}
+    tweet_texts = []
+    tweet_users = {}
+\end{lstlisting}
+
+This snippet first declares an array called tweet\_texts, while the second, tweet\_users, is a dictionary. To complicate things even worse, tuples are declared using round braces. This is in opposition to the generally verbose approach of other programming languages and is important to note.
+
+On a related note, list and dictionary comprehensions are an efficient way of creating or filtering a list or dictionary with as less code written as possible. Code such as:
+
+\begin{lstlisting}
+    [
+        (
+            x.uuid,
+            x.name
+        )
+        for x in all_harvests
+    ]
+\end{lstlisting}
+
+may be perceived as ambiguous for unfamiliar users. However for Python developers it becomes clear that this snippet produces a list of tuples from the iterable \texttt{all\_harvests}, with tuples containing the iterable element's uuid and name. In English, what this does it that it filters out some unnecessary properties in all harvests and transforms the list of objects into a simple list of pairs(uuid, name).
+
+\subsection*{Summary}
+In this section the details of implementation inside ATHENA were explained. The choice of Python and Django as programming language and frameowrk respectively were motivated by their large-scale use in developing scientific applications and web applications in general. The list of third party libraries was covered, with focus on particular libraries and their usage throughout the application.
+
+The persistence model was chosen to be non-relational and scalable, in order to support scaling the system to a larger number of nodes and eventually moving towards a distributed web application. The task of fetching Twitter statuses was handled using asynchronous job running, using the Producer-Consumer architecture, via the Celery library with Redis as a message broker. This approach ensures the user doesn't have to wait for a job to finish before continuing to use the application independently. Inside the job, rate limits and concrete Twitter API communication were handled using Tweepy, a Python wrapper. The resulting, grouped information is called a Harvest.
+
+The Enhancement step displays numerical data, a harvest's related hashtags and uses the acclaimed Sci-kit library to perform clustering on domain hashtags, using the K-Means algorithm. Another issue ATHENA tackles is the fitting of the post numbers dataset to a power function, investigating on outliers such as pages, bots and fake accounts producing significally more content than regular users.
+
+The Normalisation step flattens the data set in a "one post per user, one day" fashion, with other normalisation options currently in development. The Analysis step uses the data flattened, filtered and stored by Normalisation to provide more details about the comparison between two harvests. Such data includes vocabulary commonalities and polarisation analysis, to help the user decide whether one of the user groups or even both may be exploited in marketing strategies.
+
+The final part of this section approaches Python particularities which are used in the application but might seem unfamiliar to developers coming from different backgrounds, such as Java or PHP, where coding is usually more verbose.
 
 \chapter{Testing and Validation}
 
