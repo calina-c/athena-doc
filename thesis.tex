@@ -709,8 +709,55 @@ CREATE TABLE normal (uuid uuid, name text, content text, PRIMARY KEY(uuid));
 Multiple formats would have been suitable for serialisation if persistence only was considered. But in the idea of adding a RESTful module to the application, enabling its use from mobile and web applications seamlessly, the normalisation result is stored in a JSON format. JSON is a widely-spread and widely-used format for REST service communication and is easily integrated with Python and Django via the \texttt{json} library. The contents of the Python data structure is encoded using \texttt{json.dumps()}, while the loading from a string and into a Python data structure can be achieved using \texttt{json.loads()}.
 
 \section{Analysis}
+The Analysis module features a lot of similarity to both Enhancement and Normalisation, except that in both cases, the pages contain double the harvests. Firstly, the form step of Analysis contains two dropdowns which are populated with normalised harvests. After choosing a pair of harvests for comparison, the application redirects to a page displaying the analysis results.
+
+As per previous modules, this one also has a dedicated manager file, called \texttt{analysis\_manager}. Analysis jobs are therefore passed from the controller to the manager and the results are sent back after calculation. A number of analysis types are run on the normalised harvests, including common vocabulary, common users and post proportions.
+
+\subsection{Retrieving the normalised results}
+The task of retrieving the previously saved normalised results is a fairly simple one, consisting of connecting to the database, running a query to select the two normalised entries as selected in the form (using their respective uuids) and deserialising the JSON string in the content using the \texttt{json.loads()} function. The deserialised result is exactly as the one calculated in the Normalisation step, i.e. the keys are the users and the values are tuples of significant data, including tweet content.
+
+\subsection{Calculating the common vocabulary}
+The common vocabulary of hashtags is a type of analysis inspired from the previous Enhancement step. We are interested, in case of hashtag pairs belonging to the same fields or domains, in their very own, particular characteristics (handled here with Enhancement), but also in some common values which the share. One such important question is whether there are any common labels between the two.
+
+Common vocabulary generation is very much similar to vocabulary generation, as done in the Enhancement module. Hence the calculation consists of both respective vocabularies intersected. This means that the vocabulary function from enhancement can be reused in a DRY (Do not Repeat Yourself) fashion. The operation of intersection is done using the \& operator between the two sets, which is an efficient way of getting the result without much code written.
+
+Figure \ref{fig:commonvocab} shows an example of results for the comparison between one-day normalisations of the \#python and \#php hashtags, indicating two general categories the two belong to (\#programming and \#coding), and two technologies usually associated to them, one on the front-end side (\#javascript) and one on back-end (\#java)
+
+\begin{figure}
+    \centering
+\includegraphics[width=0.5\columnwidth]{img/commonvocab.png}
+    \caption{Example of common vocabulary in \#Python vs \#PHP comparison}
+    \label{fig:commonvocab}
+\end{figure}
+
+\subsection{Calculating common users}
+Common users are calculated in a similar fashion to that described above. Since the result deserialised from the database is a dictionary with unique keys (Python dictionaries are based on an underlying HashMap structure), the only task is to combine the two key arrays using an intersection operator, as previously done for the vocabulary part, e.g.:
+
+\[common\_users = set(h1\_users) \& set(h2\_users)\]
+
+\subsection{Calculating post numbers and proportions}
+Another important metric is the prevalence of posts belonging to a harvest as part of the domain. In comparing two normalised harvests, we are interested in the proportion of each exclusive tag and also the number of common posts. These metrics show whether one or the other hashtag is the most productive in number of posts, which may indicate number of supporters. Furthermore, by analysing the numbers and proportions of these posts, we can deduce whether the domain is clearly split between the two hashtags, or whether there is a lot of gray area, which contains posts belonging to both categories. This latter option would indicate that supporters of both concepts are fluid and have no clear preference, while a clear separation could indicate die-hard fans.
+
+Of course this relation can be exploited in a number of ways. In a very hostile, polarised domain, the user can analyse the risks of appealing to one of the groups, while rejecting the other. However in a cohesive domain with much middle ground, a good option is to appeal to the general unifying concepts.
+
+In order to calculate the domain breakdown between the two normalised harvests, we consider users as a point of reference. We have already calculated the set of common users during the previous steps, so now we calculate the difference sets using the lists of posting users in each harvest and excluding the common ones.
+
+Of course displaying the raw numbers on the results page doesn't help the user that much. It is therefore necessary to perform some extra steps to indicate the polarisation of the domain between the two hashtags: displaying the numbers as a graphical pie chart. Such a chart indicates the proportions of users who post exclusively for each hashtag and common users, who represent the middle ground.
+
+\subsubsection{Displaying the chart using Google Charts API}
 {\color{red} TODO
-}\section{Code organisation}
+}
+
+Figure \ref{fig:piechart} presents the results for the user proportions between two hashtags: \#python and \#php. The results indeed seem to match with empyrical real-life data, since the two are both back-end programming languages and it is rarely seen that both are used by the same people or in the same projects. Results also display a highly-polarised domain, with a slight better cult of Python, which can be confirmed from other sources such as the TIOBE index, which maintains Python is more popular than PHP.
+
+\begin{figure}
+    \centering
+\includegraphics[width=\columnwidth]{img/piechart.png}
+    \caption{Proportions of users who post \#Python vs \#PHP tagged statuses}
+    \label{fig:piechart}
+\end{figure}
+
+\section{Code organisation}
 {\color{red} TODO until page 44
 }
 

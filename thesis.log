@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  18 JUN 2016 13:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  18 JUN 2016 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -580,34 +580,48 @@ Package pdftex.def Info: img/clusters.png used on input line 645.
 (pdftex.def)             Requested size: 321.2986pt x 366.92297pt.
 
 [34] [35 <./img/clusters.png>] [36] [37] [38]
+<img/commonvocab.png, id=143, 431.6125pt x 97.36375pt>
+File: img/commonvocab.png Graphic file (type png)
+
+<use img/commonvocab.png>
+Package pdftex.def Info: img/commonvocab.png used on input line 728.
+(pdftex.def)             Requested size: 229.5pt x 51.7704pt.
+ [39 <./img/commonvocab.png>]
+<img/piechart.png, id=148, 752.31062pt x 191.21437pt>
+File: img/piechart.png Graphic file (type png)
+ <use img/piechart.png>
+Package pdftex.def Info: img/piechart.png used on input line 755.
+(pdftex.def)             Requested size: 459.0pt x 116.66684pt.
+
+[40 <./img/piechart.png>]
 Chapter 6.
-[39
+[41
 
 ]
 Chapter 7.
-[40
+[42
 
 ]
 Chapter 8.
-(./thesis.bbl [41
+(./thesis.bbl [43
 
-]) [42
+]) [44
 
 ]
 \openout2 = `apendix.aux'.
 
  (./apendix.tex
 Appendix A.
-[43
+[45
 
 
 ]
 Appendix B.
-[44
+[46
 
 ]
 Appendix C.
-) [45
+) [47
 
 ] (./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux)
 (./apendix.aux))
@@ -616,11 +630,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5707 strings out of 493089
- 74854 string characters out of 6134843
- 191051 words of memory out of 5000000
- 8977 multiletter control sequences out of 15000+600000
- 46253 words of font info for 107 fonts, out of 8000000 for 9000
+ 5721 strings out of 493089
+ 75106 string characters out of 6134843
+ 191073 words of memory out of 5000000
+ 8988 multiletter control sequences out of 15000+600000
+ 47756 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,8n,32p,884b,1496s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
@@ -635,10 +649,10 @@ exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (42 pages, 712161 bytes).
+Output written on thesis.pdf (44 pages, 767319 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
+ 218 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
