@@ -1,68 +1,79 @@
 \contentsline {chapter}{List of Figures}{9}
-\contentsline {chapter}{Chapter{} \numberline {1}Introduction - Project Context}{12}
-\contentsline {section}{\numberline {1.1}Project context}{12}
-\contentsline {subsection}{\numberline {1.1.1}Social Media and why people care about what it says}{13}
-\contentsline {subsection}{\numberline {1.1.2}Data Analysis tools today}{13}
-\contentsline {subsection}{\numberline {1.1.3}Crossroads: Social Media in Business Intelligence}{13}
-\contentsline {chapter}{Chapter{} \numberline {2}Project Objectives and Specifications}{15}
-\contentsline {section}{\numberline {2.1}Web architecture}{15}
-\contentsline {subsection}{\numberline {2.1.1}Data storage}{16}
-\contentsline {section}{\numberline {2.2}ATHENA breakdown}{16}
-\contentsline {subsection}{\numberline {2.2.1}Twitter as data source}{16}
-\contentsline {subsubsection}{Fetching data through asynchronous jobs}{17}
-\contentsline {subsection}{\numberline {2.2.2}Harvesting}{17}
-\contentsline {subsection}{\numberline {2.2.3}Enhancement}{18}
-\contentsline {subsubsection}{User contribution modeling}{18}
-\contentsline {subsection}{\numberline {2.2.4}Normalisation and analysis}{18}
-\contentsline {section}{\numberline {2.3}Non-functional requirements}{18}
-\contentsline {chapter}{Chapter{} \numberline {3}Bibliographic research}{20}
-\contentsline {section}{\numberline {3.1}Title}{20}
-\contentsline {section}{\numberline {3.2}Other title}{20}
-\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{21}
-\contentsline {section}{\numberline {4.1}Title}{21}
-\contentsline {section}{\numberline {4.2}Other title}{21}
-\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{22}
-\contentsline {section}{\numberline {5.1}Python and Django}{22}
-\contentsline {subsubsection}{Python for scientists}{22}
-\contentsline {subsubsection}{Python libraries}{22}
-\contentsline {section}{\numberline {5.2}Storage with Cassandra}{24}
-\contentsline {subsection}{\numberline {5.2.1}Database structure}{25}
-\contentsline {section}{\numberline {5.3}Harvesting tools}{26}
-\contentsline {subsection}{\numberline {5.3.1}Celery for asynchronous jobs}{26}
-\contentsline {subsection}{\numberline {5.3.2}Using Redis as a Celery broker}{26}
-\contentsline {subsection}{\numberline {5.3.3}Fetching data from Twitter using the Search API and Tweepy}{27}
-\contentsline {section}{\numberline {5.4}Enhancement tools}{29}
-\contentsline {subsection}{\numberline {5.4.1}Simple numerical data}{29}
-\contentsline {subsubsection}{User-related data}{29}
-\contentsline {subsubsection}{Modeling the post numbers}{30}
-\contentsline {subsection}{\numberline {5.4.2}Sci-kit learn}{30}
-\contentsline {subsection}{\numberline {5.4.3}Related hashtag calculation}{31}
-\contentsline {subsubsection}{Getting the hashtag vocabulary}{31}
-\contentsline {subsection}{\numberline {5.4.4}Related hashtag clustering using KMeans}{32}
-\contentsline {subsubsection}{Ordering and displaying the hashtag clusters}{34}
-\contentsline {section}{\numberline {5.5}Normalisation}{36}
-\contentsline {subsection}{\numberline {5.5.1}Reasons and options}{36}
-\contentsline {subsection}{\numberline {5.5.2}One post per user, one-day limit normalisation process}{37}
-\contentsline {section}{\numberline {5.6}Analysis}{38}
-\contentsline {subsection}{\numberline {5.6.1}Retrieving the normalised results}{38}
-\contentsline {subsection}{\numberline {5.6.2}Calculating the common vocabulary}{38}
-\contentsline {subsection}{\numberline {5.6.3}Calculating common users}{39}
-\contentsline {subsection}{\numberline {5.6.4}Calculating post numbers and proportions}{39}
-\contentsline {subsubsection}{Displaying the chart using Google Charts API}{40}
-\contentsline {section}{\numberline {5.7}Code organisation}{41}
-\contentsline {subsection}{\numberline {5.7.1}File and folder structure}{41}
-\contentsline {subsection}{\numberline {5.7.2}Using Django generic views}{42}
-\contentsline {subsection}{\numberline {5.7.3}List comprehensions and other Python specifics}{43}
-\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{46}
-\contentsline {section}{\numberline {6.1}Title}{46}
-\contentsline {section}{\numberline {6.2}Other title}{46}
-\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{47}
-\contentsline {section}{\numberline {7.1}Title}{47}
-\contentsline {section}{\numberline {7.2}Other title}{47}
-\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{48}
-\contentsline {section}{\numberline {8.1}Title}{48}
-\contentsline {section}{\numberline {8.2}Other title}{48}
-\contentsline {chapter}{Bibliography}{49}
-\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{50}
-\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{51}
-\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{52}
+\contentsline {chapter}{Chapter{} \numberline {1}Introduction - Project Context}{13}
+\contentsline {section}{\numberline {1.1}Project context}{13}
+\contentsline {subsection}{\numberline {1.1.1}Social Media and why people care about what it says}{14}
+\contentsline {subsection}{\numberline {1.1.2}Data Analysis tools today}{14}
+\contentsline {subsection}{\numberline {1.1.3}Crossroads: Social Media in Business Intelligence}{14}
+\contentsline {chapter}{Chapter{} \numberline {2}Project Objectives and Specifications}{16}
+\contentsline {section}{\numberline {2.1}Web architecture}{16}
+\contentsline {subsection}{\numberline {2.1.1}Data storage}{17}
+\contentsline {section}{\numberline {2.2}ATHENA breakdown}{17}
+\contentsline {subsection}{\numberline {2.2.1}Twitter as data source}{17}
+\contentsline {subsubsection}{Fetching data through asynchronous jobs}{18}
+\contentsline {subsection}{\numberline {2.2.2}Harvesting}{18}
+\contentsline {subsection}{\numberline {2.2.3}Enhancement}{19}
+\contentsline {subsubsection}{User contribution modeling}{19}
+\contentsline {subsection}{\numberline {2.2.4}Normalisation}{20}
+\contentsline {subsection}{\numberline {2.2.5}Analysis}{20}
+\contentsline {section}{\numberline {2.3}Non-functional requirements}{20}
+\contentsline {chapter}{Chapter{} \numberline {3}Bibliographic research}{21}
+\contentsline {section}{\numberline {3.1}Social media analytics}{21}
+\contentsline {section}{\numberline {3.2}In-house social media}{21}
+\contentsline {subsection}{\numberline {3.2.1}Social media analytics in companies}{22}
+\contentsline {section}{\numberline {3.3}Structurally-similar works}{22}
+\contentsline {subsection}{\numberline {3.3.1}Advantages of web applications}{22}
+\contentsline {subsection}{\numberline {3.3.2}Pipeline model}{23}
+\contentsline {section}{\numberline {3.4}Data modeling and extraction approaches}{23}
+\contentsline {subsection}{\numberline {3.4.1}Supervised vs. unsupervised learning. Domain vs Domain-independent approaches}{23}
+\contentsline {subsection}{\numberline {3.4.2}Clustering}{23}
+\contentsline {subsection}{\numberline {3.4.3}Power law dataset analysis}{23}
+\contentsline {section}{\numberline {3.5}Title}{23}
+\contentsline {section}{\numberline {3.6}Other title}{23}
+\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{24}
+\contentsline {section}{\numberline {4.1}Title}{24}
+\contentsline {section}{\numberline {4.2}Other title}{24}
+\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{25}
+\contentsline {section}{\numberline {5.1}Python and Django}{25}
+\contentsline {subsubsection}{Python for scientists}{25}
+\contentsline {subsubsection}{Python libraries}{25}
+\contentsline {section}{\numberline {5.2}Storage with Cassandra}{27}
+\contentsline {subsection}{\numberline {5.2.1}Database structure}{28}
+\contentsline {section}{\numberline {5.3}Harvesting tools}{29}
+\contentsline {subsection}{\numberline {5.3.1}Celery for asynchronous jobs}{29}
+\contentsline {subsection}{\numberline {5.3.2}Using Redis as a Celery broker}{29}
+\contentsline {subsection}{\numberline {5.3.3}Fetching data from Twitter using the Search API and Tweepy}{30}
+\contentsline {section}{\numberline {5.4}Enhancement tools}{32}
+\contentsline {subsection}{\numberline {5.4.1}Simple numerical data}{32}
+\contentsline {subsubsection}{User-related data}{32}
+\contentsline {subsubsection}{Modeling the post numbers}{33}
+\contentsline {subsection}{\numberline {5.4.2}Sci-kit learn}{33}
+\contentsline {subsection}{\numberline {5.4.3}Related hashtag calculation}{34}
+\contentsline {subsubsection}{Getting the hashtag vocabulary}{34}
+\contentsline {subsection}{\numberline {5.4.4}Related hashtag clustering using KMeans}{35}
+\contentsline {subsubsection}{Ordering and displaying the hashtag clusters}{37}
+\contentsline {section}{\numberline {5.5}Normalisation}{39}
+\contentsline {subsection}{\numberline {5.5.1}Reasons and options}{39}
+\contentsline {subsection}{\numberline {5.5.2}One post per user, one-day limit normalisation process}{40}
+\contentsline {section}{\numberline {5.6}Analysis}{41}
+\contentsline {subsection}{\numberline {5.6.1}Retrieving the normalised results}{41}
+\contentsline {subsection}{\numberline {5.6.2}Calculating the common vocabulary}{41}
+\contentsline {subsection}{\numberline {5.6.3}Calculating common users}{42}
+\contentsline {subsection}{\numberline {5.6.4}Calculating post numbers and proportions}{42}
+\contentsline {subsubsection}{Displaying the chart using Google Charts API}{43}
+\contentsline {section}{\numberline {5.7}Code organisation}{44}
+\contentsline {subsection}{\numberline {5.7.1}File and folder structure}{44}
+\contentsline {subsection}{\numberline {5.7.2}Using Django generic views}{45}
+\contentsline {subsection}{\numberline {5.7.3}List comprehensions and other Python specifics}{46}
+\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{48}
+\contentsline {section}{\numberline {6.1}Title}{48}
+\contentsline {section}{\numberline {6.2}Other title}{48}
+\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{49}
+\contentsline {section}{\numberline {7.1}Title}{49}
+\contentsline {section}{\numberline {7.2}Other title}{49}
+\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{50}
+\contentsline {section}{\numberline {8.1}Title}{50}
+\contentsline {section}{\numberline {8.2}Other title}{50}
+\contentsline {chapter}{Bibliography}{51}
+\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{52}
+\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{53}
+\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{54}

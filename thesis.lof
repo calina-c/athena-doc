@@ -1,18 +1,18 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Tableau's interface}}{14}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Tableau's interface}}{15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Harvesting pipeline}}{17}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Harvesting job sub-pipeline}}{18}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Harvesting pipeline}}{18}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Harvesting job sub-pipeline}}{19}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Demo of the cqlsh utility}}{25}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Redis splash screen}}{27}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Sample status message with hashtags}}{31}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Example of related hashtags in a \#Python harvest over one day}}{33}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Example of clustered hashtags in a \#Python harvest over one day}}{35}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Example of common vocabulary in \#Python vs \#PHP comparison}}{39}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Proportions of users who post \#Python vs \#PHP tagged statuses}}{40}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Demo of the cqlsh utility}}{28}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Redis splash screen}}{30}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Sample status message with hashtags}}{34}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Example of related hashtags in a \#Python harvest over one day}}{36}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Example of clustered hashtags in a \#Python harvest over one day}}{38}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Example of common vocabulary in \#Python vs \#PHP comparison}}{42}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Proportions of users who post \#Python vs \#PHP tagged statuses}}{43}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

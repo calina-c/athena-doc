@@ -65,15 +65,18 @@ As previously stated, it is not of great importance to have the data, but the go
 A Harvest is a collection of documents related by contant, containing a token T and spanning from a start date and to an end date, which have gone through the harvesting pipeline and are stored for further anaylsis.
 \end{definition}
 
-After completing the Harvesting pipeline, resulting harvests are processed using various data extraction algorithms and presented to the user in the Enhancement step. These algorithms each have their own sub-pipelines of transformation, which will be detailed in the Analysis step.
+After completing the Harvesting pipeline, resulting harvests are processed using various data extraction algorithms and presented to the user in the Enhancement step. These algorithms each have their own sub-pipelines of transformation, which will be detailed in Chapter \ref{ch5l}.
 
 \subsubsection{User contribution modeling}
-{\color{red} TODO
-}
+Online document collections are difficult to understand in terms of user contribution. Here it is useful to apply a variant of the Pareto laws, which state that most of the time 80\% of a document set will be created by 20\% of the users. This is in fact a variant of more general power laws, which means we need to detect whether a dataset corresponds to a power distribution, in order to model users' contribution to the document set.
 
-\subsection{Normalisation and analysis}
-{\color{red} TODO
-}
+Influencers that produce and engage to content are those targets most suitable for marketing strategies. The user using ATHENA to perform analysis on datasets should thus be able to identify these outliers.
+
+\subsection{Normalisation}
+As previously stated, the user has the option of detecting outliers. A corollary of this is that such outliers also need to be eliminated for some analysis types. For example, we might need to filter out frequent posting users because their documents may have a promotional edge, and enjoy popularity in exchange for prizes. This skews the dataset too much, which means a normalisation step is needed to flatten the data to its core users and posts only.
+
+\subsection{Analysis}
+The Analysis step should be understood as a comparative analysis between two document sets, in fact restricted only to those document sets which have passed the Normalisation step. By eliminating the outliers, the user can compare the two by vocabulary and popularity. This step is, just like those before, highly optimised in regards to user experience.
 
 \section{Non-functional requirements}
 I am much concerned with the user's perspective in developing this application. As explained previously, one of the main objectives of this application is undoubtedly to be as simple to use as possible, to benefit non-expert users.

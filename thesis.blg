@@ -4,6 +4,7 @@ The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: guideline.aux
 A level-1 auxiliary file: intro.aux
 A level-1 auxiliary file: specs.aux
+A level-1 auxiliary file: ch5.aux
 The style file: IEEEtran.bst
 A level-1 auxiliary file: apendix.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -12,54 +13,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "BellucciLZ04"
-Warning--I didn't find a database entry for "AntoniouSBDB07"
-Warning--I didn't find a database entry for "russell1995artificial"
-Warning--I didn't find a database entry for "strunk"
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 4 entries,
+You've used 9 entries,
             4024 wiz_defined-function locations,
-            902 strings with 9207 characters,
-and the built_in function-call counts, 3384 in all, are:
-= -- 270
-> -- 90
-< -- 31
-+ -- 50
-- -- 16
-* -- 177
-:= -- 509
-add.period$ -- 8
-call.type$ -- 4
-change.case$ -- 5
-chr.to.int$ -- 69
-cite$ -- 4
-duplicate$ -- 233
-empty$ -- 239
-format.name$ -- 19
-if$ -- 757
+            927 strings with 10209 characters,
+and the built_in function-call counts, 7377 in all, are:
+= -- 566
+> -- 192
+< -- 64
++ -- 105
+- -- 33
+* -- 359
+:= -- 1058
+add.period$ -- 21
+call.type$ -- 9
+change.case$ -- 9
+chr.to.int$ -- 156
+cite$ -- 9
+duplicate$ -- 513
+empty$ -- 614
+format.name$ -- 41
+if$ -- 1704
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 43
-newline$ -- 35
-num.names$ -- 3
-pop$ -- 95
+int.to.str$ -- 9
+missing$ -- 91
+newline$ -- 50
+num.names$ -- 8
+pop$ -- 228
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 253
+skip$ -- 565
 stack$ -- 0
-substring$ -- 166
-swap$ -- 202
-text.length$ -- 8
+substring$ -- 372
+swap$ -- 421
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 4
+type$ -- 9
 warning$ -- 0
-while$ -- 15
-width$ -- 5
-write$ -- 62
-(There were 4 warnings)
+while$ -- 36
+width$ -- 10
+write$ -- 105

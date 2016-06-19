@@ -21,6 +21,34 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{spirin2014people}
+N.~V. Spirin, J.~He, M.~Develin, K.~G. Karahalios, and M.~Boucher, ``People
+  search within an online social network: Large scale analysis of facebook
+  graph search query logs,'' in \emph{Proceedings of the 23rd acm international
+  conference on conference on information and knowledge management}.\hskip 1em
+  plus 0.5em minus 0.4em\relax ACM, 2014, pp. 1009--1018.
+
+\bibitem{java2007we}
+A.~Java, X.~Song, T.~Finin, and B.~Tseng, ``Why we twitter: understanding
+  microblogging usage and communities,'' in \emph{Proceedings of the 9th WebKDD
+  and 1st SNA-KDD 2007 workshop on Web mining and social network
+  analysis}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2007, pp. 56--65.
+
+\bibitem{constantinides2008social}
+E.~Constantinides, C.~L. Romero, and M.~A.~G. Boria, ``Social media: a new
+  frontier for retailers?'' in \emph{European Retail Research}.\hskip 1em plus
+  0.5em minus 0.4em\relax Springer, 2008, pp. 1--28.
+
+\bibitem{tung2013internet}
+C.-M. Tung and H.-Y. Wu, ``An internet-connected world: Google's platform
+  strategies to network industry.'' in \emph{Intelligent Environments
+  (Workshops)}, 2013, pp. 201--213.
+
+\bibitem{bird2009natural}
+S.~Bird, E.~Klein, and E.~Loper, \emph{Natural language processing with
+  Python}.\hskip 1em plus 0.5em minus 0.4em\relax " O'Reilly Media, Inc.",
+  2009.
+
 \bibitem{clauset2009power}
 A.~Clauset, C.~R. Shalizi, and M.~E. Newman, ``Power-law distributions in
   empirical data,'' \emph{SIAM review}, vol.~51, no.~4, pp. 661--703, 2009.
