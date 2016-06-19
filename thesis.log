@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  19 JUN 2016 13:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  19 JUN 2016 17:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -306,8 +306,8 @@ File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-(./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux) (./ch5.aux)
-(./apendix.aux))
+(./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux) (./bibresearch.aux)
+(./ch5.aux) (./apendix.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
@@ -498,9 +498,13 @@ Package pdftex.def Info: img/harvestpipe.png used on input line 56.
 (pdftex.def)             Requested size: 459.0pt x 178.11365pt.
 
 [18 <./img/harvestpipe1.png>] [19 <./img/harvestpipe.png>]) [20]
+\openout2 = `bibresearch.aux'.
+
+
+(./bibresearch.tex
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--233
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
 [][]\T1/aer/m/n/10 http://www.programmableweb.com/news/top-10-social-apis-faceb
 ook-twitter-and-google-
  []
@@ -508,15 +512,23 @@ ook-twitter-and-google-
 [21
 
 
+
 ]
-Overfull \hbox (12.49225pt too wide) in paragraph at lines 239--240
+Overfull \hbox (12.49225pt too wide) in paragraph at lines 17--18
 []\T1/aer/m/n/12 The fol-low-ing sec-tion presents the ad-van-tages and draw-ba
 cks of us-ing meta-frameworks
  []
 
-[22] [23]
+[22] <img/annie-pipe.png, id=79, 722.7pt x 542.025pt>
+File: img/annie-pipe.png Graphic file (type png)
+ <use img/annie-pipe.png>
+Package pdftex.def Info: img/annie-pipe.png used on input line 41.
+(pdftex.def)             Requested size: 367.2014pt x 275.40353pt.
+
+[23] [24 <./img/annie-pipe.png>] [25] [26]) [27]
 Chapter 4.
-[24
+[28
+
 
 ]
 \openout2 = `ch5.aux'.
@@ -526,75 +538,75 @@ Chapter 5.
 LaTeX Font Info:    Try loading font information for T1+aett on input line 14.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-) [25
+) [29
 
 
 ]
 Underfull \vbox (badness 2073) has occurred while \output is active []
 
- [26]
+ [30]
 Overfull \hbox (2.5912pt too wide) in paragraph at lines 93--94
 []\T1/aer/m/n/12 The Cas-san-dra NoSQL database was cho-sen for this project's 
 non-relational database
  []
 
-<img/cqlsh.png, id=93, 713.66624pt x 366.36874pt>
+<img/cqlsh.png, id=108, 713.66624pt x 366.36874pt>
 File: img/cqlsh.png Graphic file (type png)
  <use img/cqlsh.png>
 Package pdftex.def Info: img/cqlsh.png used on input line 99.
 (pdftex.def)             Requested size: 367.2014pt x 188.5059pt.
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
- [27]
+ [31]
 Overfull \hbox (7.23715pt too wide) in paragraph at lines 147--148
 []\T1/aer/m/n/12 The har-vest-ing mod-ule as pre-sented con-cep-tu-ally in 2.2[
 ] was im-ple-mented in ATHENA
  []
 
-[28 <./img/cqlsh.png>] [29]
-<img/redis-splash.png, id=105, 644.4075pt x 365.365pt>
+[32 <./img/cqlsh.png>] [33]
+<img/redis-splash.png, id=119, 644.4075pt x 365.365pt>
 File: img/redis-splash.png Graphic file (type png)
 
 <use img/redis-splash.png>
 Package pdftex.def Info: img/redis-splash.png used on input line 174.
 (pdftex.def)             Requested size: 367.2014pt x 208.20445pt.
- [30 <./img/redis-splash.png>] [31] [32] [33]
-<img/tweet.png, id=119, 638.385pt x 192.72pt>
+ [34 <./img/redis-splash.png>] [35] [36] [37]
+<img/tweet.png, id=134, 638.385pt x 192.72pt>
 File: img/tweet.png Graphic file (type png)
  <use img/tweet.png>
 Package pdftex.def Info: img/tweet.png used on input line 290.
 (pdftex.def)             Requested size: 367.2014pt x 110.8543pt.
- [34 <./img/tweet.png>] <img/relhashtags.png, id=125, 314.17375pt x 455.7025pt>
+ [38 <./img/tweet.png>] <img/relhashtags.png, id=139, 314.17375pt x 455.7025pt>
 File: img/relhashtags.png Graphic file (type png)
 
 <use img/relhashtags.png>
 Package pdftex.def Info: img/relhashtags.png used on input line 315.
 (pdftex.def)             Requested size: 183.5972pt x 266.30327pt.
- [35]
+ [39]
 Overfull \hbox (10.70837pt too wide) in paragraph at lines 329--330
 \T1/aett/m/n/12 max_df\T1/aer/m/n/12 , in or-der to also con-sider highly-used 
 hash-tags. Af-ter re-pro-duc-ing the \T1/aett/m/n/12 fit_transform
  []
 
-[36 <./img/relhashtags.png>]
-<img/clusters.png, id=133, 664.4825pt x 758.835pt>
+[40 <./img/relhashtags.png>]
+<img/clusters.png, id=148, 664.4825pt x 758.835pt>
 File: img/clusters.png Graphic file (type png)
  <use img/clusters.png>
 Package pdftex.def Info: img/clusters.png used on input line 367.
 (pdftex.def)             Requested size: 321.2986pt x 366.92297pt.
 
-[37]
+[41]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38 <./img/clusters.png>] [39] [40] [41]
-<img/commonvocab.png, id=152, 431.6125pt x 97.36375pt>
+ [42 <./img/clusters.png>] [43] [44] [45]
+<img/commonvocab.png, id=166, 431.6125pt x 97.36375pt>
 File: img/commonvocab.png Graphic file (type png)
 
 <use img/commonvocab.png>
 Package pdftex.def Info: img/commonvocab.png used on input line 450.
 (pdftex.def)             Requested size: 229.5pt x 51.7704pt.
- [42 <./img/commonvocab.png>]
-<img/piechart.png, id=157, 752.31062pt x 191.21437pt>
+ [46 <./img/commonvocab.png>]
+<img/piechart.png, id=172, 752.31062pt x 191.21437pt>
 File: img/piechart.png Graphic file (type png)
  <use img/piechart.png>
 Package pdftex.def Info: img/piechart.png used on input line 489.
@@ -605,63 +617,63 @@ Overfull \hbox (5.15427pt too wide) in paragraph at lines 495--496
 MVC (Model-View-Controller)
  []
 
-[43 <./img/piechart.png>] [44] [45] [46]) [47]
+[47 <./img/piechart.png>] [48] [49] [50]) [51]
 Chapter 6.
-[48
-
-
-]
-Chapter 7.
-[49
-
-]
-Chapter 8.
-(./thesis.bbl [50
-
-]) [51
-
-]
-\openout2 = `apendix.aux'.
-
- (./apendix.tex
-Appendix A.
 [52
 
 
 ]
-Appendix B.
+Chapter 7.
 [53
 
 ]
-Appendix C.
-) [54
+Chapter 8.
+(./thesis.bbl [54
 
-] (./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux) (./ch5.aux)
-(./apendix.aux)) ) 
+] [55
+
+]) [56]
+\openout2 = `apendix.aux'.
+
+ (./apendix.tex
+Appendix A.
+[57
+
+
+]
+Appendix B.
+[58
+
+]
+Appendix C.
+) [59
+
+] (./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux)
+(./bibresearch.aux) (./ch5.aux) (./apendix.aux)) ) 
 Here is how much of TeX's memory you used:
- 5731 strings out of 493089
- 75199 string characters out of 6134843
- 191435 words of memory out of 5000000
- 8991 multiletter control sequences out of 15000+600000
+ 5749 strings out of 493089
+ 75517 string characters out of 6134843
+ 191801 words of memory out of 5000000
+ 9001 multiletter control sequences out of 15000+600000
  47756 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,32p,908b,1464s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-
-Output written on thesis.pdf (51 pages, 784896 bytes).
+ 38i,8n,32p,937b,1464s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmtt12.pfb>
+Output written on thesis.pdf (56 pages, 806629 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
+ 254 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
