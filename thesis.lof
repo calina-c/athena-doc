@@ -8,14 +8,15 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Five-stage pipeline in a RISC machine}}{29}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Producer/Consumer architecture example}}{31}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Clustering algorithms in effect on various data sets}}{36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Demo of the cqlsh utility}}{40}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Redis splash screen}}{42}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Sample status message with hashtags}}{46}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Example of related hashtags in a \#Python harvest over one day}}{48}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Example of clustered hashtags in a \#Python harvest over one day}}{50}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Example of common vocabulary in \#Python vs \#PHP comparison}}{54}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Proportions of users who post \#Python vs \#PHP tagged statuses}}{55}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Demo of the cqlsh utility}}{42}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Redis splash screen}}{44}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Sample status message with hashtags}}{48}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Example of related hashtags in a \#Python harvest over one day}}{50}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Example of clustered hashtags in a \#Python harvest over one day}}{52}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Example of common vocabulary in \#Python vs \#PHP comparison}}{56}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Proportions of users who post \#Python vs \#PHP tagged statuses}}{57}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -385,12 +385,33 @@ The exact type of storage used depends on the implementation itself. Some proces
 Vectorising the space and calculating clusters (as discussed below) are important parts of the Enhancement step in ATHENA.
 
 \section{Clustering with KMeans}
-\subsection{Mechanism}
-\subsection{Centroid initialisation}
-\subsection{KMeans variants}
+While mere presence or absence of terms inside a document collection is interesting to consult, it is not a detail which gives users much information about the composition of said document collection. Vectorisation of terms is in this case a precursor for the clustering step, which uses the previously generated sparse matrix for identifying commonalities between some documents.
 
-\label{kmeansplusplus}
-TODO: Talk about Kmeans++ algorithm
+By clustering we generally refer to an approach, algorithm or general endeavour which assigns data points to agglomerations called clusters. The basic example follows points on a plane with given coordinates. Clusters of will be formed based on data points agglomerations, considered by the Euclidean distance measurement.
+
+\begin{figure}
+    \centering
+\includegraphics[width=\columnwidth]{img/clustering.png}
+    \caption{Clustering algorithms in effect on various data sets}
+    \label{fig:clustering}
+\end{figure}
+
+A variety of clustering algorithms exist, all with specific advantages and disadvantages. Some algorithms perform better on pattern-full data, while others handle unexpected metrics better. The efficiency of a clustering algorithm depends on the data particularities, initialisation and running options. Figure \ref{fig:clustering} exemplifies the performance of various clustering algorithms on different data sets, with data points marked as belonging to certain clusters by coloring on the graph. Note that some algorithms also place \emph{centroids} (represented in the figure as small circles) which represent the center of a cluster, although it doesn't necessarily coincide with a data point.
+
+When considering term occurrence, clearly the distance is not the Euclidean classical one. However the distance in use here is the commonality of terms used throughout the document space. E.g. documents which are used in many documents together are considered \emph{close} while terms which never intersect inside the same document are \emph{far} from one another. Considering the general lack of irregularities and patterns possible inside a textual dataset, the K-Means algorithm is a good fit to our approach.
+
+Essentially, the algorithm works by initialising a number of $k$ centroids and subsequently changing the cluster location and the data point assignment based on mean distances, i.e. at every execution step, a point is assigned to the closest centroid and a centroid's position is recalculated at the mean of its components. I will not go into much detail regarding the steps here, but rather into the problem of centroid initialisation and KMeans variants available.
+
+\subsection{Centroid initialisation}
+Centroid initialisation is a sensitive problem when considering K-Means algorithm implementation due to the propagation of errors and convergence time costliness an inappropriate initial setup could produce. The goal of centroid initialisation algorithms is to minimise intra-class distance (sum of Euclidean distances between each data point and its centroid). Some common centroid initialisation methods are:
+
+\begin{itemize}
+\item Forgy: randomly chooses k data points and uses them as initial means
+\item Random partition: starts by randomly assigning a cluster to each data point
+\item KMeans++: works by selecting an $i$ centroid using a probability function based on the minimum distance from an initial $x$. This algorithm usually prevents accidental selection of close centroids, which can propagate and affect the algorithm's working. Using a KMeans++ initialisation, it is guaranteed that the algorithm will converge in O(log k)
+\end{itemize}
+
+In order to ensure fast convergence to a good solution, the KMeans++ initialisation algorithm is a good fit for the approach presented in this thesis.\label{kmeansplusplus}
 
 \section{Power law fitting}
 \subsection{Power functions and well-known examples}

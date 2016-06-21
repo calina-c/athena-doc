@@ -81,7 +81,7 @@ The clustering algorithm used in ATHENA is K-Means. Initially proposed by Stuart
 \item update: calculate new centroids at the mean of points assigned to each centroid
 \end{itemize}
 
-KMeans runs these steps alternatively until convergence, which is achieved when centroids no longer move from iteration to iteration, or at least do not move over a distance greater than a predefined minimum.
+KMeans runs these steps alternatively until convergence, which is achieved when centroids no longer move from iteration to iteration, or at least do not move over a distance greater than a predefined minimum. In Chapter 4 I will refer to the NP-hard problem of centroid initialisation for encouraging fast convergence, which is based on a 2013 Celebi et. al study \cite{celebi2013comparative} which compares the performance of different centroid seeding methods.
 
 ATHENA uses a variant of KMeans which translates the term occurrence and frequency in the document set to Euclidean distance, i.e. the presence of common terms inside a pair of documents defines the closeness of those documents.
 

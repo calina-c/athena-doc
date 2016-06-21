@@ -66,6 +66,11 @@ M.~Steinbach, G.~Karypis, V.~Kumar \emph{et~al.}, ``A comparison of document
   clustering techniques,'' in \emph{KDD workshop on text mining}, vol. 400,
   no.~1.\hskip 1em plus 0.5em minus 0.4em\relax Boston, 2000, pp. 525--526.
 
+\bibitem{celebi2013comparative}
+M.~E. Celebi, H.~A. Kingravi, and P.~A. Vela, ``A comparative study of
+  efficient initialization methods for the k-means clustering algorithm,''
+  \emph{Expert Systems with Applications}, vol.~40, no.~1, pp. 200--210, 2013.
+
 \bibitem{taleb2007black}
 N.~N. Taleb, \emph{The black swan: The impact of the highly improbable}.\hskip
   1em plus 0.5em minus 0.4em\relax Random house, 2007.

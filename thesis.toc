@@ -41,57 +41,55 @@
 \contentsline {subsection}{\numberline {4.3.3}API wrapper libraries}{33}
 \contentsline {section}{\numberline {4.4}Vectorising the data space}{34}
 \contentsline {subsection}{\numberline {4.4.1}Sparse matrices}{34}
-\contentsline {section}{\numberline {4.5}Clustering with KMeans}{36}
-\contentsline {subsection}{\numberline {4.5.1}Mechanism}{36}
-\contentsline {subsection}{\numberline {4.5.2}Centroid initialisation}{36}
-\contentsline {subsection}{\numberline {4.5.3}KMeans variants}{36}
-\contentsline {section}{\numberline {4.6}Power law fitting}{36}
-\contentsline {subsection}{\numberline {4.6.1}Power functions and well-known examples}{36}
-\contentsline {subsection}{\numberline {4.6.2}Fitting algorithm}{36}
-\contentsline {subsection}{\numberline {4.6.3}HashMap-based duplicate removal}{36}
-\contentsline {section}{\numberline {4.7}Supervised methods and their unsuitability to the concept}{36}
-\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{37}
-\contentsline {section}{\numberline {5.1}Python and Django}{37}
-\contentsline {subsubsection}{Python for scientists}{37}
-\contentsline {subsubsection}{Python libraries}{37}
-\contentsline {section}{\numberline {5.2}Storage with Cassandra}{39}
-\contentsline {subsection}{\numberline {5.2.1}Database structure}{40}
-\contentsline {section}{\numberline {5.3}Harvesting tools}{41}
-\contentsline {subsection}{\numberline {5.3.1}Celery for asynchronous jobs}{41}
-\contentsline {subsection}{\numberline {5.3.2}Using Redis as a Celery broker}{41}
-\contentsline {subsection}{\numberline {5.3.3}Fetching data from Twitter using the Search API and Tweepy}{42}
-\contentsline {section}{\numberline {5.4}Enhancement tools}{44}
-\contentsline {subsection}{\numberline {5.4.1}Simple numerical data}{44}
-\contentsline {subsubsection}{User-related data}{44}
-\contentsline {subsubsection}{Modeling the post numbers}{45}
-\contentsline {subsection}{\numberline {5.4.2}Sci-kit learn}{45}
-\contentsline {subsection}{\numberline {5.4.3}Related hashtag calculation}{46}
-\contentsline {subsubsection}{Getting the hashtag vocabulary}{46}
-\contentsline {subsection}{\numberline {5.4.4}Related hashtag clustering using KMeans}{47}
-\contentsline {subsubsection}{Ordering and displaying the hashtag clusters}{49}
-\contentsline {section}{\numberline {5.5}Normalisation}{51}
-\contentsline {subsection}{\numberline {5.5.1}Reasons and options}{51}
-\contentsline {subsection}{\numberline {5.5.2}One post per user, one-day limit normalisation process}{52}
-\contentsline {section}{\numberline {5.6}Analysis}{53}
-\contentsline {subsection}{\numberline {5.6.1}Retrieving the normalised results}{53}
-\contentsline {subsection}{\numberline {5.6.2}Calculating the common vocabulary}{53}
-\contentsline {subsection}{\numberline {5.6.3}Calculating common users}{54}
-\contentsline {subsection}{\numberline {5.6.4}Calculating post numbers and proportions}{54}
-\contentsline {subsubsection}{Displaying the chart using Google Charts API}{55}
-\contentsline {section}{\numberline {5.7}Code organisation}{56}
-\contentsline {subsection}{\numberline {5.7.1}File and folder structure}{56}
-\contentsline {subsection}{\numberline {5.7.2}Using Django generic views}{57}
-\contentsline {subsection}{\numberline {5.7.3}List comprehensions and other Python specifics}{58}
-\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{60}
-\contentsline {section}{\numberline {6.1}Title}{60}
-\contentsline {section}{\numberline {6.2}Other title}{60}
-\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{61}
-\contentsline {section}{\numberline {7.1}Title}{61}
-\contentsline {section}{\numberline {7.2}Other title}{61}
-\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{62}
-\contentsline {section}{\numberline {8.1}Title}{62}
-\contentsline {section}{\numberline {8.2}Other title}{62}
-\contentsline {chapter}{Bibliography}{63}
-\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{65}
-\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{66}
-\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{67}
+\contentsline {section}{\numberline {4.5}Clustering with KMeans}{35}
+\contentsline {subsection}{\numberline {4.5.1}Centroid initialisation}{37}
+\contentsline {section}{\numberline {4.6}Power law fitting}{37}
+\contentsline {subsection}{\numberline {4.6.1}Power functions and well-known examples}{37}
+\contentsline {subsection}{\numberline {4.6.2}Fitting algorithm}{37}
+\contentsline {subsection}{\numberline {4.6.3}HashMap-based duplicate removal}{37}
+\contentsline {section}{\numberline {4.7}Supervised methods and their unsuitability to the concept}{38}
+\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{39}
+\contentsline {section}{\numberline {5.1}Python and Django}{39}
+\contentsline {subsubsection}{Python for scientists}{39}
+\contentsline {subsubsection}{Python libraries}{39}
+\contentsline {section}{\numberline {5.2}Storage with Cassandra}{41}
+\contentsline {subsection}{\numberline {5.2.1}Database structure}{42}
+\contentsline {section}{\numberline {5.3}Harvesting tools}{43}
+\contentsline {subsection}{\numberline {5.3.1}Celery for asynchronous jobs}{43}
+\contentsline {subsection}{\numberline {5.3.2}Using Redis as a Celery broker}{43}
+\contentsline {subsection}{\numberline {5.3.3}Fetching data from Twitter using the Search API and Tweepy}{44}
+\contentsline {section}{\numberline {5.4}Enhancement tools}{46}
+\contentsline {subsection}{\numberline {5.4.1}Simple numerical data}{46}
+\contentsline {subsubsection}{User-related data}{46}
+\contentsline {subsubsection}{Modeling the post numbers}{47}
+\contentsline {subsection}{\numberline {5.4.2}Sci-kit learn}{47}
+\contentsline {subsection}{\numberline {5.4.3}Related hashtag calculation}{48}
+\contentsline {subsubsection}{Getting the hashtag vocabulary}{48}
+\contentsline {subsection}{\numberline {5.4.4}Related hashtag clustering using KMeans}{49}
+\contentsline {subsubsection}{Ordering and displaying the hashtag clusters}{51}
+\contentsline {section}{\numberline {5.5}Normalisation}{53}
+\contentsline {subsection}{\numberline {5.5.1}Reasons and options}{53}
+\contentsline {subsection}{\numberline {5.5.2}One post per user, one-day limit normalisation process}{54}
+\contentsline {section}{\numberline {5.6}Analysis}{55}
+\contentsline {subsection}{\numberline {5.6.1}Retrieving the normalised results}{55}
+\contentsline {subsection}{\numberline {5.6.2}Calculating the common vocabulary}{55}
+\contentsline {subsection}{\numberline {5.6.3}Calculating common users}{56}
+\contentsline {subsection}{\numberline {5.6.4}Calculating post numbers and proportions}{56}
+\contentsline {subsubsection}{Displaying the chart using Google Charts API}{57}
+\contentsline {section}{\numberline {5.7}Code organisation}{58}
+\contentsline {subsection}{\numberline {5.7.1}File and folder structure}{58}
+\contentsline {subsection}{\numberline {5.7.2}Using Django generic views}{59}
+\contentsline {subsection}{\numberline {5.7.3}List comprehensions and other Python specifics}{60}
+\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{62}
+\contentsline {section}{\numberline {6.1}Title}{62}
+\contentsline {section}{\numberline {6.2}Other title}{62}
+\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{63}
+\contentsline {section}{\numberline {7.1}Title}{63}
+\contentsline {section}{\numberline {7.2}Other title}{63}
+\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{64}
+\contentsline {section}{\numberline {8.1}Title}{64}
+\contentsline {section}{\numberline {8.2}Other title}{64}
+\contentsline {chapter}{Bibliography}{65}
+\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{67}
+\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{68}
+\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{69}
