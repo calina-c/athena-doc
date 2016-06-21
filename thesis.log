@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  19 JUN 2016 17:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  21 JUN 2016 09:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,10 +527,24 @@ Package pdftex.def Info: img/annie-pipe.png used on input line 41.
 
 [23] [24 <./img/annie-pipe.png>] [25] [26]) [27]
 Chapter 4.
+<img/cpupipe.png, id=96, 731.73375pt x 212.29312pt>
+File: img/cpupipe.png Graphic file (type png)
+ <use img/cpupipe.png>
+Package pdftex.def Info: img/cpupipe.png used on input line 234.
+(pdftex.def)             Requested size: 367.2014pt x 106.53502pt.
+
 [28
 
 
-]
+] [29 <./img/cpupipe.png>] [30]
+<img/producer-consumer.png, id=108, 397.485pt x 162.206pt>
+File: img/producer-consumer.png Graphic file (type png)
+
+<use img/producer-consumer.png>
+Package pdftex.def Info: img/producer-consumer.png used on input line 284.
+(pdftex.def)             Requested size: 367.2014pt x 149.85254pt.
+ [31 <./img/producer-consumer.png>] [32]
+[33] [34] [35] [36]
 \openout2 = `ch5.aux'.
 
  (./ch5.tex
@@ -538,75 +552,75 @@ Chapter 5.
 LaTeX Font Info:    Try loading font information for T1+aett on input line 14.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-) [29
+) [37
 
 
 ]
 Underfull \vbox (badness 2073) has occurred while \output is active []
 
- [30]
+ [38]
 Overfull \hbox (2.5912pt too wide) in paragraph at lines 93--94
 []\T1/aer/m/n/12 The Cas-san-dra NoSQL database was cho-sen for this project's 
 non-relational database
  []
 
-<img/cqlsh.png, id=108, 713.66624pt x 366.36874pt>
+<img/cqlsh.png, id=139, 713.66624pt x 366.36874pt>
 File: img/cqlsh.png Graphic file (type png)
  <use img/cqlsh.png>
 Package pdftex.def Info: img/cqlsh.png used on input line 99.
 (pdftex.def)             Requested size: 367.2014pt x 188.5059pt.
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
- [31]
+ [39]
 Overfull \hbox (7.23715pt too wide) in paragraph at lines 147--148
 []\T1/aer/m/n/12 The har-vest-ing mod-ule as pre-sented con-cep-tu-ally in 2.2[
 ] was im-ple-mented in ATHENA
  []
 
-[32 <./img/cqlsh.png>] [33]
-<img/redis-splash.png, id=119, 644.4075pt x 365.365pt>
+[40 <./img/cqlsh.png>] [41]
+<img/redis-splash.png, id=151, 644.4075pt x 365.365pt>
 File: img/redis-splash.png Graphic file (type png)
 
 <use img/redis-splash.png>
 Package pdftex.def Info: img/redis-splash.png used on input line 174.
 (pdftex.def)             Requested size: 367.2014pt x 208.20445pt.
- [34 <./img/redis-splash.png>] [35] [36] [37]
-<img/tweet.png, id=134, 638.385pt x 192.72pt>
+ [42 <./img/redis-splash.png>] [43] [44] [45]
+<img/tweet.png, id=165, 638.385pt x 192.72pt>
 File: img/tweet.png Graphic file (type png)
  <use img/tweet.png>
 Package pdftex.def Info: img/tweet.png used on input line 290.
 (pdftex.def)             Requested size: 367.2014pt x 110.8543pt.
- [38 <./img/tweet.png>] <img/relhashtags.png, id=139, 314.17375pt x 455.7025pt>
+ [46 <./img/tweet.png>] <img/relhashtags.png, id=171, 314.17375pt x 455.7025pt>
 File: img/relhashtags.png Graphic file (type png)
 
 <use img/relhashtags.png>
 Package pdftex.def Info: img/relhashtags.png used on input line 315.
 (pdftex.def)             Requested size: 183.5972pt x 266.30327pt.
- [39]
+ [47]
 Overfull \hbox (10.70837pt too wide) in paragraph at lines 329--330
 \T1/aett/m/n/12 max_df\T1/aer/m/n/12 , in or-der to also con-sider highly-used 
 hash-tags. Af-ter re-pro-duc-ing the \T1/aett/m/n/12 fit_transform
  []
 
-[40 <./img/relhashtags.png>]
-<img/clusters.png, id=148, 664.4825pt x 758.835pt>
+[48 <./img/relhashtags.png>]
+<img/clusters.png, id=179, 664.4825pt x 758.835pt>
 File: img/clusters.png Graphic file (type png)
  <use img/clusters.png>
 Package pdftex.def Info: img/clusters.png used on input line 367.
 (pdftex.def)             Requested size: 321.2986pt x 366.92297pt.
 
-[41]
+[49]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42 <./img/clusters.png>] [43] [44] [45]
-<img/commonvocab.png, id=166, 431.6125pt x 97.36375pt>
+ [50 <./img/clusters.png>] [51] [52] [53]
+<img/commonvocab.png, id=198, 431.6125pt x 97.36375pt>
 File: img/commonvocab.png Graphic file (type png)
 
 <use img/commonvocab.png>
 Package pdftex.def Info: img/commonvocab.png used on input line 450.
 (pdftex.def)             Requested size: 229.5pt x 51.7704pt.
- [46 <./img/commonvocab.png>]
-<img/piechart.png, id=172, 752.31062pt x 191.21437pt>
+ [54 <./img/commonvocab.png>]
+<img/piechart.png, id=203, 752.31062pt x 191.21437pt>
 File: img/piechart.png Graphic file (type png)
  <use img/piechart.png>
 Package pdftex.def Info: img/piechart.png used on input line 489.
@@ -617,63 +631,64 @@ Overfull \hbox (5.15427pt too wide) in paragraph at lines 495--496
 MVC (Model-View-Controller)
  []
 
-[47 <./img/piechart.png>] [48] [49] [50]) [51]
+[55 <./img/piechart.png>] [56] [57] [58]) [59]
 Chapter 6.
-[52
+[60
 
 
 ]
 Chapter 7.
-[53
+[61
 
 ]
 Chapter 8.
-(./thesis.bbl [54
+(./thesis.bbl [62
 
-] [55
+] [63
 
-]) [56]
+]) [64]
 \openout2 = `apendix.aux'.
 
  (./apendix.tex
 Appendix A.
-[57
+[65
 
 
 ]
 Appendix B.
-[58
+[66
 
 ]
 Appendix C.
-) [59
+) [67
 
 ] (./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux)
 (./bibresearch.aux) (./ch5.aux) (./apendix.aux)) ) 
 Here is how much of TeX's memory you used:
- 5749 strings out of 493089
- 75517 string characters out of 6134843
- 191801 words of memory out of 5000000
- 9001 multiletter control sequences out of 15000+600000
+ 5761 strings out of 493089
+ 75774 string characters out of 6134843
+ 191831 words of memory out of 5000000
+ 9011 multiletter control sequences out of 15000+600000
  47756 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,8n,32p,937b,1464s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (56 pages, 806629 bytes).
+-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt12.pfb>
+Output written on thesis.pdf (64 pages, 858256 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
+ 287 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
