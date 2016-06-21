@@ -44,10 +44,10 @@
 \contentsline {section}{\numberline {4.5}Clustering with KMeans}{35}
 \contentsline {subsection}{\numberline {4.5.1}Centroid initialisation}{37}
 \contentsline {section}{\numberline {4.6}Power law fitting}{37}
-\contentsline {subsection}{\numberline {4.6.1}Power functions and well-known examples}{37}
-\contentsline {subsection}{\numberline {4.6.2}Fitting algorithm}{37}
-\contentsline {subsection}{\numberline {4.6.3}HashMap-based duplicate removal}{37}
-\contentsline {section}{\numberline {4.7}Supervised methods and their unsuitability to the concept}{38}
+\contentsline {subsection}{\numberline {4.6.1}Power functions and well-known examples}{38}
+\contentsline {subsection}{\numberline {4.6.2}Fitting algorithm and result interpretation}{38}
+\contentsline {section}{\numberline {4.7}HashMap-based duplicate removal}{38}
+\contentsline {section}{\numberline {4.8}Supervised methods and their unsuitability to the concept}{38}
 \contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{39}
 \contentsline {section}{\numberline {5.1}Python and Django}{39}
 \contentsline {subsubsection}{Python for scientists}{39}

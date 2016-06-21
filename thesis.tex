@@ -414,12 +414,25 @@ Centroid initialisation is a sensitive problem when considering K-Means algorith
 In order to ensure fast convergence to a good solution, the KMeans++ initialisation algorithm is a good fit for the approach presented in this thesis.\label{kmeansplusplus}
 
 \section{Power law fitting}
+In Chapter 3 I discussed the particularities of data sets which correspond to power functions. In this section I will ellaborate on the usage of these modeling techniques to identify potential pages, bots and fake accounts on social media. In concernes related to power functions and fractalic modeling, it is not problematic to output a data set corresponding to a power function, but I will present an algorithm handling the reverse problem: how, given a data set, we can calculate the degree to which it corresponds to a power law.
+
 \subsection{Power functions and well-known examples}
-\subsection{Fitting algorithm}
+In Chapter 3 I briefly mentioned Vilfredo Pareto's now famous law which stated that 80\% of the effects are generally the results of 20\% of actions, as well as other scientists' (such as Mandelbrot and Taleb) concerns towards understanding and modeling general power law principles. Pareto's law indeed seems to be applicable to many domains and fields of economics and computer science\footnote{https://en.wikipedia.org/wiki/Pareto\_principle}
+
+\begin{itemize}
+\item (in business) 80\% of a company's profits come from 20\% of its customers
+\item (in sales) 80\% of a company's sales are made by 20\% of its sale staff
+\item (in load testing, as a general recommendation for testing) 80\% of the traffic occurs in 20\% of the time
+\item (in artficial intelligence) some toy-worlds have demonstrated a natural convergence towards wealth distribution of 80\%/20\%
+\end{itemize}
+
+The proportion is of course not always 80/20 as suggested in numerous studies finding even larger discrepancies in such behaviour. For example, a 2013 study \cite{muchnik2013origins} found that 80\% of content on the online user-editable encyclopedia Wikipedia is authored by a mere 5\% of Wikipedia users. This pattern suggest that there is merit in studying the user's post numbers as being indicative of some special pattern. There is not a study formally demonstrating that abnormally frequent posters are indeed pages, bots or fake accounts, and even in ATHENA we offer the raw modeling data to end users. However, empirical evidence seems to suggest a degree of truth in this matter, at least for some users. I do believe the modern trend in analysing fat tails and power functions, as well as non-Gaussian probability distributions will continue and further investigations can be made into the subject.
+
+\subsection{Fitting algorithm and result interpretation}
 \label{plfittheory}
 TODO: Plfit theory and \cite{clauset2009power}
 
-\subsection{HashMap-based duplicate removal}
+\section{HashMap-based duplicate removal}
 {\color{red}TODO 11 pages e.g. until 39
 if not enough, add
 \section{Supervised methods and their unsuitability to the concept}
