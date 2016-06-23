@@ -417,6 +417,7 @@ In order to ensure fast convergence to a good solution, the KMeans++ initialisat
 In Chapter 3 I discussed the particularities of data sets which correspond to power functions. In this section I will ellaborate on the usage of these modeling techniques to identify potential pages, bots and fake accounts on social media. In concernes related to power functions and fractalic modeling, it is not problematic to output a data set corresponding to a power function, but I will present an algorithm handling the reverse problem: how, given a data set, we can calculate the degree to which it corresponds to a power law.
 
 \subsection{Power functions and well-known examples}
+\label{plfittheory}
 In Chapter 3 I briefly mentioned Vilfredo Pareto's now famous law which stated that 80\% of the effects are generally the results of 20\% of actions, as well as other scientists' (such as Mandelbrot and Taleb) concerns towards understanding and modeling general power law principles. Pareto's law indeed seems to be applicable to many domains and fields of economics and computer science\footnote{https://en.wikipedia.org/wiki/Pareto\_principle}
 
 \begin{itemize}
@@ -426,17 +427,23 @@ In Chapter 3 I briefly mentioned Vilfredo Pareto's now famous law which stated t
 \item (in artficial intelligence) some toy-worlds have demonstrated a natural convergence towards wealth distribution of 80\%/20\%
 \end{itemize}
 
-The proportion is of course not always 80/20 as suggested in numerous studies finding even larger discrepancies in such behaviour. For example, a 2013 study \cite{muchnik2013origins} found that 80\% of content on the online user-editable encyclopedia Wikipedia is authored by a mere 5\% of Wikipedia users. This pattern suggest that there is merit in studying the user's post numbers as being indicative of some special pattern. There is not a study formally demonstrating that abnormally frequent posters are indeed pages, bots or fake accounts, and even in ATHENA we offer the raw modeling data to end users. However, empirical evidence seems to suggest a degree of truth in this matter, at least for some users. I do believe the modern trend in analysing fat tails and power functions, as well as non-Gaussian probability distributions will continue and further investigations can be made into the subject.
-
-\subsection{Fitting algorithm and result interpretation}
-\label{plfittheory}
-TODO: Plfit theory and \cite{clauset2009power}
+The proportion is of course not always 80/20 as suggested in numerous studies finding even larger discrepancies in such behaviour. For example, a 2013 study \cite{muchnik2013origins} found that 80\% of content on the online user-editable encyclopedia Wikipedia is authored by a mere 5\% of Wikipedia users. This suggest that there is merit in studying the user's post numbers as being indicative of some special pattern. There is not a study formally demonstrating that abnormally frequent posters are indeed pages, bots or fake accounts, and even in ATHENA we offer the raw modeling data to end users. However, empirical evidence seems to suggest a degree of truth in this matter, at least for some users. I do believe the modern trend in analysing fat tails and power functions, as well as non-Gaussian probability distributions will continue and further investigations can be made into the subject.
 
 \section{HashMap-based duplicate removal}
-{\color{red}TODO 11 pages e.g. until 39
-if not enough, add
-\section{Supervised methods and their unsuitability to the concept}
-somewhere :D}
+During the Normalisation step, a classical duplication removal algorithm is used. HashMaps as a general concept are data structures that behave as a dictionary of pairs (key, value). However, the interesting part is that the constraint of uniqueness can be set on such a structure, which enforces that the collection of all keys is a set. This means that no duplicate keys may be found in the same HashMap. HashMaps have different interpretations and names in different programming languages, e.g. in Ruby they are called Hashes, in Java HashSets and in Python Dictionaries.
+
+The duplication removal algorithm loops through the existing dataset and appends the corresponding (key, value) pairs to a HashSet. In the simplest implementation, collision is simply a matter of overwriting the existent data, but other options include checking whether the key already exists, which is of $O(1)$ complexity. This means the final algorithm complexity will be $O(n)$, corresponding to the looping part.
+
+It is important to note that the implementation itself may vary per programming language particularities. In \ref{listcomprehensions} I go into more detail on how the Python implementation can be summarised to a concise declaration instead of a list of instructions.
+
+\subsection*{Summary}
+In this Chapter, I discussed several architectures and algorithms which are combined under the approach presented in this thesis. Firstly, I covered the suitability of pipelined architectures in text processing endeavours. Secondly, in regards to asynchronous jobs and the Producer/Consumer concept, I discussed the way document collection works with third party services which enforce rate limits.
+
+REST API Communication is also an important concept discussed in this Chapter, as its prevalence in modern applications, platform-independence and the existence of wrapper libraries makes it easy to use when collecting documents which have been posted online, especially in social media.
+
+As part of the pipeline's black boxes, a number of algorithms were implemented. Their importance and suitability was discussed. One such algorithm is the Vectorisation of the document collection. Not only is it used as a standalone information source, but it serves as input for document clustering as well. In regards of clustering, KMeans and its centroid-initialisation variants were covered. Power law fitting of the data set was also an important part of the ATHENA general approach, with power functions being ubiquitous in economics, mathematics and computer science. I ended with the HashMap algorithm for duplication detection and removal.
+
+Throughout the course of this Chapter I did not go into much detail about the Analysis step of the approach, as it produces simple calculations and reuses some of the algorithms in previous steps. These functionalities will be presented in the next chapter, which is concerned with the implementation of the proposed approach into a user-friendly web application.
 
 \include{ch5}
 
