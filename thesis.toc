@@ -82,12 +82,10 @@
 \contentsline {section}{\numberline {6.1}Title}{63}
 \contentsline {section}{\numberline {6.2}Other title}{63}
 \contentsline {chapter}{Chapter{} \numberline {7}User's manual}{64}
-\contentsline {section}{\numberline {7.1}Title}{64}
-\contentsline {section}{\numberline {7.2}Other title}{64}
-\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{65}
-\contentsline {section}{\numberline {8.1}Title}{65}
-\contentsline {section}{\numberline {8.2}Other title}{65}
-\contentsline {chapter}{Bibliography}{66}
-\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{68}
-\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{69}
-\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{70}
+\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{67}
+\contentsline {section}{\numberline {8.1}Title}{67}
+\contentsline {section}{\numberline {8.2}Other title}{67}
+\contentsline {chapter}{Bibliography}{68}
+\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{70}
+\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{71}
+\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{72}

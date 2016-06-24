@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  23 JUN 2016 20:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  24 JUN 2016 10:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -307,7 +307,7 @@ File: listings.cfg 2014/09/06 1.5e listings configuration
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
 (./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux) (./bibresearch.aux)
-(./ch5.aux) (./apendix.aux))
+(./analysis.aux) (./ch5.aux) (./apendix.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
@@ -526,14 +526,18 @@ Package pdftex.def Info: img/annie-pipe.png used on input line 41.
 (pdftex.def)             Requested size: 367.2014pt x 275.40353pt.
 
 [23] [24 <./img/annie-pipe.png>] [25] [26]) [27]
+\openout2 = `analysis.aux'.
+
+ (./analysis.tex
 Chapter 4.
 <img/cpupipe.png, id=96, 731.73375pt x 212.29312pt>
 File: img/cpupipe.png Graphic file (type png)
  <use img/cpupipe.png>
-Package pdftex.def Info: img/cpupipe.png used on input line 234.
+Package pdftex.def Info: img/cpupipe.png used on input line 12.
 (pdftex.def)             Requested size: 367.2014pt x 106.53502pt.
 
 [28
+
 
 
 ] [29 <./img/cpupipe.png>] [30]
@@ -541,16 +545,16 @@ Package pdftex.def Info: img/cpupipe.png used on input line 234.
 File: img/producer-consumer.png Graphic file (type png)
 
 <use img/producer-consumer.png>
-Package pdftex.def Info: img/producer-consumer.png used on input line 284.
+Package pdftex.def Info: img/producer-consumer.png used on input line 62.
 (pdftex.def)             Requested size: 367.2014pt x 149.85254pt.
  [31 <./img/producer-consumer.png>] [32]
 [33] [34] [35] <img/clustering.png, id=128, 1156.32pt x 722.7pt>
 File: img/clustering.png Graphic file (type png)
 
 <use img/clustering.png>
-Package pdftex.def Info: img/clustering.png used on input line 394.
+Package pdftex.def Info: img/clustering.png used on input line 172.
 (pdftex.def)             Requested size: 459.0pt x 286.86937pt.
- [36 <./img/clustering.png>] [37] [38] [39]
+ [36 <./img/clustering.png>] [37] [38]) [39]
 \openout2 = `ch5.aux'.
 
  (./ch5.tex
@@ -559,6 +563,7 @@ LaTeX Font Info:    Try loading font information for T1+aett on input line 14.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 ) [40
+
 
 
 ]
@@ -646,55 +651,56 @@ Chapter 6.
 Chapter 7.
 [64
 
-]
+] [65] [66]
 Chapter 8.
-(./thesis.bbl [65
+(./thesis.bbl [67
 
-] [66
+] [68
 
-]) [67]
+]) [69]
 \openout2 = `apendix.aux'.
 
  (./apendix.tex
 Appendix A.
-[68
+[70
 
 
 ]
 Appendix B.
-[69
+[71
 
 ]
 Appendix C.
-) [70
+) [72
 
 ] (./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux)
-(./bibresearch.aux) (./ch5.aux) (./apendix.aux)) ) 
+(./bibresearch.aux) (./analysis.aux) (./ch5.aux) (./apendix.aux)) ) 
 Here is how much of TeX's memory you used:
- 5770 strings out of 493089
- 75958 string characters out of 6134843
- 191863 words of memory out of 5000000
- 9019 multiletter control sequences out of 15000+600000
+ 5778 strings out of 493089
+ 76055 string characters out of 6134843
+ 192201 words of memory out of 5000000
+ 9020 multiletter control sequences out of 15000+600000
  47756 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,32p,937b,1464s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (67 pages, 1126047 bytes).
+ 38i,8n,32p,954b,1464s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on thesis.pdf (69 pages, 1138380 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
+ 309 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
