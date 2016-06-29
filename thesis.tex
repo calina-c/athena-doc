@@ -173,7 +173,7 @@ legitimat(\u{a}) cu \uline{4cm} seria \uline{3cm} nr. \uline{4cm}\\
 CNP \uline{9cm}, autorul lucr\u{a}rii \uline{2.8cm}\\
 \uline{16cm}\\
 \uline{16cm}\\
-elaborat\u{a} \^{\i}n vederea sus\c{t}inerii examenului de finalizare a studiilor de licen\c{t}\u{a} la Facultatea de Automatic\u{a} \c{s}i Calculatoare, Specializarea \uline{7cm} din cadrul Universit\u{a}\c{t}ii Tehnice din Cluj-Napoca, sesiunea \uline{4cm} a anului universitar \uline{3cm}, declar pe proprie r\u{a}spundere, c\u{a} aceast\u{a} lucrare este rezultatul propriei activit\u{a}\c{t}i intelectuale, pe baza cercet\u{a}rilor mele \c{s}i pe baza informa\c{t}iilor ob\c{t}inute din surse care au fost citate, \^{\i}n textul lucr\u{a}rii \c{s}i \^{\i}n bibliografie.
+elaborat\u{a} \^{\i}n vederea sus\c{t}inerii examenului de finalizare a studiilor de masterat la Facultatea de Automatic\u{a} \c{s}i Calculatoare, Specializarea \uline{7cm} din cadrul Universit\u{a}\c{t}ii Tehnice din Cluj-Napoca, sesiunea \uline{4cm} a anului universitar \uline{3cm}, declar pe proprie r\u{a}spundere, c\u{a} aceast\u{a} lucrare este rezultatul propriei activit\u{a}\c{t}i intelectuale, pe baza cercet\u{a}rilor mele \c{s}i pe baza informa\c{t}iilor ob\c{t}inute din surse care au fost citate, \^{\i}n textul lucr\u{a}rii \c{s}i \^{\i}n bibliografie.
 
 Declar, c\u{a} aceast\u{a} lucrare nu con\c{t}ine por\c{t}iuni plagiate, iar sursele bibliografice au fost folosite cu 
 respectarea legisla\c{t}iei rom\^{a}ne \c{s}i a conven\c{t}iilor interna\c{t}ionale privind drepturile de autor.
@@ -195,6 +195,58 @@ Data \hspace{8cm} Nume, Prenume
 
 \thispagestyle{empty}
 
+\thispagestyle{empty}
+\newpage
+
+\begin{center}
+\utcnlogo
+
+\department
+\end{center}
+
+\begin{center}
+{\bf
+Cerere de elaborare a diserta\c{t}iei \^{\i}n limba Englez\u{a}}
+\end{center}
+\vspace{0.5cm}
+
+Subsemnatul(a) \\
+\uline{14.8cm}, 
+legitimat(\u{a}) cu \uline{4cm} seria \uline{3cm} nr. \uline{4cm}\\
+CNP \uline{9cm}, autorul lucr\u{a}rii \uline{2.8cm}\\
+\uline{16cm}\\
+\uline{16cm}\\
+elaborat\u{a} \^{\i}n vederea sus\c{t}inerii examenului de finalizare a studiilor de masterat la Facultatea de Automatic\u{a} \c{s}i Calculatoare, Specializarea \uline{7cm} din cadrul Universit\u{a}\c{t}ii Tehnice din Cluj-Napoca, sesiunea \uline{4cm} a anului universitar \uline{3cm}, v\u{a} rog s\u{a}-mi aproba\c{t}i elaborarea lucr\u{a}rii de diserta\c{t}ie \^{\i}n limba Englez\u{a}.
+
+Limba Englez\u{a} este de mare circula\c{t}ie interna\c{t}ional\u{a} \c{s}i prezint\u{a} bune oportunit\u{a}\c{t}i de discu\c{t}ie \^{\i}n comunitatea stiin\c{t}ific\u{a}. Doresc s\u{a} elaborez prezenta lucrare \^{\i}n limba Englez\u{a} pentru mai buna ei vizibilitate.
+
+\vspace{0.5cm}
+
+Data \hspace{8cm} Nume, Prenume
+
+\vspace{0.5cm}
+
+\uline{3cm} \hspace{5cm} \uline{5cm}
+
+\vspace{0.5cm}
+\hspace{9.4cm}Semn\u{a}tura
+
+\vspace{0.5cm}
+\hspace{8cm} \uline{5cm}
+
+\vspace{0.5cm}
+\textbf{Semn\u{a}turi aprobare:}
+
+Profesor \^{\i}ndrumator: Prof. dr. Ioan SALOMIE: \uline{5cm}
+
+\vspace{0.5cm}
+
+\c{S}ef de catedra: Prof. dr. Rodica POTOLEA: \uline{5cm}
+
+\vspace{0.5cm}
+
+Decan: Prof. dr. Liviu MICLEA: \uline{5cm}
+
 \newpage
 
 
@@ -203,10 +255,6 @@ Data \hspace{8cm} Nume, Prenume
 
 %\clearpage 
 %\newpage
-
-%\begin{comment}
-\include{guideline} 
-%\end{comment}
 
 \newpage
 
@@ -223,10 +271,21 @@ Data \hspace{8cm} Nume, Prenume
 \include{ch5}
 
 \chapter{Testing and Validation}
+An important issue with developing novel approaches and application implementations for text feature extraction is validating the results. The endeavour of fully and completely testing such a domain-independent approach is, however, technically impossible. This is because we lack any adnotated data that could span over virtually all possible domains of application, but also due to the intrinsic nature of the algorithms themselves. Therefore, in the following section, I will handle two threads of discussion: proving the corectness of components used throughout the application, and empyrical testing of the application results, in different domains.
 
-About 5\% of the paper
-\section{Title}
-\section{Other title}
+\section{Component testing}
+ATHENA, both as approach and as implementation, is heavily reliant on the SOLID principles. One of these, Dependency Inversion, stating that components must always depend on more stable libraries and components, is key to the results obtained.
+
+\subsection{The Django framework}
+The Django framework encourage developers to aim for a high testing code coverage. It supports this general activity by supplying unit tests of its own to components and overall architecture. Django writes the tests in-house and with the help of the open-source community, having covered important bases in functionalities we use such as Request/Response handling and Generic Views. Since the web application is only loosely coupled with the underlying algorithmic implementation, further web tests are not necessary when using these proven tools.
+
+\subsection{Algorithms}
+On the other hand, the algorithms which compose the main functionalities, such as vectorisation, power law fitting, clustering and the calculation of relevant numerical data are less covered to a lesser extent and fewer cases. Most of the times, they are theoretically and matematically proven, so the requirement for unit tests only applies to the implementation and not the method itself.
+
+The SciKit modules for Vectorisation and KMeans Clustering are of course test-covered. The application of these methods into code has been thoroughly tested. The \texttt{plfit} module has also been tested and ships with unit tests and corresponding test fixtures. In the case of the latter, the approach is simply to generate the power functions with known parameters, running the fitting algorithm and comparing the results to the known examples.
+
+\section{Empyrical testing of the application results}
+{\color{red} TODO: this and 2 more pages until 66.}
 
 \chapter{User's manual}
 The following Chapter is a short description of the installation process needed to run the ATHENA app. The instructions are written for Mac OSX El Capitan, however most of the instructions work on other *nix systems as well, i.e. flavours of Linux including Ubuntu.
@@ -291,18 +350,38 @@ Use the navbar on the left to select a pipeline step from the application. If yo
 The Celery worker also needs to run in the background constantly, in order to properly be able to function as a Consumer for asynchronous jobs, as described in previous Chapters.
 
 \chapter{Conclusions}
+The following chapter presents the results of the ATHENA approach for automatic and domain-independent text feature extraction, as applied to Social Media posts. The first section presents current achievements, while the second lists further work which could improve the product application, as well as the approach, generally.
 
-About. 5\% of the whole
+\section{Achievements and results}
+The task of combining proven methods and algorithms for text feature extraction and present them as a user friendly web application is not an easy one. Careful consideration was needed in scaffolding the architecture as a pipeline and handling asynchronous jobs to fetch external data using a Producer/Consumer behaviour.
 
-Here your write:
-\begin{itemize}
-\item a summary of your contributions/achievements,
-\item a critical analysis of the achieved results,
-\item a description of the possibilities of improving/further development.
-\end{itemize}
-\section{Title}
-\section{Other title}
+\subsection{Application structure and usability}
+The presentation of a highly-specialised text feature extraction system as a web application is advisable for the sheer familiarity of users. The components chosen were based on the popular Bootstrap font-end elements, which have been in development for a few years and aim to provide developers with easy to use CSS and JS snippets and visuals. The prevalence of Bootstrap-based websites is due to the popularity of this set of libraries and consists in advantage in presenting the users with a familiar visual and interaction experience.
 
+The pipeline steps (Harvest, Enhance, Normalise, Analyse) are abstracted separately to the user, in order to keep the application uncluttered and for the purpose of separation of concerns. The presence of asynchronous jobs (as further explained) has benefits in the general User Experience as well, with users being able to submit jobs to the Harvest module and keep using any other modules until their jobs are finished.
+
+There are as few forms and complications necessary, data is presented in a highly visual and engaging fashion. All these efforts have been made with the aim of simplifying these applications for non-expert users looking to analyse social media posts, without the need for them to be statistics experts.
+
+\subsection{Architectural accomplishments}
+With pipelining, one of the most important things to note is that the approach is easily extensible for adding newer modules and/or data sources, with the Harvesting module being robust and independent from the rest of the application. Handling API Rate Limits imposed by social media networks was also an interesting task, with its asynchronous sleeping being a good abstraction: the user is not aware of the job's internal workings and doesn't have to stop using the application until their data is fully imported.
+
+As part of the Enhancement step, the data is fed into a few unsupervised algorithms which return useful information about the contents of the Harvest. One of these is clustering, which loosely organises an d groups social media hashtags as per their usage throughout the document collection. From the users' perspective, it is clear that they can visualise and grasp some concepts better, e.g. the general points of discussion, associated domain data, directions of development of certain topics etc. The Enhancement step is also important in detection of outlier users, with an application of this being able to discern between real, individual, personal users on one hand, and fake accounts, pages and bots on the other.
+
+The Normalisation step flattens the data without bothering the users with much details. At the moment, this step contains a single algorithm to elliminate outliers, and presents it as a dropdown choice. This algorithm is in fact a variant of the HashMap duplication removal algorithm running in $O(n)$ complexity, as part of the general concern to process data rapidly and present results to the user as soon as possible.
+
+While the Analysis step is not architecturally complex, reusing many of the algorithms and functions from Enhancement and having numerical calculations on top, it does present the user with some interesting insights. This step compares the structure and popularity of two Harvests which have gone through the Normalisation step. The user can have a glimpse into the general domain's structure and polarisation of users between the two input labels harvested. Features such as common vocabulary, common users and post number breakdown help analyse the domain and support the end user's decision to appeal to one social group or the other.
+
+\section{Work in progress}
+The possibilities for extending the current approach are virtually endless. There are a lot of unsupervised algorithms which can provide insight into the post and user structure of a given Harvest. For example, an interesting extension would be running the documents through a sentiment analysis module. However, it is beyond the scope of this first proof of concept to delve into particular analysis fields, but the reader should note that the effort of adding new functionalities has a minimal integration overhead, with the choice of Python as programming language permitting the usage of many third party libraries.
+
+In quantitative measures, more backends could be added to the Harvesting module, with applications such as Facebook and Instagram being some of the most obvious candidates. Adding more algorithms and data processing options to Enhancement and Analysis are also easily-implemented quantitative extensions.
+
+Another point of concern in regards to further developments is adding more options to the Normalisation step. Indeed as presented in previous chapters the current existence of a single flattening and filtering algorithm is meant as a first step towards developing more exciting new types of normalised Harvests.
+
+The project is openly available on the GitHub open source platform, as describe in the previous installation chapter and software engineers concerned with unsupervised text feature extraction from social media sources are more than welcome to contribute new features.
+
+\subsection*{Summary}
+To sum up, ATHENA is a good approach for text feature extraction which combines specialised algorithms with a comfortable, user-friendly web application interface. The main goal was to discuss and prove the benefits of the approach itself, but also to develop a proof-of-concept application which handles basic analysis and sets up the general architecture. Despite challenges such as a large number of possible implementation choices, feature inclusion and domain-independence, ATHENA as general approach and ATHENA as a minimal application are successful endeavours into bringing text extraction software closer to non-expert business users.
 
 %\addcontentsline {toc}{chapter}{Bibliography} 
 \bibliographystyle{IEEEtran} 

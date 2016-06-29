@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  24 JUN 2016 10:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  29 JUN 2016 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -306,8 +306,8 @@ File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-(./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux) (./bibresearch.aux)
-(./analysis.aux) (./ch5.aux) (./apendix.aux))
+(./thesis.aux (./intro.aux) (./specs.aux) (./bibresearch.aux) (./analysis.aux)
+(./ch5.aux) (./apendix.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
@@ -423,16 +423,15 @@ File: img/tucn.jpg Graphic file (type jpg)
 Package pdftex.def Info: img/tucn.jpg used on input line 156.
 (pdftex.def)             Requested size: 426.79134pt x 89.06966pt.
  [7]
-\openout2 = `guideline.aux'.
-
- (./guideline.tex) [8
-
-] (./thesis.lof)
+File: img/tucn.jpg Graphic file (type jpg)
+ <use img/tucn.jpg>
+Package pdftex.def Info: img/tucn.jpg used on input line 202.
+(pdftex.def)             Requested size: 426.79134pt x 89.06966pt.
+ [8] (./thesis.lof)
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
  [9
-
 
 
 ]
@@ -647,60 +646,60 @@ Chapter 6.
 [63
 
 
-]
+] [64]
 Chapter 7.
-[64
+[65
 
-] [65] [66]
+] [66] [67]
 Chapter 8.
-(./thesis.bbl [67
+[68
 
-] [68
+] [69] (./thesis.bbl [70] [71
 
-]) [69]
+]) [72]
 \openout2 = `apendix.aux'.
 
  (./apendix.tex
 Appendix A.
-[70
+[73
 
 
 ]
 Appendix B.
-[71
+[74
 
 ]
 Appendix C.
-) [72
+) [75
 
-] (./thesis.aux (./guideline.aux) (./intro.aux) (./specs.aux)
-(./bibresearch.aux) (./analysis.aux) (./ch5.aux) (./apendix.aux)) ) 
+] (./thesis.aux (./intro.aux) (./specs.aux) (./bibresearch.aux)
+(./analysis.aux) (./ch5.aux) (./apendix.aux)) ) 
 Here is how much of TeX's memory you used:
- 5778 strings out of 493089
- 76055 string characters out of 6134843
- 192201 words of memory out of 5000000
- 9020 multiletter control sequences out of 15000+600000
+ 5770 strings out of 493089
+ 75950 string characters out of 6134843
+ 191864 words of memory out of 5000000
+ 9019 multiletter control sequences out of 15000+600000
  47756 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,8n,32p,954b,1464s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (69 pages, 1138380 bytes).
+</usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmtt12.pfb>
+Output written on thesis.pdf (72 pages, 1148977 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 194 compressed objects within 2 object streams
+ 318 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
