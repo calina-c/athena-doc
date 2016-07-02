@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  29 JUN 2016 19:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  2 JUL 2016 14:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -646,31 +646,79 @@ Chapter 6.
 [63
 
 
-] [64]
+]
+Overfull \hbox (0.73209pt too wide) in paragraph at lines 297--298
+[]\T1/aett/m/n/12 #bot #comics #con-test #cos-play #dead-pool-movie #funko #fun
+kopop #game-
+ []
+
+
+Overfull \hbox (3.59651pt too wide) in paragraph at lines 297--298
+\T1/aett/m/n/12 ofthrones #give-away #hat-sofftohrithik #hot-topic #mar-ket-ing
+ #mar-vel #mar-vel-
+ []
+
+
+Overfull \hbox (9.76447pt too wide) in paragraph at lines 297--298
+\T1/aett/m/n/12 comics #mys-tery #mys-tery-pop #right-inthe-face #rus-tom #ryan
+-reynolds #so-cial-me-
+ []
+
+[64]
+Overfull \hbox (19.18329pt too wide) in paragraph at lines 305--306
+[]\T1/aer/m/n/12 marketing and so-cial pro-mo-tions (\T1/aett/m/n/12 #becausesc
+ience #bot #comics #dead-pool #dead-
+ []
+
+
+Overfull \hbox (0.52342pt too wide) in paragraph at lines 305--306
+\T1/aett/m/n/12 pool-movie #mar-ket-ing #right-inthe-face #sdcc #so-cial-me-di-
+a-day #wolver-ine\T1/aer/m/n/12 ) 
+ []
+
+
+Overfull \hbox (6.15164pt too wide) in paragraph at lines 306--307
+[]\T1/aer/m/n/12 related movies and shows (\T1/aett/m/n/12 #art #bat-man #be-ca
+us-escience #bot #com-edy #comics
+ []
+
+
+Overfull \hbox (7.41151pt too wide) in paragraph at lines 307--308
+[]\T1/aer/m/n/12 contests and give-aways (\T1/aett/m/n/12 #comedy #comics #con-
+test #dead-pool #funko #funkopop
+ []
+
+
+Overfull \hbox (20.6353pt too wide) in paragraph at lines 308--309
+\T1/aett/m/n/12 edy #comics #cos-play #dead-pool #mar-vel #mar-vel-comics #ryan
+-reynolds #star-
+ []
+
+[65] [66]
 Chapter 7.
-[65
+[67
 
-] [66] [67]
+] [68] [69]
 Chapter 8.
-[68
+[70
 
-] [69] (./thesis.bbl [70] [71
+] [71] (./thesis.bbl [72] [73
 
-]) [72]
+]) [74]
 \openout2 = `apendix.aux'.
 
  (./apendix.tex
 Appendix A.
-[73
+[75
 
 
 ]
 Appendix B.
-[74
+[76
 
 ]
 Appendix C.
-) [75
+) [77
 
 ] (./thesis.aux (./intro.aux) (./specs.aux) (./bibresearch.aux)
 (./analysis.aux) (./ch5.aux) (./apendix.aux)) ) 
@@ -696,10 +744,10 @@ ype1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (72 pages, 1148977 bytes).
+Output written on thesis.pdf (74 pages, 1155661 bytes).
 PDF statistics:
- 318 PDF objects out of 1000 (max. 8388607)
- 200 compressed objects within 2 object streams
+ 327 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

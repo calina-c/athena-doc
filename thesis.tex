@@ -285,7 +285,47 @@ On the other hand, the algorithms which compose the main functionalities, such a
 The SciKit modules for Vectorisation and KMeans Clustering are of course test-covered. The application of these methods into code has been thoroughly tested. The \texttt{plfit} module has also been tested and ships with unit tests and corresponding test fixtures. In the case of the latter, the approach is simply to generate the power functions with known parameters, running the fitting algorithm and comparing the results to the known examples.
 
 \section{Empyrical testing of the application results}
-{\color{red} TODO: this and 2 more pages until 66.}
+Throughout the thesis the examples were based on the use case of programming language comparison and exemplified with the \texttt{\#python} and \texttt{\#php} hashtags. In the next section I will present more examples of text feature extraction results.
+
+An important word of note about the examples that follow is that they will most likely not age well as examples. This is due mainly to a couple of factors: one is the restrictions imposed by the Twitter Search API, which refuses to return any tweets older than one week. Another issue to note is social media generally (and especially Twitter) are mostly used for trending topics and viral information. These facts make it difficult to follow classical or older topics, but work well for timeless, viral and/or trending hashtags.
+
+\subsection{In recent movies}
+In recent times, the comic book company Marvel has released it's own live action movies, with rising popularity for these productions. The last weeks have seen the release of "Deadpool" and "X-Men: Apocalypse". The movies have been highly covered by reviewers, bloggers and social media users. Out of the three, "Deadpool" has been the most acclaimed, gaining a 84\% rating on Rotten Tomatoes and an 8.2 score on IMDB (as of July 2nd 2016).
+
+An Enhancement run on the \texttt{\#deadpool} hashtag reveals related movies and concepts:
+
+\texttt{\#bot \#comics \#contest \#cosplay \#deadpoolmovie \#funko \#funkopop \#gameofthrones \#giveaway \#hatsofftohrithik \#hottopic \#marketing \#marvel \#marvelcomics \#mystery \#mysterypop \#rightintheface \#rustom \#ryanreynolds \#socialmediaday \#spiderman \#starwars \#wolverine \#xmen}
+
+Out of these, movies released in the same period or related by genre, representations of Deadpool (comics and movies), references to the parent company (Marvel) and/or other superhero movies.
+
+Clusters reveal even more interesting ideas, with clusters generally corresponding to directions of the social media talks around deadpool.
+
+\begin{itemize}
+\item comics and comic book movies (\texttt{\#comics \#cosplay \#deadpool \#deadpoolmovie \#funko \#funkopop \#marvel \#spiderman \#xmen})
+\item marketing and social promotions (\texttt{\#becausescience \#bot \#comics \#deadpool \#deadpoolmovie \#marketing \#rightintheface \#sdcc \#socialmediaday \#wolverine})
+\item related movies and shows (\texttt{\#art \#batman \#becausescience \#bot \#comedy \#comics \#deadpool \#gameofthrones \#wolverine \#xmen})
+\item contests and giveaways (\texttt{\#comedy \#comics \#contest \#deadpool \#funko \#funkopop \#giveaway \#hottopic \#mystery \#mysterypop})
+\item related cinematic releases(\texttt{\#2} as in the eventually upcoming Deadpool 2, \texttt{\#art \#comedy \#comics \#cosplay \#deadpool \#marvel \#marvelcomics \#ryanreynolds \#starwars})
+\end{itemize}
+
+Between the normalised harvests based on \texttt{\#deadpool} and \texttt{\#xmenapocalypse}, it is no surprise the common vocabulary consists of two hashtags: \texttt{\#marvel} and \texttt{\#xmen}, indeed with "Deadpool" taking place in the same cinematic universe as the X-Men series, with cameos from two of the the X-Men characters. However, as the breakdown suggests, the movie was standalone, and there are not many posts about both movies, partly also because they were released with a couple of weeks distance inbetween.
+
+On analysing users, however, we find that fans of comic book movies are mostly the same, with a number of 19 common users. The revelation is indeed in the post breakdown: 71\% of users have recently posted about the "Deadpool" movie (even considering "X-Men:Apocalypse" was launched more recently and should be fresher and trending), as opposed to X-Men's 27\%. This only confirms "Deadpool"'s well-received originality and high ratings.
+
+The case is mostly the same with a comparison between "Deadpool" and DC's "Batman vs. Superman: Dawn of Justice". The difference here is that, rather than comparing two movies released by the same company at different times, the comparison is between movies released by competing companies at more or less the same time. Rotten Tomatoes and IMDB scores for the "Batman vs. Superman" movies were generally low, with the comic book fanbase being generally disappointed with the movie. 
+
+\subsection{In current politics}
+ {\color{red} TODO: hillary vs. trump}
+ 
+\subsection{For related topics}
+With related topics, we can generally expect to see large common vocabularies and sets of users, as well as more common posts inside the post breakdown.  An analysis run on the popular programming languages PHP (generally for backend development) and JavaScript (clasically for frontend development, but has recently spread to backend as well) reveals the following common hashtags:
+
+\texttt{\#angularjs \#reactjs \#java \#html5 \#css \#html \#jquery \#webdev}
+
+AngularJS, ReactJS and JQuery are frontend Javascript languages and most likely used in projects with a PHP backend, in the context of this query. CSS and HTML being the main components of frontend systems, they naturally appear in the list, alongside the general occupation of web development. Besides a large common vocabulary, the two languages share 64 users which have posted about the two in the course of one day.
+
+\subsection{Summary}
+In this Chapter I presented the fundamentals on testing the web and algorithmic components of the ATHENA app, as well as the general approval of the scientific community for the conceptual algorithms used. I also discussed why a full testing is virtually impossible and presented a few examples from various topics, as resulted from the application.
 
 \chapter{User's manual}
 The following Chapter is a short description of the installation process needed to run the ATHENA app. The instructions are written for Mac OSX El Capitan, however most of the instructions work on other *nix systems as well, i.e. flavours of Linux including Ubuntu.
