@@ -5,99 +5,100 @@
 \contentsline {subsection}{\numberline {1.1.2}Data Analysis tools today}{14}
 \contentsline {subsection}{\numberline {1.1.3}Crossroads: Social Media in Business Intelligence}{14}
 \contentsline {chapter}{Chapter{} \numberline {2}Project Objectives and Specifications}{16}
-\contentsline {section}{\numberline {2.1}Web architecture}{16}
-\contentsline {subsection}{\numberline {2.1.1}Data storage}{17}
-\contentsline {section}{\numberline {2.2}ATHENA breakdown}{17}
-\contentsline {subsection}{\numberline {2.2.1}Twitter as data source}{17}
+\contentsline {section}{\numberline {2.1}Problem statement}{16}
+\contentsline {section}{\numberline {2.2}Web architecture}{17}
+\contentsline {subsection}{\numberline {2.2.1}Data storage}{17}
+\contentsline {section}{\numberline {2.3}ATHENA breakdown}{17}
+\contentsline {subsection}{\numberline {2.3.1}Twitter as data source}{18}
 \contentsline {subsubsection}{Fetching data through asynchronous jobs}{18}
-\contentsline {subsection}{\numberline {2.2.2}Harvesting}{18}
-\contentsline {subsection}{\numberline {2.2.3}Enhancement}{19}
-\contentsline {subsubsection}{User contribution modeling}{19}
-\contentsline {subsection}{\numberline {2.2.4}Normalisation}{20}
-\contentsline {subsection}{\numberline {2.2.5}Analysis}{20}
-\contentsline {section}{\numberline {2.3}Non-functional requirements}{20}
-\contentsline {chapter}{Chapter{} \numberline {3}Bibliographic research}{21}
-\contentsline {section}{\numberline {3.1}Social media analytics}{21}
-\contentsline {section}{\numberline {3.2}In-house social media}{21}
-\contentsline {subsection}{\numberline {3.2.1}Social media analytics in companies}{22}
-\contentsline {section}{\numberline {3.3}Structurally-similar works}{22}
-\contentsline {subsection}{\numberline {3.3.1}Advantages of web applications}{22}
-\contentsline {subsection}{\numberline {3.3.2}Pipeline model}{23}
-\contentsline {section}{\numberline {3.4}Data modeling and extraction approaches}{24}
-\contentsline {subsection}{\numberline {3.4.1}Supervised vs. unsupervised learning. Domain vs Domain-independent approaches}{24}
-\contentsline {subsection}{\numberline {3.4.2}Clustering}{25}
-\contentsline {subsubsection}{KMeans}{26}
-\contentsline {subsection}{\numberline {3.4.3}Power law dataset analysis}{26}
-\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{28}
-\contentsline {section}{\numberline {4.1}Pipeline architecture}{28}
-\contentsline {subsection}{\numberline {4.1.1}Black boxes}{29}
-\contentsline {subsection}{\numberline {4.1.2}Communication between modules}{29}
-\contentsline {section}{\numberline {4.2}Asynchronous application behaviour}{30}
-\contentsline {subsection}{\numberline {4.2.1}Asynchronous jobs}{30}
-\contentsline {subsection}{\numberline {4.2.2}Job handling with the Producer/Consumer architecture}{31}
-\contentsline {section}{\numberline {4.3}REST API communication}{32}
-\contentsline {subsection}{\numberline {4.3.1}Authentication}{32}
-\contentsline {subsection}{\numberline {4.3.2}Filtering with parameters}{33}
-\contentsline {subsection}{\numberline {4.3.3}API wrapper libraries}{33}
-\contentsline {section}{\numberline {4.4}Vectorising the data space}{34}
-\contentsline {subsection}{\numberline {4.4.1}Sparse matrices}{34}
-\contentsline {section}{\numberline {4.5}Clustering with KMeans}{35}
-\contentsline {subsection}{\numberline {4.5.1}Centroid initialisation}{37}
-\contentsline {section}{\numberline {4.6}Power law fitting}{37}
-\contentsline {subsection}{\numberline {4.6.1}Power functions and well-known examples}{38}
-\contentsline {section}{\numberline {4.7}HashMap-based duplicate removal}{38}
-\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{40}
-\contentsline {section}{\numberline {5.1}Python and Django}{40}
-\contentsline {subsubsection}{Python for scientists}{40}
-\contentsline {subsubsection}{Python libraries}{40}
-\contentsline {section}{\numberline {5.2}Storage with Cassandra}{42}
-\contentsline {subsection}{\numberline {5.2.1}Database structure}{43}
-\contentsline {section}{\numberline {5.3}Harvesting tools}{44}
-\contentsline {subsection}{\numberline {5.3.1}Celery for asynchronous jobs}{44}
-\contentsline {subsection}{\numberline {5.3.2}Using Redis as a Celery broker}{44}
-\contentsline {subsection}{\numberline {5.3.3}Fetching data from Twitter using the Search API and Tweepy}{45}
-\contentsline {section}{\numberline {5.4}Enhancement tools}{47}
-\contentsline {subsection}{\numberline {5.4.1}Simple numerical data}{47}
-\contentsline {subsubsection}{User-related data}{47}
-\contentsline {subsubsection}{Modeling the post numbers}{48}
-\contentsline {subsection}{\numberline {5.4.2}Sci-kit learn}{48}
-\contentsline {subsection}{\numberline {5.4.3}Related hashtag calculation}{49}
-\contentsline {subsubsection}{Getting the hashtag vocabulary}{49}
-\contentsline {subsection}{\numberline {5.4.4}Related hashtag clustering using KMeans}{50}
-\contentsline {subsubsection}{Ordering and displaying the hashtag clusters}{52}
-\contentsline {section}{\numberline {5.5}Normalisation}{54}
-\contentsline {subsection}{\numberline {5.5.1}Reasons and options}{54}
-\contentsline {subsection}{\numberline {5.5.2}One post per user, one-day limit normalisation process}{55}
-\contentsline {section}{\numberline {5.6}Analysis}{56}
-\contentsline {subsection}{\numberline {5.6.1}Retrieving the normalised results}{56}
-\contentsline {subsection}{\numberline {5.6.2}Calculating the common vocabulary}{56}
-\contentsline {subsection}{\numberline {5.6.3}Calculating common users}{57}
-\contentsline {subsection}{\numberline {5.6.4}Calculating post numbers and proportions}{57}
-\contentsline {subsubsection}{Displaying the chart using Google Charts API}{58}
-\contentsline {section}{\numberline {5.7}Code organisation}{59}
-\contentsline {subsection}{\numberline {5.7.1}File and folder structure}{59}
-\contentsline {subsection}{\numberline {5.7.2}Using Django generic views}{60}
-\contentsline {subsection}{\numberline {5.7.3}List comprehensions and other Python specifics}{61}
-\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{63}
-\contentsline {section}{\numberline {6.1}Component testing}{63}
-\contentsline {subsection}{\numberline {6.1.1}The Django framework}{63}
-\contentsline {subsection}{\numberline {6.1.2}Algorithms}{63}
-\contentsline {section}{\numberline {6.2}Empyrical testing of the application results}{64}
-\contentsline {subsection}{\numberline {6.2.1}In recent movies}{64}
-\contentsline {subsection}{\numberline {6.2.2}In current politics}{65}
-\contentsline {subsection}{\numberline {6.2.3}For related topics}{67}
-\contentsline {subsection}{\numberline {6.2.4}Summary}{67}
-\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{68}
-\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{71}
-\contentsline {section}{\numberline {8.1}Achievements and results}{71}
-\contentsline {subsection}{\numberline {8.1.1}Application structure and usability}{71}
-\contentsline {subsection}{\numberline {8.1.2}Architectural accomplishments}{72}
-\contentsline {section}{\numberline {8.2}Work in progress}{72}
-\contentsline {chapter}{Bibliography}{74}
-\contentsline {chapter}{Appendix{} \numberline {A}Abbreviations and shorthand}{76}
-\contentsline {chapter}{Appendix{} \numberline {B}Relevant code}{80}
-\contentsline {section}{\numberline {B.1}Fetching and saving a Harvest}{80}
-\contentsline {section}{\numberline {B.2}Running Enhancement steps}{81}
-\contentsline {subsection}{\numberline {B.2.1}Getting the document collection vocabulary}{81}
-\contentsline {subsection}{\numberline {B.2.2}Performing clustering on the document collection}{81}
-\contentsline {section}{\numberline {B.3}Normalisation by user duplication removal}{82}
+\contentsline {subsection}{\numberline {2.3.2}Harvesting}{19}
+\contentsline {subsection}{\numberline {2.3.3}Enhancement}{20}
+\contentsline {subsubsection}{User contribution modeling}{20}
+\contentsline {subsection}{\numberline {2.3.4}Normalisation}{20}
+\contentsline {subsection}{\numberline {2.3.5}Analysis}{20}
+\contentsline {section}{\numberline {2.4}Non-functional requirements}{21}
+\contentsline {chapter}{Chapter{} \numberline {3}Bibliographic research}{22}
+\contentsline {section}{\numberline {3.1}Social media analytics}{22}
+\contentsline {section}{\numberline {3.2}In-house social media}{22}
+\contentsline {subsection}{\numberline {3.2.1}Social media analytics in companies}{23}
+\contentsline {section}{\numberline {3.3}Structurally-similar works}{23}
+\contentsline {subsection}{\numberline {3.3.1}Advantages of web applications}{23}
+\contentsline {subsection}{\numberline {3.3.2}Pipeline model}{24}
+\contentsline {section}{\numberline {3.4}Data modeling and extraction approaches}{25}
+\contentsline {subsection}{\numberline {3.4.1}Supervised vs. unsupervised learning. Domain vs Domain-independent approaches}{25}
+\contentsline {subsection}{\numberline {3.4.2}Clustering}{26}
+\contentsline {subsubsection}{KMeans}{27}
+\contentsline {subsection}{\numberline {3.4.3}Power law dataset analysis}{27}
+\contentsline {chapter}{Chapter{} \numberline {4}Analysis and Theoretical Foundation}{29}
+\contentsline {section}{\numberline {4.1}Pipeline architecture}{29}
+\contentsline {subsection}{\numberline {4.1.1}Black boxes}{30}
+\contentsline {subsection}{\numberline {4.1.2}Communication between modules}{30}
+\contentsline {section}{\numberline {4.2}Asynchronous application behaviour}{31}
+\contentsline {subsection}{\numberline {4.2.1}Asynchronous jobs}{31}
+\contentsline {subsection}{\numberline {4.2.2}Job handling with the Producer/Consumer architecture}{32}
+\contentsline {section}{\numberline {4.3}REST API communication}{33}
+\contentsline {subsection}{\numberline {4.3.1}Authentication}{33}
+\contentsline {subsection}{\numberline {4.3.2}Filtering with parameters}{34}
+\contentsline {subsection}{\numberline {4.3.3}API wrapper libraries}{34}
+\contentsline {section}{\numberline {4.4}Vectorising the data space}{35}
+\contentsline {subsection}{\numberline {4.4.1}Sparse matrices}{35}
+\contentsline {section}{\numberline {4.5}Clustering with KMeans}{36}
+\contentsline {subsection}{\numberline {4.5.1}Centroid initialisation}{38}
+\contentsline {section}{\numberline {4.6}Power law fitting}{38}
+\contentsline {subsection}{\numberline {4.6.1}Power functions and well-known examples}{39}
+\contentsline {section}{\numberline {4.7}HashMap-based duplicate removal}{39}
+\contentsline {chapter}{Chapter{} \numberline {5}Detailed Design and Implementation}{41}
+\contentsline {section}{\numberline {5.1}Python and Django}{41}
+\contentsline {subsubsection}{Python for scientists}{41}
+\contentsline {subsubsection}{Python libraries}{41}
+\contentsline {section}{\numberline {5.2}Storage with Cassandra}{43}
+\contentsline {subsection}{\numberline {5.2.1}Database structure}{44}
+\contentsline {section}{\numberline {5.3}Harvesting tools}{45}
+\contentsline {subsection}{\numberline {5.3.1}Celery for asynchronous jobs}{45}
+\contentsline {subsection}{\numberline {5.3.2}Using Redis as a Celery broker}{45}
+\contentsline {subsection}{\numberline {5.3.3}Fetching data from Twitter using the Search API and Tweepy}{46}
+\contentsline {section}{\numberline {5.4}Enhancement tools}{48}
+\contentsline {subsection}{\numberline {5.4.1}Simple numerical data}{48}
+\contentsline {subsubsection}{User-related data}{48}
+\contentsline {subsubsection}{Modeling the post numbers}{49}
+\contentsline {subsection}{\numberline {5.4.2}Sci-kit learn}{49}
+\contentsline {subsection}{\numberline {5.4.3}Related hashtag calculation}{50}
+\contentsline {subsubsection}{Getting the hashtag vocabulary}{50}
+\contentsline {subsection}{\numberline {5.4.4}Related hashtag clustering using KMeans}{51}
+\contentsline {subsubsection}{Ordering and displaying the hashtag clusters}{53}
+\contentsline {section}{\numberline {5.5}Normalisation}{55}
+\contentsline {subsection}{\numberline {5.5.1}Reasons and options}{55}
+\contentsline {subsection}{\numberline {5.5.2}One post per user, one-day limit normalisation process}{56}
+\contentsline {section}{\numberline {5.6}Analysis}{57}
+\contentsline {subsection}{\numberline {5.6.1}Retrieving the normalised results}{57}
+\contentsline {subsection}{\numberline {5.6.2}Calculating the common vocabulary}{57}
+\contentsline {subsection}{\numberline {5.6.3}Calculating common users}{58}
+\contentsline {subsection}{\numberline {5.6.4}Calculating post numbers and proportions}{58}
+\contentsline {subsubsection}{Displaying the chart using Google Charts API}{59}
+\contentsline {section}{\numberline {5.7}Code organisation}{60}
+\contentsline {subsection}{\numberline {5.7.1}File and folder structure}{60}
+\contentsline {subsection}{\numberline {5.7.2}Using Django generic views}{61}
+\contentsline {subsection}{\numberline {5.7.3}List comprehensions and other Python specifics}{62}
+\contentsline {chapter}{Chapter{} \numberline {6}Testing and Validation}{64}
+\contentsline {section}{\numberline {6.1}Component testing}{64}
+\contentsline {subsection}{\numberline {6.1.1}The Django framework}{64}
+\contentsline {subsection}{\numberline {6.1.2}Algorithms}{64}
+\contentsline {section}{\numberline {6.2}Empyrical testing of the application results}{65}
+\contentsline {subsection}{\numberline {6.2.1}In recent movies}{65}
+\contentsline {subsection}{\numberline {6.2.2}In current politics}{66}
+\contentsline {subsection}{\numberline {6.2.3}For related topics}{68}
+\contentsline {subsection}{\numberline {6.2.4}Summary}{68}
+\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{69}
+\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{72}
+\contentsline {section}{\numberline {8.1}Achievements and results}{72}
+\contentsline {subsection}{\numberline {8.1.1}Application structure and usability}{72}
+\contentsline {subsection}{\numberline {8.1.2}Architectural accomplishments}{73}
+\contentsline {section}{\numberline {8.2}Work in progress}{73}
+\contentsline {chapter}{Bibliography}{75}
+\contentsline {chapter}{Appendix{} \numberline {A}Abbreviations and shorthand}{77}
+\contentsline {chapter}{Appendix{} \numberline {B}Relevant code}{81}
+\contentsline {section}{\numberline {B.1}Fetching and saving a Harvest}{81}
+\contentsline {section}{\numberline {B.2}Running Enhancement steps}{82}
+\contentsline {subsection}{\numberline {B.2.1}Getting the document collection vocabulary}{82}
+\contentsline {subsection}{\numberline {B.2.2}Performing clustering on the document collection}{82}
+\contentsline {section}{\numberline {B.3}Normalisation by user duplication removal}{83}
