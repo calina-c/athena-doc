@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  2 JUL 2016 14:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.4)  3 JUL 2016 12:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -420,12 +420,12 @@ Overfull \hbox (25.93462pt too wide) in paragraph at lines 107--112
 [5] [6]
 File: img/tucn.jpg Graphic file (type jpg)
  <use img/tucn.jpg>
-Package pdftex.def Info: img/tucn.jpg used on input line 156.
+Package pdftex.def Info: img/tucn.jpg used on input line 154.
 (pdftex.def)             Requested size: 426.79134pt x 89.06966pt.
  [7]
 File: img/tucn.jpg Graphic file (type jpg)
  <use img/tucn.jpg>
-Package pdftex.def Info: img/tucn.jpg used on input line 202.
+Package pdftex.def Info: img/tucn.jpg used on input line 200.
 (pdftex.def)             Requested size: 426.79134pt x 89.06966pt.
  [8] (./thesis.lof)
 \tf@lof=\write4
@@ -647,107 +647,142 @@ Chapter 6.
 
 
 ]
-Overfull \hbox (0.73209pt too wide) in paragraph at lines 297--298
+Overfull \hbox (0.73209pt too wide) in paragraph at lines 295--296
 []\T1/aett/m/n/12 #bot #comics #con-test #cos-play #dead-pool-movie #funko #fun
 kopop #game-
  []
 
 
-Overfull \hbox (3.59651pt too wide) in paragraph at lines 297--298
+Overfull \hbox (3.59651pt too wide) in paragraph at lines 295--296
 \T1/aett/m/n/12 ofthrones #give-away #hat-sofftohrithik #hot-topic #mar-ket-ing
  #mar-vel #mar-vel-
  []
 
 
-Overfull \hbox (9.76447pt too wide) in paragraph at lines 297--298
+Overfull \hbox (9.76447pt too wide) in paragraph at lines 295--296
 \T1/aett/m/n/12 comics #mys-tery #mys-tery-pop #right-inthe-face #rus-tom #ryan
 -reynolds #so-cial-me-
  []
 
 [64]
-Overfull \hbox (19.18329pt too wide) in paragraph at lines 305--306
+Overfull \hbox (19.18329pt too wide) in paragraph at lines 303--304
 []\T1/aer/m/n/12 marketing and so-cial pro-mo-tions (\T1/aett/m/n/12 #becausesc
 ience #bot #comics #dead-pool #dead-
  []
 
 
-Overfull \hbox (0.52342pt too wide) in paragraph at lines 305--306
+Overfull \hbox (0.52342pt too wide) in paragraph at lines 303--304
 \T1/aett/m/n/12 pool-movie #mar-ket-ing #right-inthe-face #sdcc #so-cial-me-di-
 a-day #wolver-ine\T1/aer/m/n/12 ) 
  []
 
 
-Overfull \hbox (6.15164pt too wide) in paragraph at lines 306--307
+Overfull \hbox (6.15164pt too wide) in paragraph at lines 304--305
 []\T1/aer/m/n/12 related movies and shows (\T1/aett/m/n/12 #art #bat-man #be-ca
 us-escience #bot #com-edy #comics
  []
 
 
-Overfull \hbox (7.41151pt too wide) in paragraph at lines 307--308
+Overfull \hbox (7.41151pt too wide) in paragraph at lines 305--306
 []\T1/aer/m/n/12 contests and give-aways (\T1/aett/m/n/12 #comedy #comics #con-
 test #dead-pool #funko #funkopop
  []
 
 
-Overfull \hbox (20.6353pt too wide) in paragraph at lines 308--309
+Overfull \hbox (20.6353pt too wide) in paragraph at lines 306--307
 \T1/aett/m/n/12 edy #comics #cos-play #dead-pool #mar-vel #mar-vel-comics #ryan
 -reynolds #star-
  []
 
-[65] [66]
+[65]
+Overfull \hbox (28.51987pt too wide) in paragraph at lines 323--324
+[]\T1/aer/m/n/12 media out-lets and catch-phrases re-lated to the cam-paign (\T
+1/aett/m/n/12 #dtmag #2a #trump #trump2016
+ []
+
+
+Overfull \hbox (2.13144pt too wide) in paragraph at lines 323--324
+\T1/aett/m/n/12 #trumptrain #imwith-you #maga #makeam-er-ica-greata-gain #growi
+nguphis-panic
+ []
+
+
+Overfull \hbox (19.02728pt too wide) in paragraph at lines 324--325
+\T1/aett/m/n/12 #gaysfort #gaysfortrump #geor-gia #glob-al-ism #gop #world-chan
+ges #hillary2\T1/aer/m/n/12 ) 
+ []
+
+
+Overfull \hbox (46.37518pt too wide) in paragraph at lines 325--326
+[]\T1/aer/m/n/12 campaign ide-als (\T1/aett/m/n/12 #fraud #free-dom #freethedel
+-e-gates #full-monty #garbage #gaysfort
+ []
+
+
+Overfull \hbox (7.33936pt too wide) in paragraph at lines 326--327
+[]\T1/aer/m/n/12 confrontational is-sues (\T1/aett/m/n/12 #obama #trump #trump2
+016 #trumptrain #crooked-hillary
+ []
+
+
+Overfull \hbox (13.068pt too wide) in paragraph at lines 332--333
+[]\T1/aett/m/n/12 #maga #hillaryclin-ton #crooked-hillary #elec-tion2016 #nev-e
+r-hillary #tcot
+ []
+
+[66] [67]
 Chapter 7.
-[67
+[68
 
-] [68] [69]
+] [69] [70]
 Chapter 8.
-[70
+[71
 
-] [71] (./thesis.bbl [72] [73
+] [72] (./thesis.bbl [73] [74
 
-]) [74]
+]) [75]
 \openout2 = `apendix.aux'.
 
  (./apendix.tex
 Appendix A.
-[75
-
-
-]
-Appendix B.
 [76
 
-]
-Appendix C.
-) [77
 
-] (./thesis.aux (./intro.aux) (./specs.aux) (./bibresearch.aux)
-(./analysis.aux) (./ch5.aux) (./apendix.aux)) ) 
+] [77] [78] [79]
+Appendix B.
+[80
+
+]
+LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
+ [81] [82]) [83] (./thesis.aux (./intro.aux) (./specs.aux)
+(./bibresearch.aux) (./analysis.aux) (./ch5.aux) (./apendix.aux)) ) 
 Here is how much of TeX's memory you used:
- 5770 strings out of 493089
- 75950 string characters out of 6134843
- 191864 words of memory out of 5000000
- 9019 multiletter control sequences out of 15000+600000
+ 5771 strings out of 493089
+ 75967 string characters out of 6134843
+ 226865 words of memory out of 5000000
+ 9020 multiletter control sequences out of 15000+600000
  47756 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,32p,954b,1464s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (74 pages, 1155661 bytes).
+ 38i,8n,32p,954b,1496s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on thesis.pdf (80 pages, 1176277 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
+ 346 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

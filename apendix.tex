@@ -1,28 +1,177 @@
 \appendix
+\chapter{Abbreviations and shorthand}
+
+\begin{itemize}
+\item ANNIE - A Nearly-New Information Extraction System (well known set of text processing tools, used in comparison to the presented approach)
+\item API - Application Programming Interface: set of entrypoints that allow the creation of an application by accessing features of another application, service etc.
+\item ASCII - American Standard Code for Information Interchange: numerical represantations of characters used in computing
+\item ATHENA - Approach for Tweet Harvesting, Enhancement, Normalisation and Analysis: the approach and application proof of concept presented in this thesis. It is a pipelined approach for text feature extracton from social media documents authored online
+\item AWS3 - Amazon Web Simple Storage Service: a service of cloud storage provided by Amazon
+\item AngularJS - popular web framework for frontend Javascript development
+\item BSD - Berkeley Software Distribution License: a set of permissive free software licenses, often used in open source
+\item CD - Compact Disc: a digital optical data storage format
+\item CPU - Central Processing Unit: component of a computer which carries out basic instructions
+\item CQL - Cassandra Query Language, a variant of the popular SQL (Structured Query Language) adapted to Cassandra non-relational databases
+\item CRUD - Create, Update, Delete: Describes the functionalities of a system in reference to the actions a user can carry out on resources.
+\item CSS - Cascade Style Sheet: Document which describes the appearance of a web page and not its contents.
+\item CherryPy - Popular Python framework
+\item CouchDB - open source non-relational database
+\item DC Comics (formerly Detective Comics): American comic book publisher part of Warner Bros. Entertainment (mentioned as part of the examples section, alongside rival company Marvel)
+\item DRY -  Do not Repeat Yourself: programming set of best practices which encourage code reuse without copy-pasting, thus avoiding multiple failure points
+\item ERP - Enterprise Resource Planning: business process management software that allows an organization to use a system of integrated applications to manage the business and automate many back office functions
+\item FIFO - First In First Out: describes the functioning of a queue, with elements being removed from the top of the queue and added at its end
+\item GATE - General Architecture For Text Engineering (well known set of text processing tools, used in comparison to the presented approach)
+\item GET - HTTP verb indicating fetching of a resource from the server, without any modifications
+\item Git - popular version control system
+\item GitHub - online project hosting using Git
+\item HBase - Hadoop distributed , scalable, big data-oriented database
+\item HTML - HyperText Markup Language: document describing the content of a web page, interpretable by web browsers
+\item HTTP - Hypertext Transfer Protocol: application protocol for distributed, collaborative, hypermedia information systems
+\item IMDB - Internet Movie DataBase: popular authoritative source for movie, TV and celebrity content (mentioned as a reliable comparison for the application results in case of movies, alongside RottenTomatoes, another popular movie review source)
+\item JQuery - Javascript library which provides interactions, widgets, effects, and theming for web pages
+\item JS - Javascript: is a high-level, dynamic, untyped, and interpreted programming language, usually run on the frontend side of applications and interpreted by web browsers
+\item JSON - JavaScript Object Notation: lightweight data-interchange format
+\item LaSIE - Large Scale Information Extraction (well known set of text processing tools, used in comparison to the presented approach)
+\item LinkedIn - social media oriented toward carreer development and recruiting
+\item MVC - Model/View/Controller: tripartite software architectural pattern separating internal representations of the information from their presentation to the user
+\item MongoDB - non-relational database
+\item NLP - Natural Language Processing
+\item NLTK - Natural Language ToolKit (set of libraries and data sets for NLP)
+\item NoSQL - non-SQL: database providing a mechanism for storage and retrieval of data which is modeled in ways means other than tabular relations
+\item NumPy: fundamental package for scientific computing with Python
+\item OAuth: open standard for authorization, commonly used as a way for Internet users to log in to third party websites using their Microsoft, Google, Facebook, Twitter, One Network etc. accounts without exposing their password
+\item OSX: Apple Macintosh's Operating System
+\item PHP - Hypertext Preprocessor: popular backend programming language which builds HTML files using programmatic methods
+\item POST - HTTP verb indicating a modification of the resource(s) on the server
+\item README.md - file which contains a short description of the application, usually placed in the codebase
+\item REST - Representational State Transfer: relies on a stateless, client-server, cacheable communications protocol (usually HTTP).
+\item RISC - Reduced Instruction Set Computing: CPU design strategy based on the insight that a simplified instruction set provides higher performance when combined with a microprocessor architecture capable of executing those instructions using fewer microprocessor cycles per instruction.
+\item RabbitMQ: open source message broker software
+\item ReactJS: popular web framework for frontend Javascript
+\item RegEx - Regular Expressions: sequence of characters that define a search pattern
+\item SMS - Short Message Service: text messaging service component of phone, Web, or mobile communication systems
+\item SOLID - Single responsibility, open-closed, Liskov substitution, interface segregation and dependency inversion: mnemonic acronym for the "first five principles" named by Robert C. Martin in the early 2000s that stands for five basic principles of object-oriented programming
+\item SQL - Structured Query Language: special-purpose language designed for managing data held in a relational database management system
+\item UI - User Interface
+\item URI - Uniform Resource Identifier: string of characters used to identify a resource
+\item URL - Uniform Resource Locator: reference (address) to a resource on the Internet
+\item UUID - Universally unique identifier: identifier standard used in software construction
+\end{itemize}
+
 \chapter{Relevant code}
+\section{Fetching and saving a Harvest}
+\begin{lstlisting}
+def create_harvest(hashtag, start_date, end_date):
+    cluster = Cluster()
+    session = cluster.connect('demo')
+    key = uuid.uuid1()
 
-\begin{verbatim}
- /** Maps are easy to use in Scala. */
-object Maps {
-  val colors = Map("red" -> 0xFF0000,
-                   "turquoise" -> 0x00FFFF,
-                   "black" -> 0x000000,
-                   "orange" -> 0xFF8040,
-                   "brown" -> 0x804000)
-  def main(args: Array[String]) {
-    for (name <- args) println(
-      colors.get(name) match {
-        case Some(code) =>
-          name + " has code: " + code
-        case None =>
-          "Unknown color: " + name
-      }
+    session.execute(
+        """
+        insert into harvest (uuid, start_date, end_date, hashtag, done) values (%s, %s, %s, %s, %s)
+        """,
+        (key, start_date, end_date, hashtag, False)
     )
-  }
-}
-\end{verbatim}
 
-\chapter{Other relevant information (demonstrations, etc.)}
+    auth = OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_token_secret)
+    api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
+    tweets = tweepy.Cursor(api.search, q='#' + hashtag, since=start_date, until=end_date, lang='en').items()
 
+    for tweet in tweets:
+        session.execute(
+            """
+            insert into tweet (twitterId, user, content, date, retweets, history) values (%s, %s, %s, %s, %s, %s)
+            """,
+            (str(tweet.id), tweet.author.screen_name.encode('utf8'), tweet.text, tweet.created_at, tweet.retweet_count, key)
+        )
 
-\chapter{Published papers}
+    session.execute(
+        """
+        update harvest set done=true where uuid = %s
+        """,
+        (key, )
+    )
+\end{lstlisting}
+
+\section{Running Enhancement steps}
+\subsection{Getting the document collection vocabulary}
+\begin{lstlisting}
+def get_vocabulary(tweet_texts):
+    vectorizer = TfidfVectorizer(
+        min_df=10,
+        max_df=0.8,
+        sublinear_tf=True,
+        use_idf=True,
+        max_features=25,
+        token_pattern='#[a-zA-Z0-9][a-zA-Z0-9]*'
+    )
+
+    matrix = vectorizer.fit_transform(tweet_texts).toarray()
+    vocabulary = vectorizer.get_feature_names()
+
+    return vocabulary
+\end{lstlisting}
+\subsection{Performing clustering on the document collection}
+\begin{lstlisting}
+
+def get_clusters(tweet_texts):
+    true_k = 5
+    vectorizer = TfidfVectorizer(stop_words='english', min_df=10,token_pattern='#[a-zA-Z0-9][a-zA-Z0-9]*')
+    X = vectorizer.fit_transform(tweet_texts)
+    model = KMeans(n_clusters=true_k, init='k-means++', max_iter=100, n_init=1)
+    model.fit(X)
+
+    order_centroids = model.cluster_centers_.argsort()[:, ::-1]
+    terms = vectorizer.get_feature_names()
+    clusters = {}
+
+    for i in range(true_k):
+        cluster_name = 'Cluster ' + str(i+1) + ':'
+        cluster = {}
+        for ind in order_centroids[i, :10]:
+            cluster[ind] = str(terms[ind])
+        clusters[cluster_name] = cluster
+
+    return clusters
+\end{lstlisting}
+\section{Normalisation by user duplication removal}
+\begin{lstlisting}
+def normalise(key):
+    cluster = Cluster()
+    session = cluster.connect('demo')
+    key = uuid.UUID(key)
+
+    res = session.execute(
+        """
+        select * from harvest where uuid = %s
+        """,
+        (key, )
+    )
+
+    for r in res:
+        harvest = r
+
+    normalised_harvest = {}
+
+    tweets = session.execute(
+        """
+        select * from tweet where history = %s ALLOW FILTERING
+        """,
+        (key, )
+    )
+
+    no_tweets = 0
+
+    for tweet in tweets:
+        if tweet.user not in normalised_harvest.keys():
+            no_tweets += 1
+            normalised_harvest[tweet.user] = [tweet.twitterid, tweet.content]
+
+    session.execute(
+        """
+        insert into normal (uuid, name, content) values (%s, %s, %s)
+        """,
+        (key, r.hashtag + ' one day normalisation', json.dumps(normalised_harvest))
+    )
+\end{lstlisting}

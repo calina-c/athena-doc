@@ -85,15 +85,19 @@
 \contentsline {section}{\numberline {6.2}Empyrical testing of the application results}{64}
 \contentsline {subsection}{\numberline {6.2.1}In recent movies}{64}
 \contentsline {subsection}{\numberline {6.2.2}In current politics}{65}
-\contentsline {subsection}{\numberline {6.2.3}For related topics}{65}
-\contentsline {subsection}{\numberline {6.2.4}Summary}{66}
-\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{67}
-\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{70}
-\contentsline {section}{\numberline {8.1}Achievements and results}{70}
-\contentsline {subsection}{\numberline {8.1.1}Application structure and usability}{70}
-\contentsline {subsection}{\numberline {8.1.2}Architectural accomplishments}{71}
-\contentsline {section}{\numberline {8.2}Work in progress}{71}
-\contentsline {chapter}{Bibliography}{73}
-\contentsline {chapter}{Appendix{} \numberline {A}Relevant code}{75}
-\contentsline {chapter}{Appendix{} \numberline {B}Other relevant information (demonstrations, etc.)}{76}
-\contentsline {chapter}{Appendix{} \numberline {C}Published papers}{77}
+\contentsline {subsection}{\numberline {6.2.3}For related topics}{67}
+\contentsline {subsection}{\numberline {6.2.4}Summary}{67}
+\contentsline {chapter}{Chapter{} \numberline {7}User's manual}{68}
+\contentsline {chapter}{Chapter{} \numberline {8}Conclusions}{71}
+\contentsline {section}{\numberline {8.1}Achievements and results}{71}
+\contentsline {subsection}{\numberline {8.1.1}Application structure and usability}{71}
+\contentsline {subsection}{\numberline {8.1.2}Architectural accomplishments}{72}
+\contentsline {section}{\numberline {8.2}Work in progress}{72}
+\contentsline {chapter}{Bibliography}{74}
+\contentsline {chapter}{Appendix{} \numberline {A}Abbreviations and shorthand}{76}
+\contentsline {chapter}{Appendix{} \numberline {B}Relevant code}{80}
+\contentsline {section}{\numberline {B.1}Fetching and saving a Harvest}{80}
+\contentsline {section}{\numberline {B.2}Running Enhancement steps}{81}
+\contentsline {subsection}{\numberline {B.2.1}Getting the document collection vocabulary}{81}
+\contentsline {subsection}{\numberline {B.2.2}Performing clustering on the document collection}{81}
+\contentsline {section}{\numberline {B.3}Normalisation by user duplication removal}{82}

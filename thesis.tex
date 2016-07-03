@@ -115,20 +115,18 @@ Supervisor: {\bf \thesissupervisor}
 \begin{center}
 Graduate: {\bf \thesisauthor}
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 {\bf \thesistitle}
 \end{center}
 
-\vspace{1cm}
-
 \begin{enumerate}
- \item {\bf Project proposal:} {\it Short description of the license thesis and initial data}
-\item {\bf Project contents:} {\it (enumerate the main component parts) Presentation page, advisor's evaluation, title of chapter 1, title of chapter 2, ..., title of chapter n, bibliography, appendices.}
-\item {\bf Place of documentation:} {\it Example}: Technical University of Cluj-Napoca, Computer Science Department
-\item {\bf Consultants:}
-\item {\bf Date of issue of the proposal:} November 1, 2014
-\item {\bf Date of  delivery:} June 18, 2015 {\it (the date when the document is submitted)}
+ \item {\bf Project proposal:} {\it This approach combines time-proven unsupervised algorithms and specialised, state of the art text feature extraction with components of user-oriented business systems, to provide a solid but friendly decision support system of social media analysis. In essence, I present a process of data extraction that simplifies the task of analysing social media feeds, for business users and other stakeholders with little or no expertise in the domain of text feature extraction..}
+\item {\bf Project contents:} {\it (Project Objectives and Specifications, Bibliographic research, Analyisis and Theoretical Foundation, Detailed Design and Implementa- tion, Testing and validation, User’s manual, Conclusions, Bibliography, Abbreviations and shorthand, Relevant code}
+\item {\bf Place of documentation:} {\it Technical University of Cluj-Napoca, Computer Science Department}
+\item {\bf Consultants:} Prof. dr. ing. Ioan SALOMIE
+\item {\bf Date of issue of the proposal:} November 25, 2015
+\item {\bf Date of  delivery:} July 5, 2016 {\it (the date when the document is submitted)}
   \end{enumerate}
 \vspace{1.2cm}
 
@@ -315,8 +313,30 @@ On analysing users, however, we find that fans of comic book movies are mostly t
 The case is mostly the same with a comparison between "Deadpool" and DC's "Batman vs. Superman: Dawn of Justice". The difference here is that, rather than comparing two movies released by the same company at different times, the comparison is between movies released by competing companies at more or less the same time. Rotten Tomatoes and IMDB scores for the "Batman vs. Superman" movies were generally low, with the comic book fanbase being generally disappointed with the movie. 
 
 \subsection{In current politics}
- {\color{red} TODO: hillary vs. trump}
- 
+In testing the current status of popular tweets, politics is not a domain to be ignored. The following subsections describes ATHENA's results on processing tweets about the current USA Presidential Campaign, with candidates Hillary Clinton and Donald Trump using Twitter as a political advertisment platform. However, various articles and news outlets have stated that Trump's so-called "Twitter game" obviously attracts more discussion than his counter candidate's\footnote{http://www.slate.com/articles/technology/future\_tense/2016/02/
+
+donald\_trump\_is\_the\_best\_at\_twitter\_here\_s\_why.html}. Indeed the popularity of discussions isn't necessarily related to the outcome of the vote, with discussion generally falling into positive or negative categories. However, the phenomenon is interesting to be studied.
+
+A one-day Harvest of the \texttt{\#trump} hashtag provides a number of 22,301 posts by 13,366 users, with a maximum posts per user of 128 (highly indicative of page or bot activity), well-fitted to a power function. This is to be expected of course, since the political campaign is in full fledge. Hashtag clusters organise as follows:
+
+\begin{itemize}
+\item media outlets and catchphrases related to the campaign (\texttt{\#dtmag \#2a \#trump \#trump2016 \#trumptrain \#imwithyou \#maga \#makeamericagreatagain \#growinguphispanic \#neverhillary})
+\item recent events which are featured in his campaign: cluster 1 (\texttt{\#fullmonty \#garbage \#gaysfort \#gaysfortrump \#georgia \#globalism \#gop \#worldchanges \#hillary2}) 
+\item campaign ideals (\texttt{\#fraud \#freedom \#freethedelegates \#fullmonty \#garbage \#gaysfort \#trump \#georgia \#globalism \#gaysfortrump \#makeamericagreatagain})
+\item confrontational issues (\texttt{\#obama \#trump \#trump2016 \#trumptrain \#crookedhillary \#establishment \#canada \#populism \#hannity})
+\item political associations (\texttt{\#trump \#borisjohnson \#uk \#brexit \#imwithher \#democracy \#sanders \#scotland \#boris \#fraud})\footnote{most of these hashtags refer to the United Kingdom's vote to leave the European Union, with politicians such as Boris Johnson encouraging it. Users see the same discourse in the "Leave" politicians as in Trump's "Make America great again" anti-imigration policies.}
+\end{itemize}
+
+The theory that Trump is prevalent on Twitter as opposed to Hillary Clinton is also proven to be quite close to the actual truth. From a normalisation of one-day harvests with the same start and end dates, using the hashtags \texttt{\#trump} and \texttt{\#hillary} reveal some interesting facts. First, the common vocabulary consisting of:
+
+\texttt{\#maga \#hillaryclinton \#crookedhillary \#election2016 \#neverhillary \#tcot \#imwithher \#trump2016 \#bernie \#clinton \#obama}
+
+These hashtags indicate that common posts about the two are often neutral or negative to Hillary Clinton. The number of common users is very large, with the 1,963 common tweets authored by 1,963 different users. This 1:1 proportion indicates that the users are mostly real accounts and that the candidates supporting pages avoid mentioning the other candidate's official hashtag(s), preferring to opt for negative ones, such as the previously mentioned \texttt{\#crookedhillary, \#neverhillary} etc.
+
+Proportions and breakdown also speak volumes. The prevalence of Trump's online presence is proven, with 11,728 posts (71.4\% of the total breakdown) containing the \texttt{\#trump} hashtag and no mention of \texttt{\#hillary}. HIllary Clinton's exclusive mentions and the common mentions the candidates share are almost equivalent, with 2,737 (16.7\%) and the said 1,963 (11.9\%) respectively.
+
+Results indeed confirm the theories that Twitter is dominated by Donald Trump's presence, albeit positive or negative.
+
 \subsection{For related topics}
 With related topics, we can generally expect to see large common vocabularies and sets of users, as well as more common posts inside the post breakdown.  An analysis run on the popular programming languages PHP (generally for backend development) and JavaScript (clasically for frontend development, but has recently spread to backend as well) reveals the following common hashtags:
 
