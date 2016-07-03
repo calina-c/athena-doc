@@ -54,14 +54,14 @@ If we interpret ATHENA as a classical pipeline, then it becomes clear that the H
 
 Figure \ref{fig:harvestpipe1} represents the conceptual model of data acquisition, starting from a collection of grouped documents (in our case they will be collections of statuses with a common hashtag). The Harvest manager handles sending asynchronous jobs via a FIFO queue towards a Consumer-type Harvesting job, represented as black box and further detailed in Figure \ref{fig:harvestpipe}. It is important to note that this pipeline is not in any way adjusted to the domain or the particular API platform; the only constraint we impose is that of periodically checking for compliance to rate limits. Social APIs usually limit requests either by number of requests or requested data size per unit of time. It is therefore a good idea to consider if any limitations alter our pipelines before starting on implementations.
 
-\begin{figure}[ht]
+\begin{figure}[]
     \centering
 \includegraphics[width=\columnwidth]{img/harvestpipe1.png}
     \caption{Harvesting pipeline}
     \label{fig:harvestpipe1}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[]
     \centering
 \includegraphics[width=\columnwidth]{img/harvestpipe.png}
     \caption{Harvesting job sub-pipeline}
